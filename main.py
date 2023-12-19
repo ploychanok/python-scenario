@@ -9,15 +9,16 @@ learning_scenarios = df[df['Category'] == 'Scenario']
 
 module_counts = learning_scenarios['Target Audience'].value_counts()
 
-selected_module = st.selectbox("Select a Target Audience:", module_counts.index)
+# Sidebar
+st.sidebar.title("Scenario Analysis")
+selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
+selected_scenario = st.sidebar.selectbox(f"Select Scenario Instances for {selected_module}:", learning_scenarios['Scenario Instances'].unique())
 
+# Filter data based on selected module and scenario
 filtered_scenarios_module = learning_scenarios[learning_scenarios['Target Audience'] == selected_module]
-
-selected_scenario = st.selectbox(f"Select Scenario Instances for {selected_module}:", filtered_scenarios_module['Scenario Instances'].unique())
-
 filtered_scenarios = filtered_scenarios_module[filtered_scenarios_module['Scenario Instances'] == selected_scenario]
 
-# Display Chapter Titles for the selected Scenario Instances
+# Main content
 st.title(f"Chapter Titles for {selected_module} - {selected_scenario}")
 table_data = filtered_scenarios[['Chapter Title']]
 
@@ -40,5 +41,6 @@ with col2:
         st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
         st.write(filtered_chapter['Chapter Summary'].iloc[0])  # Assuming there is only one unique Chapter Summary for the selected Chapter Title
 
-        # Add a link to a PDF file (replace 'your_pdf_file.pdf' with the actual file path or URL)
-        st.markdown("[Download PDF](your_pdf_file.pdf)")
+        # Add a link to a PDF file based on the URL column in the DataFrame
+        pdf_url = filtered_chapter['URL'].iloc[0]  # Assuming 'URL' is the name of the column with PDF links
+        st.markdown(f"[Download PDF]({pdf_url})")
