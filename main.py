@@ -28,14 +28,17 @@ col1, col2 = st.columns(2)
 with col1:
     selected_chapter_title = st.radio("Select a Chapter Title:", table_data['Chapter Title'].unique())
 
-# Display Chapter Summary, Book Name, and Chapter Number in the second column
+# Display Chapter Summary, Book Name, Chapter Number, and PDF link in the second column
 with col2:
     if selected_chapter_title:
         # Filter the data based on the selected Chapter Title
         filtered_chapter = filtered_scenarios[filtered_scenarios['Chapter Title'] == selected_chapter_title]
 
-        # Display Chapter Summary, Book Name, and Chapter Number
+        # Display Chapter Summary, Book Name, Chapter Number, and PDF link
         st.title(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
         st.write(f"Book Name: {filtered_chapter['Textbook'].iloc[0]}")
         st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
         st.write(filtered_chapter['Chapter Summary'].iloc[0])  # Assuming there is only one unique Chapter Summary for the selected Chapter Title
+
+        # Add a link to a PDF file (replace 'your_pdf_file.pdf' with the actual file path or URL)
+        st.markdown("[Download PDF](your_pdf_file.pdf)")
