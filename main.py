@@ -39,8 +39,8 @@ with col2:
         st.title(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
         st.write(f"Book Name: {filtered_chapter['Textbook'].iloc[0]}")
         st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
-        st.write(filtered_chapter['Chapter Summary'].iloc[0])  # Assuming there is only one unique Chapter Summary for the selected Chapter Title
+        st.write(filtered_chapter['Chapter Summary'].iloc[0])
 
         # Add a link to a PDF file based on the URL column in the DataFrame
-        pdf_url = filtered_chapter['URL'].iloc[0]  # Assuming 'URL' is the name of the column with PDF links
+        pdf_url = filtered_chapter['URL'].iloc[0]
         st.markdown(f"[Download PDF]({pdf_url})")
