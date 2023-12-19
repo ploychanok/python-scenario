@@ -1,0 +1,403 @@
+Textbook,Chapter Number,Maximun Chapter,Chapter Title,Category,Scenario Instances,Library name,Target Audience
+20 python libraries you aren't using but should,4,11,Easier Python Packaging with flit,Scenario,Others/Generic,Flit,Generic
+20 python libraries you aren't using but should,5,11,Command-Line Applications,Scenario,Others/Generic,,Generic
+20 python libraries you aren't using but should,6,11,Graphical User Interfaces,Scenario,GUI,,Generic
+20 python libraries you aren't using but should,8,11,Web APIs with hug,Scenario,API,,Generic
+20 python libraries you aren't using but should,9,11,Dates and Times,Scenario,Others/Generic,,Generic
+20 python libraries you aren't using but should,10,11,General-Purpose Libraries,Scenario,Others/Generic,,Generic
+2019 Book A Beginner's Guide To Python 3 Program,8,37,Number Guessing Game,Scenario,Others/Generic,,Generic
+2019 Book A Beginner's Guide To Python 3 Program,16,37,Curried Functions,Scenario,Data and Processing,,Generic
+2019 Book A Beginner's Guide To Python 3 Program,25,37,Python Modules and Packages,Scenario,Others/Generic,,Generic
+2019 Book A Beginner's Guide To Python 3 Program,37,37,TicTacToe Game,Scenario,GUI,,Generic
+2019 Book Advanced Guide To Python3 Programm,3,41,Python Turtle Graphics,Scenario,GUI,,Generic
+2019 Book Advanced Guide To Python3 Programm,4,41,Computer Generated Art,Scenario,GUI,,Generic
+2019 Book Advanced Guide To Python3 Programm,6,41,Graphing with Matplotlib pyplot,Scenario,GUI,Matplotlib,Generic
+2019 Book Advanced Guide To Python3 Programm,7,41,Graphical User Interfaces,Scenario,Others/Generic,,Generic
+2019 Book Advanced Guide To Python3 Programm,8,41,The wxPython GUI Library,Scenario,GUI,wxPython,Generic
+2019 Book Advanced Guide To Python3 Programm,9,41,Events in wxPython User Interfaces,Scenario,Others/Generic,wxPython,Generic
+2019 Book Advanced Guide To Python3 Programm,10,41,PyDraw wxPython Example Application,Scenario,GUI,PyDraw ,Generic
+2019 Book Advanced Guide To Python3 Programm,12,41,Building Games with pygame,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,13,41,StarshipMeteors pygame,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,20,41,Working with CSV Files,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,21,41,Working with Excel Files,Scenario,API,,Generic
+2019 Book Advanced Guide To Python3 Programm,22,41,Regular Expressions in Python,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,24,41,Python DB-API,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,25,41,PyMySQL Module,Scenario,API,PyMySQL,Generic
+2019 Book Advanced Guide To Python3 Programm,30,41,Threading,Scenario,Data and Processing,,Generic
+2019 Book Advanced Guide To Python3 Programm,31,41,Multiprocessing,Scenario,API,,Generic
+2019 Book Advanced Guide To Python3 Programm,34,41,Concurrency with AsyncIO,Scenario,API,,Generic
+2019 Book Advanced Guide To Python3 Programm,36,41,"RxPy Observables, Observers and Subjects",Scenario,API,RxPy,Generic
+2019 Book Advanced Guide To Python3 Programm,37,41,RxPy Operators,Scenario,API,RxPy,Generic
+2019 Book Advanced Guide To Python3 Programm,39,41,Sockets in Python,Scenario,API,,Generic
+2019 Book Advanced Guide To Python3 Programm,40,41,Web Services in Python,Scenario,Others/Generic,,Generic
+2019 Book Advanced Guide To Python3 Programm,41,41,Bookshop Web Service,Scenario,Others/Generic,,Generic
+A Whirlwind Tour of Python,8,18,Built-In Data Structures,Scenario,Data and Processing,,Generic
+A Whirlwind Tour of Python,15,18,Modules and Packages,Scenario,Others/Generic,,Generic
+Becoming a Better Programmer,6,38,Navigating a Route,Scenario,Others/Generic,,Generic
+Becoming a Better Programmer,17,38,Use Your Brain,Scenario,Others/Generic,,Generic
+Becoming a Better Programmer,19,38,A Case for Code Reuse,Scenario,Others/Generic,,Generic
+Beginning Django CMS,1,11,Working with a CMS,Scenario,Others/Generic,,Web development
+Beginning Django CMS,4,11,Site Templates,Scenario,Others/Generic,,Web development
+Beginning Django CMS,5,11,Your Blog Website: Templates,Scenario,Others/Generic,,Web development
+Beginning Django CMS,6,11,django CMS Plugins,Scenario,Others/Generic,Django,Web development
+Beginning Django CMS,7,11,Advanced Plugins,Scenario,API,,Web development
+Beginning Django CMS,8,11,Authoring in ajango CMS,Scenario,API,,Web development
+Beginning Django CMS,10,11,Extending django CMS,Scenario,Others/Generic,Django,Web development
+Beginning Game Development with Python and Pygame,4,12,Creating Visuals,Scenario,Others/Generic,,Game development
+Beginning Game Development with Python and Pygame,12,12,Setting the Scene with OpenGL,Scenario,Others/Generic,PyOpenGL,Game development
+"Beginning Python Games Development, 2nd Edition",12,12,Setting the Scene with OpenGL,Scenario,Data and Processing,,Game development
+Bioinformatics with Python Cookbook,3,9,Working with Genomes,Scenario,Others/Generic,,Educational purposes
+Bioinformatics with Python Cookbook,4,9,Population Genetics,Scenario,Data and Processing,,Educational purposes
+Bioinformatics with Python Cookbook,5,9,Population Genetics Simulation,Scenario,Data and Processing,,Educational purposes
+Bioinformatics with Python Cookbook,6,9,Phylogenetics,Scenario,GUI,,Educational purposes
+Bioinformatics with Python Cookbook,7,9,Using the Protein Data Bank,Scenario,Others/Generic,,Educational purposes
+Bioinformatics with Python Cookbook,8,9,Other Topics in Bioinformatics,Scenario,Others/Generic,,Educational purposes
+Bioinformatics with Python Cookbook,9,9,Python for Big Genomics Datasets,Scenario,API,,Educational purposes
+Data Structures and Algorithms with Python,8,12,Membership Structures,Scenario,Data and Processing,,Data analysis
+Data Structures and Algorithms with Python,12,12,Heuristic Search,Scenario,Data and Processing,,Data analysis
+Data Wrangling with Python,3,15,Data Meant to Be Read by Machines,Scenario,API,,Data analysis
+Data Wrangling with Python,4,15,Working with Excel Files,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,5,15,PDFs and Problem Solving in Python,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,8,15,Data Cleanup: Standardizing and Scripting,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,9,15,Data Exploration and Analysis,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,10,15,Presenting Your Data,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,11,15,Web Scraping: Acquiring and Storing Data form the Web,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,12,15,Advance Web Scraping: Screen Scrapers and Spiders,Scenario,Others/Generic,,Data analysis
+Data Wrangling with Python,13,15,APIs,Scenario,API,,Data analysis
+Dive Into Python - Mark Pilgrim,8,18,HTML Processing,Scenario,Others/Generic,,Generic
+Dive Into Python - Mark Pilgrim,9,18,XML Processing,Scenario,Others/Generic,,Generic
+Dive Into Python - Mark Pilgrim,11,18,HTTP Web Services,Scenario,API,,Generic
+Dive Into Python - Mark Pilgrim,12,18,SOAP Web Services,Scenario,Others/Generic,,Generic
+Django 1.0 Template Development,2,11,"Views, URLs, and Generic Views",Scenario,Others/Generic,,Web development
+Django 1.0 Template Development,8,11,Pagination,Scenario,Others/Generic,,Web development
+Django 1.0 Template Development,10,11,Caching Your Pages,Scenario,Others/Generic,,Web development
+Django by Example,1,12,Building a Blog Application,Scenario,Others/Generic,,Web development
+Django by Example,2,12,Enhancing Your Blog with Advanced Features,Scenario,Others/Generic,,Web development
+Django by Example,3,12,Extending Your Blog Application,Scenario,Data and Processing,,Web development
+Django by Example,4,12,Building a Social Website,Scenario,Data and Processing,,Web development
+Django by Example,5,12,Sharing Content in Your Website,Scenario,Others/Generic,,Web development
+Django by Example,6,12,Tracking User Actions,Scenario,Data and Processing,,Web development
+Django by Example,7,12,Building an Online Shop,Scenario,Others/Generic,,Web development
+Django by Example,8,12,Managing Payments and Orders,Scenario,Data and Processing,,Web development
+Django by Example,9,12,Extending Your Shop,Scenario,Others/Generic,,Web development
+Django by Example,10,12,Building an e-Learning Platform,Scenario,Others/Generic,,Web development
+Django by Example,11,12,Caching Content,Scenario,Others/Generic,,Web development
+Django by Example,12,12,Building an API,Scenario,Others/Generic,,Web development
+Django Design Patterns and Best Practices,1,11,Django and Patterns,Scenario,API,Django,Web development
+Django Design Patterns and Best Practices,4,11,Views and URLs,Scenario,Data and Processing,,Web development
+Django Design Patterns and Best Practices,6,11,Admin Interface,Scenario,API,,Web development
+Django Design Patterns and Best Practices,8,11,Dealing with Legacy Code,Scenario,GUI,,Web development
+Django Design Patterns and Best Practices,9,11,Testing and Debugging,Scenario,Others/Generic,,Web development
+Django Design Patterns and Best Practices,10,11,Security,Scenario,Data and Processing,,Web development
+Django Design Patterns and Best Practices,11,11,Production-ready,Scenario,Others/Generic,,Web development
+Effective Python_ 59 Specific W - Brett Slatkin,1,8,Pythonic Thinking,Scenario,Data and Processing,,Generic
+Effective Python_ 59 Specific W - Brett Slatkin,6,8,Built-in Modules,Scenario,Data and Processing,,Generic
+"Expert Python Programming, 2nd Edition",9,14,Documenting Your Project,Scenario,Data and Processing,,Generic
+"Expert Python Programming, 2nd Edition",13,14,Concurrency,Scenario,Others/Generic,,Generic
+"Expert Python Programming, 2nd Edition",14,14,Useful Design Patterns,Scenario,API,,Generic
+Fluent Python,1,21,The Python Data Model,Scenario,API,,Generic
+Fluent Python,4,21,Text versus bytes,Scenario,Others/Generic,,Generic
+Fluent Python,11,21,Interfaces: from protocals to ABCs,Scenario,Others/Generic,,Generic
+Fluent Python,16,21,Coroutines,Scenario,Others/Generic,,Generic
+Fluent Python,17,21,Concurrency with futures,Scenario,Others/Generic,,Generic
+Fluent Python,18,21,Concurrency with asyncio,Scenario,API,,Generic
+Foundations of Agile Python Development,2,11,The IDE: Eclipsing the Command Line,Scenario,Others/Generic,,Software development
+Foundations of Agile Python Development,9,11,Databases,Scenario,Others/Generic,,Software development
+From Future Import Python,5,5,Python Distributions,Scenario,API,,Generic
+Hadoop with Python,2,5,MapReduce with Python,Scenario,Data and Processing,MapReduce,Data analysis
+Hadoop with Python,4,5,Spark with Python,Scenario,API,,Data analysis
+Head First Python,5,11,Comprehending Data: Work That Data!,Scenario,Others/Generic,,Generic
+Head First Python,6,11,Custom Data Objects: Bundling Code with Data,Scenario,Others/Generic,,Generic
+Head First Python,7,11,Web Development: Putting It All Together,Scenario,GUI,,Generic
+Head First Python,8,11,Mobile App Development: Small Devices,Scenario,Data and Processing,,Generic
+Head First Python,9,11,Manage Your Data: Heading Input,Scenario,Others/Generic,,Generic
+Head First Python,10,11,Scaling Your Webapp: Getting Real,Scenario,Others/Generic,,Generic
+Head First Python,11,11,Dealing with Complexity: Data Wrangling,Scenario,Data and Processing,,Generic
+Internet of Things with Python,1,10,Understanding and Setting up the Base IoT Hardware,Scenario,Others/Generic,,DevOps
+Internet of Things with Python,2,10,Working with Python on Intel Galilgo Gen 2,Scenario,Data and Processing,,DevOps
+Internet of Things with Python,3,10,Interacting with Digital Outputs with Python,Scenario,Data and Processing,,DevOps
+Internet of Things with Python,4,10,Working with a RESTful API and Pulse,Scenario,Data and Processing,,DevOps
+Internet of Things with Python,7,10,Retrieving Data form the Real World with Sensors,Scenario,Others/Generic,,DevOps
+Internet of Things with Python,9,10,Working with the Cloud,Scenario,GUI,,DevOps
+Internet of Things with Python,10,10,Analyzing Huge Amounts Data with Cloud-based IoT Analytics,Scenario,Data and Processing,,DevOps
+Introducing Python,5,12,"Py Boxes: Modules, Packages, and Programs",Scenario,Others/Generic,Py Boxes,Generic
+Introducing Python,7,12,Mangle Data Like a Pro,Scenario,Data and Processing,,Generic
+Introducing Python,8,12,Data Has to Go Somewhere,Scenario,Others/Generic,,Generic
+Introducing Python,9,12,"The Web, Untangled",Scenario,Data and Processing,,Generic
+Introducing Python,11,12,Concurrency and Networks,Scenario,Others/Generic,,Generic
+Introduction to Computer Science Using Python,7,12,Modular Design,Scenario,GUI,,Educational purposes
+IPython Notebook Essentials,3,5,Graphics with matplotlib,Scenario,Data and Processing,Matplotlib,Educational purposes
+IPython Notebook Essentials,4,5,Handling Data with pandas,Scenario,Others/Generic,,Educational purposes
+IPython Notebook Essentials,5,5,"Advanced Computing with SciPy, Numba, and NumbaPro",Scenario,Data and Processing,,Educational purposes
+Learning Pandas,1,12,A Tour of pandas,Scenario,Data and Processing,,Data analysis
+Learning Pandas,2,12,Installing pandas,Scenario,Data and Processing,,Data analysis
+Learning Pandas,3,12,NumPy for pandas,Scenario,Data and Processing,NumPy,Data analysis
+Learning Pandas,4,12,The pandas Series Object,Scenario,Data and Processing,Pandas,Data analysis
+Learning Pandas,5,12,The pandas DataFrame Object,Scenario,Others/Generic,,Data analysis
+Learning Pandas,7,12,Tidying Up Your Data,Scenario,Data and Processing,,Data analysis
+Learning Pandas,12,12,Applications to Finance,Scenario,Others/Generic,,Data analysis
+"Learning Python, 5th Edition",24,41,Module Packages,Scenario,Others/Generic,,Generic
+"Learning Python, 5th Edition",25,41,Advanced Module Topics,Scenario,Others/Generic,,Generic
+Learning Selenium Testing Tools with Python,1,10,Getting Started with Selenium WebDriver and Python,Scenario,Data and Processing,Selenium,Software testing
+Learning Selenium Testing Tools with Python,3,10,Finding Elements,Scenario,Others/Generic,,Software testing
+Learning Selenium Testing Tools with Python,9,10,Advanced Techniques of Selenium WebDriver,Scenario,Data and Processing,Selenium,Software testing
+Lightweight Django,1,8,The World's Smallest Django Project,Scenario,Others/Generic,,Web development
+Lightweight Django,2,8,Stateless Web Application,Scenario,Others/Generic,,Web development
+Lightweight Django,3,8,Building a Static Site Generator,Scenario,Others/Generic,,Web development
+Lightweight Django,4,8,Building a REST API,Scenario,Others/Generic,,Web development
+Lightweight Django,5,8,Client-Side Django with Backbone.js,Scenario,Others/Generic,,Web development
+Lightweight Django,6,8,Single-Page Web Application,Scenario,API,,Web development
+Lightweight Django,7,8,Real-Time Django,Scenario,API,,Web development
+Lightweight Django,8,8,Communication Between Django and Tornado,Scenario,Others/Generic,,Web development
+Making Sense of NoSQL,3,4,NoSQL Solutions,Scenario,Others/Generic,NoSQL,Data analysis
+Making Use of Python,6,15,Modules,Scenario,Others/Generic,,Generic
+Making Use of Python,10,15,CGI Programming,Scenario,Others/Generic,,Generic
+Making Use of Python,12,15,Network Programming,Scenario,Data and Processing,,Generic
+Making Use of Python,14,15,Advanced Web Programming,Scenario,Others/Generic,,Generic
+Making Use of Python,15,15,GUI Programming with Tkinter,Scenario,Others/Generic,Tkinter,Generic
+Mastering Python,3,15,Containers and Collections - Stroring Data the Right Way,Scenario,GUI,,Generic
+Mastering Python,4,15,Function Programming - Readability Versus Bravity,Scenario,Others/Generic,,Generic
+Mastering Python,6,15,"Generators and Coroutines - Infinity, One Step at a Time",Scenario,Data and Processing,,Generic
+Mastering Python,9,15,Documentation - How to Use Sphinx and reStructuredText,Scenario,API,,Generic
+Mastering Python,13,15,Multiprocessing - When a Single CPU Core Is not Enough,Scenario,Others/Generic,,Generic
+Mastering Python,14,15,"Extensions in C/C++, System Calls and C/C++ Libraries",Scenario,Others/Generic,,Generic
+Mastering Python,15,15,Packaging - Creating Your Own Libraries or Applications,Scenario,Others/Generic,,Generic
+Mining the Social Web,2,10,Microformats: Semantic Markup and Common Sense Collide,Scenario,Others/Generic,,Web development
+Mining the Social Web,3,10,Mailboxs: Oldies but Goodies,Scenario,Others/Generic,,Web development
+Mining the Social Web,4,10,"Twitter: Friends, Followers, and Setwise Operations",Scenario,GUI,,Web development
+Mining the Social Web,5,10,"Twitter: The Tweet, the Whole Tweet, and Nothing but the Tweet",Scenario,Data and Processing,,Web development
+Mining the Social Web,6,10,LinkedIn: Clustering Your Professional Network for Fun (and Profit?),Scenario,Others/Generic,,Web development
+Mining the Social Web,7,10,"Google Buzz: TF-IDF, Cosine Similarity, and Collocations",Scenario,Others/Generic,,Web development
+Mining the Social Web,8,10,Blogs et al.: Natural Language Processing (and Beyond),Scenario,Others/Generic,NLP,Web development
+Mining the Social Web,9,10,Facebook: The All-in-One Wonder,Scenario,API,,Web development
+Mining the Social Web,10,10,The Semantic Web: A Cocktail Descussion,Scenario,Others/Generic,,Web development
+"Mining the Social Web, 2nd Edition",1,8,"Mining Twitter: Exploring Treading Topics, Discovering What People Are Talking About and More",Scenario,Others/Generic,,Web development
+"Mining the Social Web, 2nd Edition",2,8,"Mining Facebook: Analyzing Fan Pages, Examming Friendships, and More",Scenario,Others/Generic,,Web development
+"Mining the Social Web, 2nd Edition",4,8,"Mining Google+: Computing Document Similarity, Extracting Collocations and More",Scenario,GUI,,Web development
+"Mining the Social Web, 2nd Edition",5,8,"Mining Web Page: Using Natural Language Processing to Understand Human Language, Summarize Blog Posts, and More",Scenario,Others/Generic,,Web development
+"Mining the Social Web, 2nd Edition",6,8,"Mining Mailboxes: Analyzing Who's Talking to Whom About What, How Often, and More",Scenario,Others/Generic,,Web development
+"Mining the Social Web, 2nd Edition",7,8,"Mining the Semantically Marked-Up Web: Extracing Microformats, Inferancing over RDF, and More",Scenario,Data and Processing,,Web development
+"Mining the Social Web, 2nd Edition",8,8,Twitter Cookbook,Scenario,Others/Generic,,Web development
+Numerical Python,4,9,Plotting and Visualization,Scenario,Data and Processing,,Educational purposes
+Numerical Python,9,9,Ordinary Differential Equations,Scenario,GUI,,Educational purposes
+Numerical Python,12,9,Data Processing and Analysis,Scenario,API,,Educational purposes
+Numerical Python,14,9,Statistical modeling,Scenario,Others/Generic,,Educational purposes
+Numerical Python,15,9,Machine Learning,Scenario,GUI,,Educational purposes
+Numerical Python,17,9,Signal Processing,Scenario,GUI,,Educational purposes
+NumPy Cookbook,1,9,Winding Along with Ipython,Scenario,Data and Processing,,Educational purposes
+NumPy Cookbook,3,9,Getting to Grips with Commonly Used Functions,Scenario,Data and Processing,,Educational purposes
+NumPy Cookbook,4,9,Connecting NumPy with the Rest of the World,Scenario,Data and Processing,,Educational purposes
+NumPy Cookbook,5,9,Audio and Image Processing,Scenario,Others/Generic,,Educational purposes
+NumPy Cookbook,9,9,Speeding Up Code with Cython,Scenario,Others/Generic,Cython,Educational purposes
+"NumPy Cookbook, 2nd Edition",1,12,Winding Along with Ipython,Scenario,API,,Educational purposes
+"NumPy Cookbook, 2nd Edition",3,12,Getting to Grips with Commonly Used Functions,Scenario,Others/Generic,,Educational purposes
+"NumPy Cookbook, 2nd Edition",4,12,Connecting NumPy with the Rest of the World,Scenario,GUI,,Educational purposes
+"NumPy Cookbook, 2nd Edition",5,12,Audio and Image Processing,Scenario,GUI,,Educational purposes
+"NumPy Cookbook, 2nd Edition",9,12,Speeding Up Code with Cython,Scenario,Others/Generic,Cython,Educational purposes
+"NumPy Cookbook, 2nd Edition",10,12,Fun with Scikits,Scenario,Data and Processing,Scikits ,Educational purposes
+"NumPy Cookbook, 2nd Edition",11,12,Lastest and Greatest Numpy,Scenario,Others/Generic,NumPy,Educational purposes
+"NumPy Cookbook, 2nd Edition",12,12,Exploratory and Predictive Data Analysis with NumPy,Scenario,Others/Generic,NumPy,Educational purposes
+"Pro Django, 2nd Edition",1,11,Understanding Django,Scenario,Others/Generic,Django,Web development
+"Pro Django, 2nd Edition",2,11,Django Is Python,Scenario,Others/Generic,Django,Web development
+"Pro Django, 2nd Edition",4,11,URLs and Views,Scenario,GUI,,Web development
+"Pro Django, 2nd Edition",5,11,Forms,Scenario,Data and Processing,,Web development
+"Pro Django, 2nd Edition",6,11,Templates,Scenario,GUI,,Web development
+"Pro Django, 2nd Edition",7,11,Handling HTTP,Scenario,GUI,,Web development
+"Pro Django, 2nd Edition",8,11,Backend Protocols,Scenario,Others/Generic,,Web development
+"Pro Django, 2nd Edition",11,11,Enhancing Applications,Scenario,Others/Generic,,Web development
+Pro IronPython,2,9,IronPython Syntax,Scenario,Others/Generic,,Generic
+Pro IronPython,3,9,Advanced IronPython,Scenario,Others/Generic,IronPython,Generic
+Pro IronPython,4,9,IronPython Studio,Scenario,Others/Generic,,Generic
+Pro IronPython,5,9,Mixing and Mingling with CLR,Scenario,Data and Processing,,Generic
+Pro IronPython,8,9,Caught in a Web,Scenario,Others/Generic,,Generic
+Pro IronPython,9,9,IronPython Recipes,Scenario,API,,Generic
+"Pro Python, 2nd Edition",11,11,Sheets: A CSV Framework,Scenario,Others/Generic,,Generic
+Professional Python,12,14,Cli Tools,Scenario,API,,Generic
+Professional Python,13,14,Asyncio,Scenario,Data and Processing,,Generic
+Python 3 for Absolute Beginners,7,12,Working with Text,Scenario,API,,Generic
+Python 3 for Absolute Beginners,8,12,"Executable Files, Organization, and Python on the Web",Scenario,Data and Processing,,Generic
+Python 3 for Absolute Beginners,12,12,Simple Windowed Applications,Scenario,Data and Processing,,Generic
+"Python 3 Patterns, Recipes and Idioms",2,36,Taching Support,Scenario,Data and Processing,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",3,36,Book Development Rules,Scenario,GUI,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",6,36,Python for Programmers,Scenario,GUI,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",12,36,"Generators, Iterators, and Itertools",Scenario,Others/Generic,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",14,36,"Coroutines, Concurrency & Distributed Systems",Scenario,GUI,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",15,36,Jython,Scenario,Others/Generic,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",19,36,Messanger/Data Transfer Object,Scenario,API,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",23,36,Building Application Frameworks,Scenario,API,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",24,36,Fronting for an Implementation,Scenario,GUI,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",26,36,Decorator: Dynamic Type Selection,Scenario,Others/Generic,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",28,36,Factory: Encapsulating Object Creation,Scenario,Data and Processing,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",30,36,Changing the Interface,Scenario,GUI,,Educational purposes
+"Python 3 Patterns, Recipes and Idioms",36,36,Projects,Scenario,Others/Generic,,Educational purposes
+Python Algorithms,3,11,Counting 101,Scenario,Data and Processing,,Educational purposes
+Python Algorithms,5,11,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,,Educational purposes
+Python Algorithms,6,11,"Divide, Combine, and Conquer",Scenario,GUI,,Educational purposes
+Python Algorithms,8,11,Tangled Dependencies and Memoization,Scenario,Others/Generic,,Educational purposes
+"Python Algorithms, 2nd Edition",1,11,Introduction,Scenario,API,,Educational purposes
+"Python Algorithms, 2nd Edition",3,11,Counting 101,Scenario,Others/Generic,,Educational purposes
+"Python Algorithms, 2nd Edition",5,11,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,,Educational purposes
+"Python Algorithms, 2nd Edition",6,11,"Divide, Combine, and Conquer",Scenario,API,,Educational purposes
+"Python Algorithms, 2nd Edition",8,11,Tangled Dependencies and Memoization,Scenario,Data and Processing,,Educational purposes
+"Python Cookbook, 2nd Edition",4,20,Python Shortcuts,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",10,20,System Administration,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",11,20,User Interfaces,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",12,20,Processing XML,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",13,20,Network Programming,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",14,20,Web Programming,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",16,20,Programs About Programs,Scenario,API,,Generic
+"Python Cookbook, 2nd Edition",17,20,Extending and Embedding,Scenario,GUI,,Generic
+Python Crash Course,15,20,Generating Data,Scenario,GUI,,Generic
+Python Crash Course,16,20,Downloading Data,Scenario,GUI,,Generic
+Python Crash Course,17,20,Working with APIs,Scenario,GUI,,Generic
+Python Crash Course,18,20,Getting Started with Django,Scenario,GUI,,Generic
+Python Crash Course,19,20,User Accounts,Scenario,API,,Generic
+Python Crash Course,20,20,Styling and Developing an App,Scenario,API,,Generic
+Python Data Analysis,1,12,Getting Started with Python Libraries,Scenario,Data and Processing,,Data analysis
+Python Data Analysis,2,12,NumPy Arrays,Scenario,Data and Processing,,Data analysis
+Python Data Analysis,4,12,Pandas Primer,Scenario,Data and Processing,,Data analysis
+Python Data Analysis,6,12,Data Visualization,Scenario,API,,Data analysis
+Python Data Analysis,7,12,Signal Processing and Time Series,Scenario,API,,Data analysis
+Python Data Analysis,8,12,Working with Databases,Scenario,API,,Data analysis
+Python Data Analysis,9,12,Analyzing Textual Data and Social Media,Scenario,GUI,,Data analysis
+Python Data Analysis,10,12,Predictive Analytics and Machine Learning,Scenario,Others/Generic,,Data analysis
+Python Data Analysis,11,12,Environments Outside the Python Ecosystem and Cloud Computing,Scenario,Others/Generic,,Data analysis
+Python Data Analysis,12,12,"Performance Tuning, Profilling, and Concurrency",Scenario,Others/Generic,,Data analysis
+Python Data Analytics,1,11,An Introduction to Data Analysis,Scenario,Others/Generic,,Data analysis
+Python Data Analytics,3,11,The NumPy Library,Scenario,Data and Processing,,Data analysis
+Python Data Analytics,4,11,The pandas Library---An Introduction,Scenario,Data and Processing,,Data analysis
+Python Data Analytics,5,11,pandas: Reading and Writing Data,Scenario,Data and Processing,,Data analysis
+Python Data Analytics,6,11,pandas in Depth: Data Manipulation,Scenario,Data and Processing,,Data analysis
+Python Data Analytics,7,11,Data Visualization with matplotlib,Scenario,Data and Processing,,Data analysis
+Python Data Analytics,8,11,Machine Learning with scikit-learn,Scenario,API,Scikit-learn,Data analysis
+Python Data Analytics,9,11,An Example---Meteorological Data,Scenario,GUI,,Data analysis
+Python Data Analytics,10,11,Embadding the Javascript D3 Library in IPython Notebook,Scenario,GUI,,Data analysis
+Python Data Analytics,11,11,Recognizing Handwritten Digits,Scenario,Data and Processing,,Data analysis
+Python for Data Analysis,2,12,Introductory Examples,Scenario,Data and Processing,,Data analysis
+Python for Data Analysis,4,12,NumPy Basics: Arrays and Vectorized Computation,Scenario,Data and Processing,,Data analysis
+Python for Data Analysis,8,12,Plotting and Visualization,Scenario,Data and Processing,,Data analysis
+Python for Data Analysis,11,12,Financial and Economic Data Applications,Scenario,Data and Processing,,Data analysis
+Python for Data Analysis,12,12,Advanced NumPy,Scenario,Others/Generic,,Data analysis
+Python for Google App Engine,2,8,A More Complex Application,Scenario,Others/Generic,,Web development
+Python for Google App Engine,5,8,Storing Data in Google Cloud SQL,Scenario,Data and Processing,,Web development
+Python for Google App Engine,6,8,Using Channels to Implement a Real-time Application,Scenario,Data and Processing,,Web development
+Python for Google App Engine,7,8,Building an Application with Django,Scenario,Others/Generic,,Web development
+Python for Google App Engine,8,8,Exposing a REST API with Google Cloud Endpoints,Scenario,API,,Web development
+Python for Kids,4,18,Drawing with Turtles,Scenario,GUI,,Generic
+Python for Kids,7,18,Recycling Your Code with Functions and Modules,Scenario,Others/Generic,,Generic
+Python for Kids,10,18,Useful Python Modules,Scenario,GUI,,Generic
+Python for Kids,11,18,More Turtle Graphics,Scenario,GUI,,Generic
+Python for Kids,12,18,Using Tkinter for Better Graphics,Scenario,GUI,,Generic
+Python for Kids,13,18,Beginning Your First Game: Bounce!,Scenario,Others/Generic,,Generic
+Python for Kids,14,18,Finishing /your First Game: Bounce!,Scenario,Others/Generic,,Generic
+Python for Kids,15,18,Creating Graphics for The Mr.Stick Man Game,Scenario,Others/Generic,,Generic
+Python for Kids,16,18,Developing The Mr.Stick Man Game,Scenario,Others/Generic,,Generic
+Python for Kids,17,18,Creating Mr.Stick Man,Scenario,Others/Generic,,Generic
+Python for Kids,18,18,Completing The Mr.Stick Man Game,Scenario,Others/Generic,,Generic
+Python GUI Programming Cookbook,1,11,Creating the GUI Form and Adding Widgets,Scenario,GUI,,Computer graphics
+Python GUI Programming Cookbook,3,11,Look and Feel Customization,Scenario,Others/Generic,,Computer graphics
+Python GUI Programming Cookbook,5,11,Matplotlib Charts,Scenario,Others/Generic,,Computer graphics
+Python GUI Programming Cookbook,7,11,Storing Data in Out MySQL Database via Our GUI,Scenario,GUI,,Computer graphics
+Python GUI Programming Cookbook,9,11,Extending Our GUI with the wxPython Library,Scenario,GUI,,Computer graphics
+Python GUI Programming Cookbook,10,11,Creating Amazing 3D GUIs with PyOpenGL and PyGLet,Scenario,GUI,PyGLet,Computer graphics
+Python in Education,2,5,A Pythonic Case Study: Raspberry Pi,Scenario,Others/Generic,,Educational purposes
+Python Machine Learning,1,13,Giving Computers the Ability to Learn from Data,Scenario,Others/Generic,,Machine learning
+Python Machine Learning,2,13,Training Machine Learning Algorithms of Classification,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,3,13,A Tour of Machine Learning Classifiers Using Scikit-learn,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,4,13,Building Good Training Sets - Data Preprocessing,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,7,13,Combining Different Models for Ensemble Learning,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,8,13,Applying Machine Learning to Sentiment Analysis,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,9,13,Embedding a Machine Learning Model into a Web Application,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,10,13,Predicting Continuous Target Variables with Regression Analysis,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,11,13,Working with Unabeled Data - Clustering Analysis,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,12,13,Trainging Artificial Nerual Networks for Image Recognition,Scenario,Data and Processing,,Machine learning
+Python Machine Learning,13,13,Parallelizing Neural Network Training with Theano,Scenario,Data and Processing,,Machine learning
+Python Parallel Programming Cookbook,6,6,GPU Programming with Python,Scenario,Data and Processing,,Educational purposes
+Python Playground,1,14,Parasing Itunes Playlists,Scenario,Others/Generic,,Generic
+Python Playground,2,14,Spirographs,Scenario,GUI,,Generic
+Python Playground,3,14,Conway's Game of Lift,Scenario,Others/Generic,,Generic
+Python Playground,5,14,Boids: Simulating a Flock,Scenario,Others/Generic,,Generic
+Python Playground,6,14,ASCII ART,Scenario,GUI,,Generic
+Python Playground,7,14,Photomosaics,Scenario,GUI,,Generic
+Python Playground,8,14,Autostereograms,Scenario,GUI,,Generic
+Python Playground,9,14,Understanding OpenGL,Scenario,API,,Generic
+Python Playground,10,14,Particle Systems,Scenario,GUI,,Generic
+Python Playground,11,14,Volume Rendering,Scenario,GUI,,Generic
+Python Playground,13,14,Laser Audio Display,Scenario,GUI,,Generic
+Python Playground,14,14,A Raspberry Pi-Based Weather Monitor,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",15,24,Standard Library Modules,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",16,24,The sys Module,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",17,24,The os System Module,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",18,24,The re Pattern-Matching Module,Scenario,Data and Processing,,Generic
+"Python Pocket Reference, 4th Edition",19,24,Object Persistence Modules,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",20,24,The tkinter GUI Module and Tools,Scenario,GUI,,Generic
+"Python Pocket Reference, 4th Edition",21,24,Internet Modules and Tools,Scenario,Others/Generic,,Generic
+"Python Pocket Reference, 4th Edition",22,24,Other Standard Library Modules,Scenario,GUI,,Generic
+"Python Pocket Reference, 4th Edition",23,24,Python Portable SQL Database API,Scenario,API,,Generic
+Python Projects for Kids,8,10,Pygame,Scenario,Data and Processing,Pygame,Generic
+Python Projects for Kids,9,10,Tiny Tennis,Scenario,Others/Generic,,Generic
+Python Scripting for Computational Science,5,12,"Combining Python with Fortran, C, and C++",Scenario,Others/Generic,,Educational purposes
+Python Scripting for Computational Science,7,12,Web Interfaces and CGI Programming,Scenario,GUI,,Educational purposes
+Python Scripting for Computational Science,9,12,Fortran Programming with NumPy Arrays,Scenario,Data and Processing,,Educational purposes
+Python Scripting for Computational Science,10,12,C and C++ Programming with NumPy Arrays,Scenario,Data and Processing,,Educational purposes
+Python Scripting for Computational Science,12,12,Tools and Examples,Scenario,Others/Generic,,Educational purposes
+Python Unlocked,5,8,Elegance with Design Patterns,Scenario,Others/Generic,,Generic
+Python Unlocked,8,8,Scalling Python,Scenario,Others/Generic,,Generic
+Python Web Development with Django,1,12,Practical Python for Django,Scenario,Data and Processing,,Web development
+Python Web Development with Django,2,12,Django for the Impatient: Building a Blog,Scenario,API,,Web development
+Python Web Development with Django,5,12,"URLs, HTTP Mechanisms, and Views URLs",Scenario,API,,Web development
+Python Web Development with Django,6,12,Templates and Form Processing Templates,Scenario,Data and Processing,,Web development
+Python Web Development with Django,7,12,Photo Gallery,Scenario,GUI,,Web development
+Python Web Development with Django,8,12,Content Management System,Scenario,Data and Processing,,Web development
+Python Web Development with Django,9,12,Liveblog,Scenario,Others/Generic,,Web development
+Python Web Development with Django,10,12,Pastebin,Scenario,Others/Generic,,Web development
+Python Web Development with Django,11,12,Advanced Django Programming,Scenario,Others/Generic,,Web development
+Python XML,1,10,Python and XML,Scenario,API,,Web development
+Python XML,2,10,XML Fundamentals,Scenario,Others/Generic,,Web development
+Python XML,3,10,The Simple API for XML,Scenario,API,,Web development
+Python XML,5,10,Querying XML with Xpath,Scenario,Data and Processing,,Web development
+Python XML,6,10,Transforming XML with XSLT,Scenario,Data and Processing,,Web development
+Python XML,7,10,XML Validation and Dialects,Scenario,Data and Processing,,Web development
+Python XML,8,10,Python Internet APIs,Scenario,API,,Web development
+Python XML,9,10,"Python, Web Services, and SOAP",Scenario,Data and Processing,,Web development
+Raspberry Pi Cookbook for Python Programmers,3,11,Using Python for Automation and Productivity,Scenario,Data and Processing,,Others
+Raspberry Pi Cookbook for Python Programmers,4,11,Creating Games and Graphics,Scenario,GUI,,Others
+Raspberry Pi Cookbook for Python Programmers,5,11,Creating 3D Graphics,Scenario,GUI,,Others
+Raspberry Pi Cookbook for Python Programmers,6,11,Using Python to Drive Hardware,Scenario,Data and Processing,,Others
+Raspberry Pi Cookbook for Python Programmers,7,11,Sense and Display Real-world Data,Scenario,GUI,,Others
+Raspberry Pi Cookbook for Python Programmers,8,11,Work on Projects with the Raspberry Pi Camera Module,Scenario,Others/Generic,,Others
+Raspberry Pi Cookbook for Python Programmers,9,11,Building Robots,Scenario,Data and Processing,,Others
+Raspberry Pi Cookbook for Python Programmers,10,11,Interfacing with Technology,Scenario,GUI,,Others
+SciPy and NumPy,2,5,NumPy,Scenario,Others/Generic,,Educational purposes
+SciPy and NumPy,3,5,SciPy,Scenario,Others/Generic,,Educational purposes
+SciPy and NumPy,4,5,SciKit: Taking SciPy One Step Further,Scenario,Others/Generic,,Educational purposes
+Spark for Python Developers,1,6,Setting Up a Spark Virtual Environment,Scenario,Others/Generic,,Data analysis
+Spark for Python Developers,2,6,Building Batch and Streaming Apps with Spark,Scenario,Others/Generic,,Data analysis
+Spark for Python Developers,3,6,Juggling Data with Spark,Scenario,Data and Processing,,Data analysis
+Spark for Python Developers,5,6,Steaming Live Data with Spark,Scenario,Data and Processing,,Data analysis
+Spark for Python Developers,6,6,Visualizing Insights and Trends,Scenario,GUI,,Data analysis
+Test-Driven Development with Python,1,22,Getting Django Set Up Using a Function Test,Scenario,Others/Generic,,Software testing
+Test-Driven Development with Python,6,22,Getting to the Minimun Viable Site,Scenario,API,,Software testing
+Test-Driven Development with Python,7,22,"Prettification: Layout and Styling, and What to Test About It",Scenario,GUI,,Software testing
+Test-Driven Development with Python,9,22,Automating Deployment with Fabric,Scenario,API,,Software testing
+Test-Driven Development with Python,12,22,More Advanced Forms,Scenario,GUI,,Software testing
+Test-Driven Development with Python,13,22,"Dipping Out Toes, Very Tentativaly, into Javascript",Scenario,Others/Generic,,Software testing
+Test-Driven Development with Python,15,22,"User Authentication, Integrating Third-Party Plugins, and Mocking with Javascript",Scenario,API,,Software testing
+Test-Driven Development with Python,16,22,Server-Side Authentication and Mocking in Python,Scenario,API,,Software testing
+Test-Driven Development with Python,20,22,Continuous Integration (CI),Scenario,Data and Processing,,Software testing
+Test-Driven Development with Python,21,22,"The Token Social Bit, the Page Pattern, and an Exercise for the Reader",Scenario,Others/Generic,,Software testing
+"Think Python, 2nd Edition",4,21,Case Study: Interface Design,Scenario,Others/Generic,,Generic
+"Think Python, 2nd Edition",7,21,Iteration,Scenario,Data and Processing,,Generic
+"Think Python, 2nd Edition",9,21,Case Study: Word Play,Scenario,Others/Generic,,Generic
+"Think Python, 2nd Edition",14,21,Files,Scenario,Others/Generic,,Generic
+"Think Python, 2nd Edition",21,21,Analysis of Algorithms,Scenario,Data and Processing,,Generic
+"Web Development with Django Cookbook, 2nd Edition",2,11,Database Structure,Scenario,Data and Processing,,Web development
+"Web Development with Django Cookbook, 2nd Edition",5,11,Custom Templates Filter and Tags,Scenario,Data and Processing,,Web development
+"Web Development with Django Cookbook, 2nd Edition",6,11,Model Administration,Scenario,Others/Generic,,Web development
+"Web Development with Django Cookbook, 2nd Edition",7,11,Django CMS,Scenario,Data and Processing,,Web development
+Web Scraping with Python,2,9,Scraping the Data,Scenario,API,,Web development
+Web Scraping with Python,3,9,Caching Downloads,Scenario,Others/Generic,,Web development
+Web Scraping with Python,4,9,Concurrent Downloading,Scenario,Others/Generic,,Web development
+Web Scraping with Python,5,9,Dynamic Content,Scenario,Others/Generic,,Web development
+Web Scraping with Python,7,9,Solving CAPTCHA,Scenario,Others/Generic,,Web development
+Web Scraping with Python,8,9,Scrapy,Scenario,API,,Web development
