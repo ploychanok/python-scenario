@@ -29,17 +29,29 @@ col1, col2 = st.columns(2)
 with col1:
     selected_chapter_title = st.radio("Select a Chapter Title:", table_data['Chapter Title'].unique())
 
-# Display Chapter Summary, Book Name, Chapter Number, and PDF link in the second column
+# Display Chapter Summary, Book Name, Chapter Number, Code snippet, Code snippet description, and Download PDF link in the second column
 with col2:
     if selected_chapter_title:
         # Filter the data based on the selected Chapter Title
         filtered_chapter = filtered_scenarios[filtered_scenarios['Chapter Title'] == selected_chapter_title]
 
-        # Display Chapter Summary, Book Name, Chapter Number, and PDF link
-        st.title(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
+        # Display Chapter Summary, Book Name, Chapter Number
+        st.subheader(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
         st.write(f"Book Name: {filtered_chapter['Textbook'].iloc[0]}")
         st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
         st.write(filtered_chapter['Chapter Summary'].iloc[0])
+
+        code_snippet = filtered_chapter['Code snippet'].iloc[0]
+        if pd.notna(code_snippet):
+            st.markdown("---")
+            st.subheader("Code snippet")
+            st.code(filtered_chapter['Code snippet'].iloc[0], language="python")
+            # st.subheader("Code snippet description")
+            st.write(filtered_chapter['Code snippet description'].iloc[0])
+        # else:
+        #     st.write("The code snippets from this chapter are not provided in the information source pages given.")
+
+        st.markdown("---")
 
         # Add a link to a PDF file based on the URL column in the DataFrame
         pdf_url = filtered_chapter['URL'].iloc[0]
