@@ -13,49 +13,41 @@ module_counts = learning_scenarios['Target Audience'].value_counts()
 st.sidebar.title("Scenario Analysis")
 selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
 selected_scenario = st.sidebar.selectbox(f"Select Scenario Instances for {selected_module}:", learning_scenarios['Scenario Instances'].unique())
+selected_chapter_title = st.sidebar.selectbox("Select a Chapter Title:", learning_scenarios[learning_scenarios['Scenario Instances'] == selected_scenario]['Chapter Title'].unique())
 
-# Filter data based on selected module and scenario
-filtered_scenarios_module = learning_scenarios[learning_scenarios['Target Audience'] == selected_module]
-filtered_scenarios = filtered_scenarios_module[filtered_scenarios_module['Scenario Instances'] == selected_scenario]
+# Filter data based on selected module, scenario, and chapter title
+filtered_chapter = learning_scenarios[
+    (learning_scenarios['Target Audience'] == selected_module) &
+    (learning_scenarios['Scenario Instances'] == selected_scenario) &
+    (learning_scenarios['Chapter Title'] == selected_chapter_title)
+]
 
 # Main content
-st.title(f"Chapter Titles for {selected_module} - {selected_scenario}")
-table_data = filtered_scenarios[['Chapter Title']]
+st.markdown(f"**{selected_module}** > **{selected_scenario}** > **{selected_chapter_title}**")
 
-# Create two columns
-col1, col2 = st.columns(2)
+# Display Chapter Summary, Book Name, Chapter Number, Code snippet, Code snippet description, and Download PDF link
+if not filtered_chapter.empty:
+    st.markdown("### Chapter Summary")
+    st.write(f"**Book Name:** {filtered_chapter['Textbook'].iloc[0]}")
+    st.write(f"**Chapter Number:** {filtered_chapter['Chapter Number'].iloc[0]}")
+    
+    chapter_summary = filtered_chapter['Chapter Summary'].iloc[0]
+    if pd.notna(chapter_summary):
+        st.write(chapter_summary)
 
-# Display the radio button list of Chapter Titles in the first column
-with col1:
-    selected_chapter_title = st.radio("Select a Chapter Title:", table_data['Chapter Title'].unique())
+        code_snippet = filtered_chapter['Code snippet'].iloc[0]
+        if pd.notna(code_snippet):
+            st.markdown("---")
+            st.markdown("### Sample Code Snippet")
+            st.code(code_snippet, language="python")
+            code_snippet_description = filtered_chapter['Code snippet description'].iloc[0]
+            if pd.notna(code_snippet_description):
+                st.write(code_snippet_description)
+   
+    st.markdown("---")
 
-# Display Chapter Summary, Book Name, Chapter Number, Code snippet, Code snippet description, and Download PDF link in the second column
-with col2:
-    if selected_chapter_title:
-        # Filter the data based on the selected Chapter Title
-        filtered_chapter = filtered_scenarios[filtered_scenarios['Chapter Title'] == selected_chapter_title]
-
-        # Display Chapter Summary, Book Name, Chapter Number
-        st.subheader(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
-        st.write(f"Book Name: {filtered_chapter['Textbook'].iloc[0]}")
-        st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
-        
-        chapter_summary = filtered_chapter['Chapter Summary'].iloc[0]
-        if pd.notna(chapter_summary):
-            st.write(chapter_summary)
-
-            code_snippet = filtered_chapter['Code snippet'].iloc[0]
-            if pd.notna(code_snippet):
-                st.markdown("---")
-                st.subheader("Code snippet")
-                st.code(code_snippet, language="python")
-                # st.subheader("Code snippet description")
-                code_snippet_description = filtered_chapter['Code snippet description'].iloc[0]
-                if pd.notna(code_snippet_description):
-                    st.write(code_snippet_description)
-       
-        st.markdown("---")
-
-        # Add a link to a PDF file based on the URL column in the DataFrame
-        pdf_url = filtered_chapter['URL'].iloc[0]
-        st.markdown(f"[Download PDF]({pdf_url})")
+    # Add a link to a PDF file based on the URL column in the DataFrame
+    pdf_url = filtered_chapter['URL'].iloc[0]
+    st.markdown(f"[Download PDF]({pdf_url})")
+else:
+    st.warning("No data available for the selected criteria.")
