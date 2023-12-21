@@ -28,7 +28,7 @@ st.markdown(f"**{selected_module}** > **{selected_scenario}** > **{selected_chap
 # Display Chapter Summary, Book Name, Chapter Number, Code snippet, Code snippet description, and Download PDF link
 if not filtered_chapter.empty:
     st.markdown("### Chapter Summary")
-    st.write(f"**Book Name:** {filtered_chapter['Textbook'].iloc[0]}")
+    st.write(f"**Book Name:** {filtered_chapter['Dispaly Book Name'].iloc[0]}")
     st.write(f"**Chapter Number:** {filtered_chapter['Chapter Number'].iloc[0]}")
     
     chapter_summary = filtered_chapter['Chapter Summary'].iloc[0]
