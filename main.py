@@ -39,18 +39,21 @@ with col2:
         st.subheader(f"Chapter Summary for {selected_module} - {selected_scenario} - {selected_chapter_title}")
         st.write(f"Book Name: {filtered_chapter['Textbook'].iloc[0]}")
         st.write(f"Chapter Number: {filtered_chapter['Chapter Number'].iloc[0]}")
-        st.write(filtered_chapter['Chapter Summary'].iloc[0])
+        
+        chapter_summary = filtered_chapter['Chapter Summary'].iloc[0]
+        if pd.notna(chapter_summary):
+            st.write(chapter_summary)
 
-        code_snippet = filtered_chapter['Code snippet'].iloc[0]
-        if pd.notna(code_snippet):
-            st.markdown("---")
-            st.subheader("Code snippet")
-            st.code(filtered_chapter['Code snippet'].iloc[0], language="python")
-            # st.subheader("Code snippet description")
-            st.write(filtered_chapter['Code snippet description'].iloc[0])
-        # else:
-        #     st.write("The code snippets from this chapter are not provided in the information source pages given.")
-
+            code_snippet = filtered_chapter['Code snippet'].iloc[0]
+            if pd.notna(code_snippet):
+                st.markdown("---")
+                st.subheader("Code snippet")
+                st.code(code_snippet, language="python")
+                # st.subheader("Code snippet description")
+                code_snippet_description = filtered_chapter['Code snippet description'].iloc[0]
+                if pd.notna(code_snippet_description):
+                    st.write(code_snippet_description)
+       
         st.markdown("---")
 
         # Add a link to a PDF file based on the URL column in the DataFrame
