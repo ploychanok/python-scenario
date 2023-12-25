@@ -5,56 +5,62 @@ import pandas as pd
 file_path = "data.csv"
 df = pd.read_csv(file_path)
 
-learning_scenarios = df[df['Category'] == 'Scenario']
-
-module_counts = learning_scenarios['Target Audience'].value_counts()
-
 # Sidebar
 st.sidebar.title("Scenario Analysis")
 option = st.sidebar.radio("Select Analysis Option:", ["By Module", "By Library"])
 
-if option == "By Module":
-    selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
-    selected_scenario = st.sidebar.selectbox(f"Select Scenario Instances for {selected_module}:", learning_scenarios['Scenario Instances'].unique())
-    selected_chapter_title = st.sidebar.selectbox("Select a Chapter Title:", learning_scenarios[learning_scenarios['Scenario Instances'] == selected_scenario]['Chapter Title'].unique())
+# Initialize variables
+selected_module = None
+selected_scenario = None
+selected_chapter_title = None
+selected_library = None
+filtered_chapter = pd.DataFrame()  # Initialize as an empty DataFrame
 
-    # Filter data based on selected module, scenario, and chapter title
-    filtered_chapter = learning_scenarios[
-        (learning_scenarios['Target Audience'] == selected_module) &
-        (learning_scenarios['Scenario Instances'] == selected_scenario) &
-        (learning_scenarios['Chapter Title'] == selected_chapter_title)
-    ]
-    
+if option == "By Module":
+    # Filter by scenario category
+    learning_scenarios = df[df['Category'] == 'Scenario']
+
+    # Display available modules and scenarios in the sidebar
+    module_counts = learning_scenarios['Target Audience'].value_counts()
+    selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
+
+    # Filter by the selected module
+    module_filter = learning_scenarios['Target Audience'] == selected_module
+    module_scenarios = learning_scenarios[module_filter]
+    selected_scenario = st.sidebar.selectbox(f"Select Scenario Instances for {selected_module}:", module_scenarios['Scenario Instances'].unique())
+
+    # Filter by selected module and scenario
+    scenario_filter = (learning_scenarios['Target Audience'] == selected_module) & (learning_scenarios['Scenario Instances'] == selected_scenario)
+    filtered_chapter = learning_scenarios[scenario_filter]
+
+    # Display available chapter titles for the selected module and scenario
+    selected_chapter_title = st.sidebar.selectbox("Select a Chapter Title:", filtered_chapter['Chapter Title'].unique())
+
 elif option == "By Library":
     # Extract unique libraries from the "Libraries" column and split them by ','
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
 
+    # Display library selection in the sidebar
     selected_library = st.sidebar.selectbox("Select a Library:", list(libraries))
 
-    # Filter data based on the selected library
-    library_names = df['Libraries'].str.split(',').explode().str.strip()
-    chapters_for_library = learning_scenarios.loc[library_names == selected_library, 'Chapter Title'].unique()
+    # Filter DataFrame based on selected library
+    library_filter = df['Libraries'].str.contains(selected_library, case=False, na=False)
+    filtered_chapter = df[library_filter]
 
-    st.sidebar.subheader(f"Chapter Titles mentioning {selected_library}")
-    selected_chapter_title = st.sidebar.selectbox("Select a Chapter Title:", chapters_for_library)
-
-    # Filter data based on the selected library and chapter title
-    filtered_chapter = learning_scenarios[
-        (library_names == selected_library) &
-        (learning_scenarios['Chapter Title'] == selected_chapter_title)
-    ]
+    # Display available chapter titles for the selected library
+    if not filtered_chapter.empty:
+        # Use st.sidebar.selectbox to display chapters in a dropdown menu
+        selected_chapter_title = st.sidebar.selectbox("Select a Chapter:", filtered_chapter['Chapter Title'].tolist())
+    else:
+        st.sidebar.write("No chapters found for selected library:", selected_library)
 
 # Main content
 if not filtered_chapter.empty:
-    if option == "By Module":
-        st.markdown(f"**{selected_module}** > **{selected_scenario}** > **{selected_chapter_title}**")
-    elif option == "By Library":
-        st.markdown(f"**{selected_library}** > **{selected_chapter_title}**")
-
+    st.markdown(f"**{selected_module}** > **{selected_scenario}** > **{selected_chapter_title}**")
     st.markdown("### Chapter Summary")
     st.write(f"**Book Name:** {filtered_chapter['Dispaly Book Name'].iloc[0]}")
     st.write(f"**Chapter Number:** {filtered_chapter['Chapter Number'].iloc[0]}")
-    
+
     chapter_summary = filtered_chapter['Chapter Summary'].iloc[0]
     if pd.notna(chapter_summary):
         st.write(chapter_summary)
@@ -64,14 +70,14 @@ if not filtered_chapter.empty:
             st.markdown("---")
             st.markdown("### Sample Code Snippet")
             st.code(code_snippet, language="python")
+            
             code_snippet_description = filtered_chapter['Code snippet description'].iloc[0]
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
-   
+
     pdf_url = filtered_chapter['URL'].iloc[0]
     if pd.notna(pdf_url):
         st.markdown("---")
         st.markdown(f"[Download PDF]({pdf_url})")
-    
 else:
     st.warning("No data available for the selected criteria.")
