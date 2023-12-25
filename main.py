@@ -51,8 +51,15 @@ elif option == "By Library":
     if not filtered_chapter.empty:
         # Use st.sidebar.selectbox to display chapters in a dropdown menu
         selected_chapter_title = st.sidebar.selectbox("Select a Chapter:", filtered_chapter['Chapter Title'].tolist())
+
+        # Get corresponding Scenario Instances and Target Audience for the selected chapter
+        selected_row = filtered_chapter[filtered_chapter['Chapter Title'] == selected_chapter_title].iloc[0]
+        selected_module = selected_row['Scenario Instances']
+        selected_scenario = selected_row['Target Audience']
+
     else:
         st.sidebar.write("No chapters found for selected library:", selected_library)
+
 
 # Main content
 if not filtered_chapter.empty:
