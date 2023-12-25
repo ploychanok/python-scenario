@@ -1,6 +1,7 @@
 import streamlit as st
 from filter_chapters import filter_chapters_by_module, filter_chapters_by_library, display_chapter_selection
 import pandas as pd
+from diagram import display_chord_diagram
 
 file_path = "data.csv"
 df = pd.read_csv(file_path)
@@ -53,10 +54,13 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
             code_snippet_description = selected_chapter['Code snippet description'].iloc[0]
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
+                
+    # Chord diagram
+    # display_chord_diagram(df)
 
     pdf_url = selected_chapter['URL'].iloc[0]
     if pd.notna(pdf_url):
         st.markdown("---")
-        st.markdown(f"[Download PDF]({pdf_url})")
+        st.markdown(f"[Link to TextBook]({pdf_url})")
 else:
     st.warning("No data available for the selected criteria.")
