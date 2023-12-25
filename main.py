@@ -31,13 +31,13 @@ df = pd.read_csv(file_path)
 
 # Sidebar
 st.sidebar.title("Scenario Analysis")
-option = st.sidebar.radio("Select Analysis Option:", ["By Module", "By Library"])
+option = st.sidebar.radio("Select Analysis Option:", ["By Audience", "By Library"])
 
 # Initialize variables
 selected_module, selected_scenario, selected_chapter_title, selected_library = None, None, None, None
 filtered_chapter = pd.DataFrame()
 
-if option == "By Module":
+if option == "By Audience":
     learning_scenarios = df[df['Category'] == 'Scenario']
     module_counts = learning_scenarios['Target Audience'].value_counts()
     selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
