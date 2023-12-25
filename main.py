@@ -1,7 +1,7 @@
 import streamlit as st
 from filter_chapters import filter_chapters_by_module, filter_chapters_by_library, display_chapter_selection
 import pandas as pd
-from diagram import display_chord_diagram
+# from diagram import display_chord_diagram
 
 file_path = "data.csv"
 df = pd.read_csv(file_path)
