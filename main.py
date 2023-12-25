@@ -44,10 +44,10 @@ if not filtered_chapter.empty:
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
    
-    st.markdown("---")
-
-    # Add a link to a PDF file based on the URL column in the DataFrame
     pdf_url = filtered_chapter['URL'].iloc[0]
-    st.markdown(f"[Download PDF]({pdf_url})")
+    if pd.notna(pdf_url):
+        st.markdown("---")
+        st.markdown(f"[Download PDF]({pdf_url})")
+    
 else:
     st.warning("No data available for the selected criteria.")

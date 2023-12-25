@@ -1,5 +1,5 @@
-Textbook,Dispaly Book Name,Chapter Number,Chapter Title,Category,Scenario Instances,Target Audience,Chapter Summary,URL,Code snippet,Code snippet description
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),4,Easier Python Packaging with flit,Scenario,Others/Generic,Generic,"The chapter presents flit, a Python library that simplifies the process of submitting a Python package to the Python Package Index (PyPI). The traditional process of submitting a package requires creating a setup.py file which can be tedious, whereas flit can create a configuration file interactively. flit requires only minimal package information, and for straightforward packages, it is simple to upload them to PyPI. The chapter provides step-by-step instructions on how to install and use flit, as well as how to complete the additional steps necessary to submit a package to PyPI. The simplified process that flit provides helps developers to more easily package and distribute their Python projects.",,"from setuptools import setup
+Textbook,Dispaly Book Name,Chapter Number,Chapter Title,Category,Scenario Instances,Target Audience,Chapter Summary,URL,Code snippet,Code snippet description,Libraries
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),4,Easier Python Packaging with flit,Scenario,Others/Generic,Generic,"The chapter presents flit, a Python library that simplifies the process of submitting a Python package to the Python Package Index (PyPI). The traditional process of submitting a package requires creating a setup.py file which can be tedious, whereas flit can create a configuration file interactively. flit requires only minimal package information, and for straightforward packages, it is simple to upload them to PyPI. The chapter provides step-by-step instructions on how to install and use flit, as well as how to complete the additional steps necessary to submit a package to PyPI. The simplified process that flit provides helps developers to more easily package and distribute their Python projects.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"from setuptools import setup
 
 setup(
     name=""my_package"",
@@ -9,8 +9,8 @@ setup(
     description=""A description of my package"",
     packages=[""my_package""],
     install_requires=[""numpy>=1.13.3"", ""matplotlib>=2.1.0""],
-)","In the snippet, a typical `setup()` function is used to define metadata about the package and its dependencies. The example shows how to define the `name`, `version`, `description`, `packages`, and `install_requires` for the package and specifies that it requires numpy and matplotlib libraries to be present in the specified version or later. This `setup()` function can be run on its own or with flit to build a distributable package that can be installed via pip or other package managers."
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),5,Command-Line Applications,Scenario,Others/Generic,Generic,"The chapter introduces two Python libraries for creating command-line applications with improved user experience. The first library, colorama, allows for the use of colors in the command-line output, which can significantly improve the user interface. The second library, begins, simplifies the creation of command-line interfaces by providing an easy-to-use interface for specifying and processing command-line options. Begins also offers additional features such as automatic handling of environment variables, config files, error handling, and logging. However, if begins seems too advanced, there are other options available such as click.",,"import argparse
+)","In the snippet, a typical `setup()` function is used to define metadata about the package and its dependencies. The example shows how to define the `name`, `version`, `description`, `packages`, and `install_requires` for the package and specifies that it requires numpy and matplotlib libraries to be present in the specified version or later. This `setup()` function can be run on its own or with flit to build a distributable package that can be installed via pip or other package managers.","1. `flit` is a library that makes it easy to create and publish Python packages to the Python Package Index (PyPI). It simplifies the packaging process by allowing you to define your package metadata in a `pyproject.toml` file, and provides simple commands to build and publish your package. `flit` is a good choice for small or simple projects, and provides a simpler alternative to the more complex `setuptools`."
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),5,Command-Line Applications,Scenario,Others/Generic,Generic,"The chapter introduces two Python libraries for creating command-line applications with improved user experience. The first library, colorama, allows for the use of colors in the command-line output, which can significantly improve the user interface. The second library, begins, simplifies the creation of command-line interfaces by providing an easy-to-use interface for specifying and processing command-line options. Begins also offers additional features such as automatic handling of environment variables, config files, error handling, and logging. However, if begins seems too advanced, there are other options available such as click.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"import argparse
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 
@@ -23,8 +23,10 @@ parser.add_argument('--sum', dest='accumulate', action='store_const',
 
 args = parser.parse_args()
 
-print(args.accumulate(args.integers))","In this example, the argparse module is used to define command-line arguments for a Python program. The code defines an argument for integers that will be accumulated, and an optional argument to specify whether to sum the integers or return the maximum integer. The `parse_args()` method is then called to parse command-line arguments and generate a Namespace object holding the values of those arguments. Finally, the program runs and prints the result of either the maximum or the sum of the given integers."
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),6,Graphical User Interfaces,Scenario,GUI,Generic,"The chapter introduces the PyQt and tkinter libraries for creating graphical user interfaces (GUIs) in Python. The chapter also highlights two lesser-known libraries: pyqtgraph and pywebview. pyqtgraph is a chart-plotting library that offers different features than the more popular matplotlib library, with a focus on interactive and real-time visualization. pywebview allows for creating a browser-like interface as a desktop client interface, which is based on tools like cefpython and Electron. The chapter provides examples and code snippets to demonstrate how to use and create GUIs with these libraries, showcasing their usefulness in developing effective and interactive desktop applications.",,"
+print(args.accumulate(args.integers))","In this example, the argparse module is used to define command-line arguments for a Python program. The code defines an argument for integers that will be accumulated, and an optional argument to specify whether to sum the integers or return the maximum integer. The `parse_args()` method is then called to parse command-line arguments and generate a Namespace object holding the values of those arguments. Finally, the program runs and prints the result of either the maximum or the sum of the given integers.","1. `colorama`: A library that lets you use colors in your output to improve the user interface of your command-line applications.
+2. `begins`: A library that makes it easy to provide a rich interface for specifying and processing command-line options.
+"
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),6,Graphical User Interfaces,Scenario,GUI,Generic,"The chapter introduces the PyQt and tkinter libraries for creating graphical user interfaces (GUIs) in Python. The chapter also highlights two lesser-known libraries: pyqtgraph and pywebview. pyqtgraph is a chart-plotting library that offers different features than the more popular matplotlib library, with a focus on interactive and real-time visualization. pywebview allows for creating a browser-like interface as a desktop client interface, which is based on tools like cefpython and Electron. The chapter provides examples and code snippets to demonstrate how to use and create GUIs with these libraries, showcasing their usefulness in developing effective and interactive desktop applications.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"
 
 from tkinter import *
 
@@ -45,13 +47,17 @@ class Application(Frame):
 root = Tk() 
 app = Application(master=root)
 app.mainloop()
-","This code creates a very basic GUI using the Tkinter module in Python. It defines a class called `Application` that inherits from `Frame` and contains a constructor that sets up the application's widgets. In the constructor, two widgets are created: a label that says ""Hello, world!"" and a button that says ""QUIT"" and exits the application when clicked. Finally, an instance of the `Application` class is created with a `Tk()` instance as the master, and the `mainloop()` method is called to start the application."
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),8,Web APIs with hug,Scenario,API,Generic,"The chapter introduces the hug library, which simplifies the process of building web APIs. hug allows developers to create fully-functional web APIs with minimal code and configuration, making it a valuable tool for quickly building APIs. The chapter provides examples of how to use hug to define endpoints and specify input and output formats for a web API. Hug offers automatic API documentation, which makes it easy for developers to understand and use the API. The chapter also explains how to test a hug-based API and provides examples of how to test it using different tools like curl and Postman. Overall, the hug library provides a simple and efficient way to create web APIs with minimal setup or configuration.",,"import hug
+","This code creates a very basic GUI using the Tkinter module in Python. It defines a class called `Application` that inherits from `Frame` and contains a constructor that sets up the application's widgets. In the constructor, two widgets are created: a label that says ""Hello, world!"" and a button that says ""QUIT"" and exits the application when clicked. Finally, an instance of the `Application` class is created with a `Tk()` instance as the master, and the `mainloop()` method is called to start the application.","1. `PyQt`: A library that provides Python bindings for the Qt application framework. This is a feature-rich and widely used library for building desktop applications with GUIs.
+2. `wxPython`: A library that provides Python bindings for the wxWidgets GUI toolkit. wxPython is a cross-platform GUI toolkit that is written in C++ and provides native look-and-feel for various operating systems.
+3. `tkinter`: A part of the Python standard library that provides a lightweight GUI toolkit. It is relatively simple to use, and is often used for small GUI applications or for prototyping.
+4. `pyqtgraph`: A library that is much more than simply a chart-plotting library. It offers a different selection of features, and is particularly good for real-time and interactive visualization.
+5. `pywebview`: A library that allows you to create simple GUI windows by embedding a web page in them. It provides an easy way to create simple GUIs without having to learn a full GUI toolkit like PyQt or wxPython."
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),8,Web APIs with hug,Scenario,API,Generic,"The chapter introduces the hug library, which simplifies the process of building web APIs. hug allows developers to create fully-functional web APIs with minimal code and configuration, making it a valuable tool for quickly building APIs. The chapter provides examples of how to use hug to define endpoints and specify input and output formats for a web API. Hug offers automatic API documentation, which makes it easy for developers to understand and use the API. The chapter also explains how to test a hug-based API and provides examples of how to test it using different tools like curl and Postman. Overall, the hug library provides a simple and efficient way to create web APIs with minimal setup or configuration.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"import hug
 
 @hug.get('/greet/{name}')
 def greet(name):
-    return f'Hello, {name}!'","This code defines a simple web service endpoint that can be accessed using the GET method on an API endpoint. In this case, sending a GET request along with a string ('name') to the endpoint /greet/{name}, where {name} is a placeholder for a variable parameter. The endpoint responds with a formatted string that greets the caller with their input. You can run this application with the `hug` command on the command line. Once the service is up and running, a user can navigate to a URL like http://localhost:8000/greet/Jane on their client, and the web service will respond to the GET request by routing it to the greet() function and returning with ""Hello, Jane!""."
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),9,Dates and Times,Scenario,Others/Generic,Generic,"The chapter introduces several libraries in Python that are designed to work with dates and times. The chapter explains how to work with Python's built-in datetime module and highlights some of its more useful and powerful features, such as time zone support. The chapter also introduces two additional libraries for working with dates and times: arrow and pendulum. Arrow is a library that provides a more human-readable format for dates and times and makes it easy to do date and time arithmetic. Pendulum is another library that offers a similar interface to arrow but with additional support for things like leap years and time zones. Finally, the chapter introduces the parsedatetime library, which is designed to help with parsing natural language input into dates and times. Throughout the chapter, various examples and code snippets are used to demonstrate how to use these different libraries effectively in various tasks.",,"
+    return f'Hello, {name}!'","This code defines a simple web service endpoint that can be accessed using the GET method on an API endpoint. In this case, sending a GET request along with a string ('name') to the endpoint /greet/{name}, where {name} is a placeholder for a variable parameter. The endpoint responds with a formatted string that greets the caller with their input. You can run this application with the `hug` command on the command line. Once the service is up and running, a user can navigate to a URL like http://localhost:8000/greet/Jane on their client, and the web service will respond to the GET request by routing it to the greet() function and returning with ""Hello, Jane!"".","1. `hug`, which is a lightweight, yet powerful library for creating web APIs in Python. The chapter provides a step-by-step guide to create a simple API using `hug`, starting with installing `hug` using `pip`, defining endpoints with HTTP methods and parameters, and generating documentation for the API. No other libraries are mentioned in this chapter."
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),9,Dates and Times,Scenario,Others/Generic,Generic,"The chapter introduces several libraries in Python that are designed to work with dates and times. The chapter explains how to work with Python's built-in datetime module and highlights some of its more useful and powerful features, such as time zone support. The chapter also introduces two additional libraries for working with dates and times: arrow and pendulum. Arrow is a library that provides a more human-readable format for dates and times and makes it easy to do date and time arithmetic. Pendulum is another library that offers a similar interface to arrow but with additional support for things like leap years and time zones. Finally, the chapter introduces the parsedatetime library, which is designed to help with parsing natural language input into dates and times. Throughout the chapter, various examples and code snippets are used to demonstrate how to use these different libraries effectively in various tasks.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"
 from datetime import datetime
 
 # current date and time
@@ -62,8 +68,12 @@ print(f'{now.year}/{now.month}/{now.day}')
 
 # print datetime object with time
 print(f'{now.hour}:{now.minute}:{now.second}')
-","This code shows how to work with date and time in Python using the built-in datetime module. The `datetime.now()` function creates a datetime object representing the current date and time. We can then access the `year`, `month`, `day`, `hour`, `minute`, and `second` attributes of the object to display these values in various formats. The print statements in this code will output the current date in `year/month/day` format, and the current time in `hour:minute:second` format."
-20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),10,General-Purpose Libraries,Scenario,Others/Generic,Generic,"The chapter introduces two Python libraries that can improve the functionality of the Python standard library: Boltons and Cython. Boltons is a collection of small libraries that provide various functionalities such as caching, templates, and differentiation, while Cython is a library that allows developers to optimize normal Python code by converting it into C code. The chapter explains the features and functions of both libraries, and gives examples of how to use them in practical scenarios. The chapter also mentions a few other libraries such as flit, colorama, and parsedatetime, among others, that provide additional functionality to Python developers. The chapter highlights the usefulness of these libraries in improving the efficiency of Python code and suggests that adding such libraries to your program can make development much more efficient.",,"import random
+","This code shows how to work with date and time in Python using the built-in datetime module. The `datetime.now()` function creates a datetime object representing the current date and time. We can then access the `year`, `month`, `day`, `hour`, `minute`, and `second` attributes of the object to display these values in various formats. The print statements in this code will output the current date in `year/month/day` format, and the current time in `hour:minute:second` format.","1. `arrow` is a library for working with dates and times in Python that has a strong emphasis on usability and human readability. 
+2. `parsedatetime` is a library that allows your code to parse natural-language inputs for dates and times. 
+3. `dateutil` is a popular library for working with dates and times that is part of the standard Python library.
+4. `pytimeparse` is a library for parsing time expressions in a human-readable format and returning the number of seconds in the duration.
+5. `pendulum` is a date and time library for Python that provides intuitive and human-friendly syntax for working with time zones and date arithmetic."
+20 python libraries you aren't using but should,20 Python Libraries You Aren't Using (But Should),10,General-Purpose Libraries,Scenario,Others/Generic,Generic,"The chapter introduces two Python libraries that can improve the functionality of the Python standard library: Boltons and Cython. Boltons is a collection of small libraries that provide various functionalities such as caching, templates, and differentiation, while Cython is a library that allows developers to optimize normal Python code by converting it into C code. The chapter explains the features and functions of both libraries, and gives examples of how to use them in practical scenarios. The chapter also mentions a few other libraries such as flit, colorama, and parsedatetime, among others, that provide additional functionality to Python developers. The chapter highlights the usefulness of these libraries in improving the efficiency of Python code and suggests that adding such libraries to your program can make development much more efficient.",https://www.oreilly.com/content/20-python-libraries-you-arent-using-but-should/,"import random
 
 # Roll a six-sided die
 roll = random.randint(1, 6)
@@ -77,8 +87,9 @@ random.shuffle(items)
 
 print(f'Roll: {roll}')
 print(f'Random item: {rand_item}')
-print(f'Shuffled list: {items}')","This code shows how to use the `random` module in Python to generate random numbers and randomly select elements from sequences. The `random.randint(a, b)` function generates a random integer between a and b, inclusive. The `random.choice(seq)` function chooses a random item from a sequence (`seq`), such as a list or string. The `random.shuffle(seq)` function shuffles the order of the items in a sequence. The print statements in this code show examples of using these functions to roll a six-sided die, choose a random item from a list, and shuffle the items in a list."
-2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,8,Number Guessing Game,Scenario,Others/Generic,Generic,"This chapter provides an introduction to creating a simple program where the user guesses a randomly generated number. The steps involved in creating the program are explained in detail, including adding welcome messages, generating the random number, obtaining user input, checking the number of guesses, notifying the player about the number of guesses, and ending the game. The chapter also includes a complete code listing and some helpful hints for initialization and blank lines. Several exercises are also included in the chapter to help with practice.",,"
+print(f'Shuffled list: {items}')","This code shows how to use the `random` module in Python to generate random numbers and randomly select elements from sequences. The `random.randint(a, b)` function generates a random integer between a and b, inclusive. The `random.choice(seq)` function chooses a random item from a sequence (`seq`), such as a list or string. The `random.shuffle(seq)` function shuffles the order of the items in a sequence. The print statements in this code show examples of using these functions to roll a six-sided die, choose a random item from a list, and shuffle the items in a list.","1. `boltons` is a general-purpose collection of Python modules that cover a wide range of situations you may encounter. The library is well-maintained and high-quality, and it comes with several smaller libraries that focus on specific areas. For example, `boltons.cacheutils` provides tools for using a cache inside your code, and `boltons.strutils` provides several small utilities for manipulating strings.
+2. `Cython` is a language that is a superset of Python. It provides easy access to C-level performance, making it an excellent choice for people who need to execute computationally intensive tasks in Python. Cython can be used to write code that can be used directly from Python, or as an extension module for CPython."
+2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,8,Number Guessing Game,Scenario,Others/Generic,Generic,"This chapter provides an introduction to creating a simple program where the user guesses a randomly generated number. The steps involved in creating the program are explained in detail, including adding welcome messages, generating the random number, obtaining user input, checking the number of guesses, notifying the player about the number of guesses, and ending the game. The chapter also includes a complete code listing and some helpful hints for initialization and blank lines. Several exercises are also included in the chapter to help with practice.",https://link.springer.com/book/10.1007/978-3-030-20290-3,"
 import random
 
 print(""Welcome to the Number Guessing Game!"")
@@ -93,8 +104,8 @@ while guess != number:
         print(""Too high! Guess again."")
 
 print(f""Congratulations! You guessed the number ({number}) correctly!"")
-","This code snippet shows a simple implementation of a number guessing game in Python. It starts by generating a random integer between 1 and 100 using the `random.randint()` function. It then enters a loop that prompts the user to guess the correct number by entering an integer between 1 and 100. If the guess is too low or too high, the game provides feedback to the user, asking them to guess again. When the user correctly guesses the random number, the game congratulates the player and ends."
-2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,16,Curried Functions,Scenario,Data and Processing,Generic,"This chapter provides an introduction to currying concepts and shows how to create curried functions with Python. The chapter explains how to create a Python curried function with closures and provides some examples to help readers understand this concept. It also explains how to apply currying to real-world problems. In addition, the chapter covers the definitions and concepts of higher-order functions, which are required to understand curried functions. The chapter includes a complete code listing and several exercises for readers to practice creating curried functions with Python. ",,"def add(a):
+","This code snippet shows a simple implementation of a number guessing game in Python. It starts by generating a random integer between 1 and 100 using the `random.randint()` function. It then enters a loop that prompts the user to guess the correct number by entering an integer between 1 and 100. If the guess is too low or too high, the game provides feedback to the user, asking them to guess again. When the user correctly guesses the random number, the game congratulates the player and ends.",
+2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,16,Curried Functions,Scenario,Data and Processing,Generic,"This chapter provides an introduction to currying concepts and shows how to create curried functions with Python. The chapter explains how to create a Python curried function with closures and provides some examples to help readers understand this concept. It also explains how to apply currying to real-world problems. In addition, the chapter covers the definitions and concepts of higher-order functions, which are required to understand curried functions. The chapter includes a complete code listing and several exercises for readers to practice creating curried functions with Python. ",https://link.springer.com/book/10.1007/978-3-030-20290-3,"def add(a):
     def add_b(b):
         return a + b
     return add_b
@@ -103,14 +114,18 @@ add2 = add(2)
 add3 = add(3)
 
 print(add2(5)) # Output: 7
-print(add3(5)) # Output: 8","This code shows how to define a curried function in Python, which allows you to create a new function by partially applying the original function with some of its arguments. In this example, we define the `add` function that takes in an argument `a` and returns another function `add_b` that takes in a second argument `b` and returns the sum of `a` and `b`. We can then create new functions `add2` and `add3` by partially applying `add` with arguments 2 and 3, respectively. `add2` and `add3` are essentially new functions that add 2 and 3 to their input, respectively. The `print` statements in this code show how to use these curried functions to add 2 and 3 to the number 5, respectively."
-2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,25,Python Modules and Packages,Scenario,Others/Generic,Generic,"This chapter provides a detailed look at modules and packages in Python. It explains the differences between modules and packages, how to use them, and how to create them. The chapter covers topics such as importing modules, hiding certain elements of modules, searching for and importing modules, and setting up and creating packages. The differences between built-in and external modules are also explained. Additionally, the chapter shows how to create scripts using modules, describes the concept of abstract base classes and the process of subclassing them, and introduces readers to the protocol, polymorphism, and descriptor protocols. The chapter provides examples and source code to aid in better understanding. Several exercises for readers to practice are also included at the end of the chapter.",,"from mypackage.mymodule import my_function
+print(add3(5)) # Output: 8","This code shows how to define a curried function in Python, which allows you to create a new function by partially applying the original function with some of its arguments. In this example, we define the `add` function that takes in an argument `a` and returns another function `add_b` that takes in a second argument `b` and returns the sum of `a` and `b`. We can then create new functions `add2` and `add3` by partially applying `add` with arguments 2 and 3, respectively. `add2` and `add3` are essentially new functions that add 2 and 3 to their input, respectively. The `print` statements in this code show how to use these curried functions to add 2 and 3 to the number 5, respectively.",
+2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,25,Python Modules and Packages,Scenario,Others/Generic,Generic,"This chapter provides a detailed look at modules and packages in Python. It explains the differences between modules and packages, how to use them, and how to create them. The chapter covers topics such as importing modules, hiding certain elements of modules, searching for and importing modules, and setting up and creating packages. The differences between built-in and external modules are also explained. Additionally, the chapter shows how to create scripts using modules, describes the concept of abstract base classes and the process of subclassing them, and introduces readers to the protocol, polymorphism, and descriptor protocols. The chapter provides examples and source code to aid in better understanding. Several exercises for readers to practice are also included at the end of the chapter.",https://link.springer.com/book/10.1007/978-3-030-20290-3,"from mypackage.mymodule import my_function
 
 my_variable = ""hello""
 result = my_function(my_variable)
 
-print(result)","This code shows how to import a function from a module in a package in Python. In this example, we assume that we have a package named `mypackage` with a module named `mymodule` that contains a function named `my_function`. To use `my_function`, we import it using the `from ... import ...` syntax, specifying the package (`mypackage`) and module (`mymodule`) that contain the function. We can then call `my_function`, passing in a string `""hello""` as its argument and storing the result in the `result` variable. Finally, we print the value of `result` to the console."
-2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,37,TicTacToe Game,Scenario,GUI,Generic,"This chapter provides a comprehensive description of creating a two-player Tic Tac Toe game using Python. The chapter covers topics such as board creation, player moves, game logic and rules, alternate player turns, winning conditions and tie conditions. It also explains the importance and benefits of using object-oriented programming (OOP) concepts in game development. The chapter includes complete source code for building the game, along with step-by-step instructions on how the different objects interact with each other. Additionally, the chapter covers various techniques for improving the game, such as adding graphics and sounds. Several exercises are included at the end of the chapter for readers to practice and enhance their skills in Python game development.",,"class TicTacToe:
+print(result)","This code shows how to import a function from a module in a package in Python. In this example, we assume that we have a package named `mypackage` with a module named `mymodule` that contains a function named `my_function`. To use `my_function`, we import it using the `from ... import ...` syntax, specifying the package (`mypackage`) and module (`mymodule`) that contain the function. We can then call `my_function`, passing in a string `""hello""` as its argument and storing the result in the `result` variable. Finally, we print the value of `result` to the console.","1. `os`: A built-in Python library that provides a way of using operating system dependent functionality.
+2. `time`: Another built-in Python library that provides various time-related functions.
+3. `datetime`: A built-in Python library that provides classes for working with dates and times.
+4. `NumPy`: A third-party library for scientific computing in Python.
+5. `pandas`: A third-party library for data manipulation and analysis."
+2019 Book A Beginner's Guide To Python 3 Program,A Beginners Guide to Python 3 Programming,37,TicTacToe Game,Scenario,GUI,Generic,"This chapter provides a comprehensive description of creating a two-player Tic Tac Toe game using Python. The chapter covers topics such as board creation, player moves, game logic and rules, alternate player turns, winning conditions and tie conditions. It also explains the importance and benefits of using object-oriented programming (OOP) concepts in game development. The chapter includes complete source code for building the game, along with step-by-step instructions on how the different objects interact with each other. Additionally, the chapter covers various techniques for improving the game, such as adding graphics and sounds. Several exercises are included at the end of the chapter for readers to practice and enhance their skills in Python game development.",https://link.springer.com/book/10.1007/978-3-030-20290-3,"class TicTacToe:
     def __init__(self):
         self.board = [["" "" for _ in range(3)] for _ in range(3)]
 
@@ -167,8 +182,8 @@ print(result)","This code shows how to import a function from a module in a pack
                     return False
         return True","This code shows how to create a simple command-line implementation of the game Tic Tac Toe in Python. The game is implemented as a class called `TicTacToe`. The `__init__` method creates an empty game board, represented as a 3x3 matrix of spaces. The `play` method allows two players (represented by ""X"" and ""O"") to take turns placing pieces on the board until the game is over. The `get_winner` method checks the board to see if one of the players has won (by having three pieces in a row, column, or diagonal), and the `is_game_over` method checks if the game is over (either a player has won or the board is full).
 
-To play the game, you can create a new instance of the `TicTacToe` class and call the `play` method. The game will prompt the players to enter the row and column numbers for their moves and display the current state of the board until the game ends. The winner (if there is one) or ""Tie"" message will be displayed at the end of the game."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,3,Python Turtle Graphics,Scenario,GUI,Generic,"This chapter provides an introduction to Python's Turtle Graphics library. It explains the basics of the Turtle module and how it can be used to create simple vector graphics with x, y coordinates using commands such as forward and right. The chapter also briefly discusses other graphics libraries, such as PyOpenGL, which can be used to create more complex 3D scenes.",,"```python
+To play the game, you can create a new instance of the `TicTacToe` class and call the `play` method. The game will prompt the players to enter the row and column numbers for their moves and display the current state of the board until the game ends. The winner (if there is one) or ""Tie"" message will be displayed at the end of the game.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,3,Python Turtle Graphics,Scenario,GUI,Generic,"This chapter provides an introduction to Python's Turtle Graphics library. It explains the basics of the Turtle module and how it can be used to create simple vector graphics with x, y coordinates using commands such as forward and right. The chapter also briefly discusses other graphics libraries, such as PyOpenGL, which can be used to create more complex 3D scenes.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"```python
 import turtle
 
 # Set up the turtle graphics window
@@ -188,8 +203,18 @@ t.right(90)
 t.forward(100)
 
 # Exit the turtle graphics window on click
-turtle.exitonclick()","This code imports the `turtle` module, sets up a graphics window with a specific size and title, creates a `Turtle` object, and then moves it forward by 100 units, rotates it 90 degrees to the right, and moves it forward again by 100 units. Finally, it exits the turtle graphics window when the user clicks on it. This is a simple example of how to use turtle graphics to create basic shapes and drawings."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,4,Computer Generated Art,Scenario,GUI,Generic,"This chapter is about computer generated art, which is defined as any art that uses a computer or a computer program. The chapter gives an example of how simple Python code using the Turtle graphics library can be used to generate images that can be considered computer art. The chapter includes a recursive function that draws circles of different sizes in a location specified by x, y coordinates, creating images with fractal-like patterns. The chapter also examines various techniques for generating computer art, including creating art with mathematical functions and random numbers.",,"```python
+turtle.exitonclick()","This code imports the `turtle` module, sets up a graphics window with a specific size and title, creates a `Turtle` object, and then moves it forward by 100 units, rotates it 90 degrees to the right, and moves it forward again by 100 units. Finally, it exits the turtle graphics window when the user clicks on it. This is a simple example of how to use turtle graphics to create basic shapes and drawings.","1. `Turtle Graphics Library` : Python's built-in turtle graphics library provides a simple and user-friendly interface for creating graphics and shapes.
+
+2. `PyOpen GL` : A cross-platform and open-source graphics library that provides functionality for creating and manipulating 2D and 3D graphics and animations.
+
+3. `MatPlotLib` : A plotting library that is widely used for creating static, animated, and interactive visualizations in Python.
+
+4. `PyQtGraph` : A high-performance 2D graphics and plotting support for Python. It is built on top of the Qt toolkit and offers a user-friendly interface for creating data visualizations.
+
+5. `Pillow`: A library that adds support for opening, manipulating, and saving many image file formats.
+
+6. `Pyglet`: A cross-platform multimedia library that provides an OpenGL-based API for creating interactive applications and games using Python."
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,4,Computer Generated Art,Scenario,GUI,Generic,"This chapter is about computer generated art, which is defined as any art that uses a computer or a computer program. The chapter gives an example of how simple Python code using the Turtle graphics library can be used to generate images that can be considered computer art. The chapter includes a recursive function that draws circles of different sizes in a location specified by x, y coordinates, creating images with fractal-like patterns. The chapter also examines various techniques for generating computer art, including creating art with mathematical functions and random numbers.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"```python
 import turtle
 
 def draw_circle(x, y, size):
@@ -214,31 +239,15 @@ t = turtle.Turtle()
 draw_circle(0, 0, 200)
 
 # Exit the turtle graphics window on click
-turtle.exitonclick()","This code imports the `turtle` module, defines a function `draw_circle` that draws a circle at a specified (x, y) location with a given `size`, and recursively calls itself to draw smaller circles as long as the size is greater than 20. It then sets up a turtle graphics window with a specific size and title, creates a `Turtle` object, and uses the `draw_circle` function to generate a circle pattern. Finally, it exits the turtle graphics window when the user clicks on it. This is a simple example of how to generate computer-generated art using turtle graphics in Python."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,6,Graphing with Matplotlib pyplot,Scenario,GUI,Generic,"This chapter introduces the Matplotlib pyplot API, which is used to generate various types of charts and graphs using Matplotlib. The chapter explains how the pyplot API simplifies plotting creation and manipulation, and it introduces high-level functions such as bar(), plot(), scatter(), and pie() for creating different types of charts. The chapter also covers how parameters can be used with pyplot functions to customize plots and provides examples of how to create a simple bar chart and a grouped bar chart. The chapter concludes by discussing figures and subplots, with examples of how to generate a figure object that can be used to add multiple subplots to a single figure.",,"```python
-import matplotlib.pyplot as plt
-import numpy as np
+turtle.exitonclick()","This code imports the `turtle` module, defines a function `draw_circle` that draws a circle at a specified (x, y) location with a given `size`, and recursively calls itself to draw smaller circles as long as the size is greater than 20. It then sets up a turtle graphics window with a specific size and title, creates a `Turtle` object, and uses the `draw_circle` function to generate a circle pattern. Finally, it exits the turtle graphics window when the user clicks on it. This is a simple example of how to generate computer-generated art using turtle graphics in Python.","1. `Math`: Although not a library, the built-in 'Math' module in Python is used to perform mathematical operations to generate computer-generated art.
 
-# Set up a figure with a single axis
-fig, ax = plt.subplots()
+2. `Turtle Graphics Library`: Turtle Graphics Library is a built-in graphics library in Python that provides an easy-to-use interface for creating graphics.
 
-# Set the x and y values to plot
-x = np.linspace(-10, 10, 100)
-y = np.sin(x)
+3. `Pygame`: Pygame is a cross-platform set of Python modules designed for writing video games. In the context of the chapter, it is used to create a graphical window and loading images.
 
-# Plot the data
-ax.plot(x, y)
-
-# Add labels to the x and y axis
-ax.set_xlabel('X Axis')
-ax.set_ylabel('Y Axis')
-
-# Add a title to the figure
-ax.set_title('Sine Wave')
-
-# Show the plot
-plt.show()","This code imports the `matplotlib.pyplot` module as `plt` and the `numpy` module as `np`, sets up a figure with a single axis using the `subplots()` function, generates some data to plot using NumPy’s `linspace` method, and then plots the data using the `plot()` function of the axis object. The code also adds labels to the x- and y-axis and a title to the plot. Finally, it shows the plot using the `show()` function of the `plt` module. This is a simple example of how to use Matplotlib pyplot to generate a plot of a mathematical function."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,7,Graphical User Interfaces,Scenario,Others/Generic,Generic,"This chapter is about graphical user interfaces (GUIs) in general. The chapter introduces the concept of GUIs, explaining that they can provide a more intuitive and user-friendly experience compared to traditional command-line interfaces. The chapter discusses the advantages of GUIs, such as their ability to capture complex ideas in a visual format and their ease of use for non-technical users. The chapter provides an overview of the history of GUIs and their development over time, including the transition from textual displays to graphical displays. The chapter then covers the range of GUI libraries available for Python and explains how to create rich client graphical displays using these libraries. Finally, the chapter explains how to create windows, buttons, text fields, and labels, and provides examples of how to position and organize these GUI elements.",,"import tkinter as tk
+4. `Pillow`: Pillow is a Python Imaging Library that is used for opening, manipulating, and saving many different image file formats."
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,6,Graphing with Matplotlib pyplot,Scenario,GUI,Generic,"This chapter introduces the Matplotlib pyplot API, which is used to generate various types of charts and graphs using Matplotlib. The chapter explains how the pyplot API simplifies plotting creation and manipulation, and it introduces high-level functions such as bar(), plot(), scatter(), and pie() for creating different types of charts. The chapter also covers how parameters can be used with pyplot functions to customize plots and provides examples of how to create a simple bar chart and a grouped bar chart. The chapter concludes by discussing figures and subplots, with examples of how to generate a figure object that can be used to add multiple subplots to a single figure.",https://link.springer.com/book/10.1007/978-3-030-25943-3,67,"This code imports the `matplotlib.pyplot` module as `plt` and the `numpy` module as `np`, sets up a figure with a single axis using the `subplots()` function, generates some data to plot using NumPy’s `linspace` method, and then plots the data using the `plot()` function of the axis object. The code also adds labels to the x- and y-axis and a title to the plot. Finally, it shows the plot using the `show()` function of the `plt` module. This is a simple example of how to use Matplotlib pyplot to generate a plot of a mathematical function.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,7,Graphical User Interfaces,Scenario,Others/Generic,Generic,"This chapter is about graphical user interfaces (GUIs) in general. The chapter introduces the concept of GUIs, explaining that they can provide a more intuitive and user-friendly experience compared to traditional command-line interfaces. The chapter discusses the advantages of GUIs, such as their ability to capture complex ideas in a visual format and their ease of use for non-technical users. The chapter provides an overview of the history of GUIs and their development over time, including the transition from textual displays to graphical displays. The chapter then covers the range of GUI libraries available for Python and explains how to create rich client graphical displays using these libraries. Finally, the chapter explains how to create windows, buttons, text fields, and labels, and provides examples of how to position and organize these GUI elements.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"import tkinter as tk
 
 # Create a new window object
 window = tk.Tk()
@@ -253,8 +262,8 @@ label = tk.Label(window, text=""Hello, World!"")
 label.pack()
 
 # Run the main event loop
-window.mainloop()","This code imports the `tkinter` module as `tk`, creates a new window object using the `Tk()` method, sets the title of the window to 'My GUI', creates a `Label` widget that displays the text 'Hello, World!', adds the `Label` widget to the window using the `pack()` method, and then starts the main event loop using the `mainloop()` method of the window object. This is a simple example of how to create a GUI in Python using the Tkinter module."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,8,The wxPython GUI Library,Scenario,GUI,Generic,"This chapter is about the wxPython GUI library, which is a cross-platform library for creating graphical user interfaces in Python. The chapter explains that GUI elements in wxPython are contained within top-level windows, such as Frames or Dialogs, and that widgets or controls can be grouped together into containers, such as Panels. The chapter introduces the various components of wxPython and provides examples of how to create basic Frames and Dialogs, as well as Widgets/Controls such as buttons, checkboxes, and text fields. The chapter also covers more advanced topics, such as arranging Widgets within containers and drawing graphics, and it provides a SimpleGUIApplication exercise for readers to practice what they have learned.",,"```python
+window.mainloop()","This code imports the `tkinter` module as `tk`, creates a new window object using the `Tk()` method, sets the title of the window to 'My GUI', creates a `Label` widget that displays the text 'Hello, World!', adds the `Label` widget to the window using the `pack()` method, and then starts the main event loop using the `mainloop()` method of the window object. This is a simple example of how to create a GUI in Python using the Tkinter module.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,8,The wxPython GUI Library,Scenario,GUI,Generic,"This chapter is about the wxPython GUI library, which is a cross-platform library for creating graphical user interfaces in Python. The chapter explains that GUI elements in wxPython are contained within top-level windows, such as Frames or Dialogs, and that widgets or controls can be grouped together into containers, such as Panels. The chapter introduces the various components of wxPython and provides examples of how to create basic Frames and Dialogs, as well as Widgets/Controls such as buttons, checkboxes, and text fields. The chapter also covers more advanced topics, such as arranging Widgets within containers and drawing graphics, and it provides a SimpleGUIApplication exercise for readers to practice what they have learned.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"```python
 import wx
 
 # Define the application class
@@ -284,8 +293,8 @@ class MyApp(wx.App):
 
 # Run the application
 app = MyApp()
-app.MainLoop()","This code imports the `wx` module, defines a new `MyApp` class that inherits from `wx.App` and overrides its `OnInit` method, creates a `wx.Frame` object with a title of 'My Frame', creates a `wx.Panel` object inside the frame, creates a `wx.StaticText` label widget with the text 'Hello, World!', adds the label to the panel using a sizer to control its layout, sets the panel's sizer to the sizer we just created, shows the frame, and then starts the main event loop using the `MainLoop()` method of the `MyApp` object. This is a simple example of how to create a GUI in Python using the wxPython library."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,9,Events in wxPython User Interfaces,Scenario,Others/Generic,Generic,"This chapter is about events in wxPython user interfaces. It explains that events are actions or occurrences that can trigger a response from the application, and that events are handled by event handlers in wxPython. The chapter introduces the various types of events that can occur in a wxPython user interface, such as mouse events and keyboard events, and explains how to bind events to event handlers using the Bind() method. The chapter provides examples of how to implement event handling in wxPython, including an interactive wxPython GUI for a simple calculator. The chapter concludes with online resources and exercises for readers to practice creating event handlers in wxPython.",,"import wx
+app.MainLoop()","This code imports the `wx` module, defines a new `MyApp` class that inherits from `wx.App` and overrides its `OnInit` method, creates a `wx.Frame` object with a title of 'My Frame', creates a `wx.Panel` object inside the frame, creates a `wx.StaticText` label widget with the text 'Hello, World!', adds the label to the panel using a sizer to control its layout, sets the panel's sizer to the sizer we just created, shows the frame, and then starts the main event loop using the `MainLoop()` method of the `MyApp` object. This is a simple example of how to create a GUI in Python using the wxPython library.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,9,Events in wxPython User Interfaces,Scenario,Others/Generic,Generic,"This chapter is about events in wxPython user interfaces. It explains that events are actions or occurrences that can trigger a response from the application, and that events are handled by event handlers in wxPython. The chapter introduces the various types of events that can occur in a wxPython user interface, such as mouse events and keyboard events, and explains how to bind events to event handlers using the Bind() method. The chapter provides examples of how to implement event handling in wxPython, including an interactive wxPython GUI for a simple calculator. The chapter concludes with online resources and exercises for readers to practice creating event handlers in wxPython.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"import wx
 
 # Define the application class
 class MyApp(wx.App):
@@ -323,8 +332,8 @@ class MyApp(wx.App):
 
 # Run the application
 app = MyApp()
-app.MainLoop()","This code imports the `wx` module, defines a new `MyApp` class that inherits from `wx.App` and overrides its `OnInit` method and a `on_button_click` method, creates a `wx.Frame` object with a title of 'My Frame', creates a `wx.Panel` object inside the frame, creates a `wx.Button` widget with the label 'Click me!', binds the `wx.EVT_BUTTON` event to the `on_button_click` method, adds the button to the panel using a sizer to control its layout, sets the panel's sizer to the sizer we just created, shows the frame, and then starts the main event loop using the `MainLoop()` method of the `MyApp` object. When the button is clicked, the `on_button_click` method creates and shows a message dialog box saying 'You clicked the button!'. This is a simple example of how to handle events in a wxPython user interface."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,10,PyDraw wxPython Example Application,Scenario,GUI,Generic,"This chapter is about the PyDraw wxPython example application. It introduces the Model-View-Controller (MVC) architecture and explains how it is used in the PyDraw application, which is a simple drawing program made with wxPython. The chapter provides a detailed explanation of how the MVC architecture is implemented in the PyDraw application, including the different classes and their relationships, such as the View class that handles drawing and the Controller class that handles user input. The chapter also covers how to use event binding in wxPython to handle user input, and it provides examples of how to add additional functionality to the PyDraw application, such as color selection and line thickness adjustment. The chapter concludes with online resources and exercises for readers to practice using the MVC architecture and event handling in wxPython.",,"import wx
+app.MainLoop()","This code imports the `wx` module, defines a new `MyApp` class that inherits from `wx.App` and overrides its `OnInit` method and a `on_button_click` method, creates a `wx.Frame` object with a title of 'My Frame', creates a `wx.Panel` object inside the frame, creates a `wx.Button` widget with the label 'Click me!', binds the `wx.EVT_BUTTON` event to the `on_button_click` method, adds the button to the panel using a sizer to control its layout, sets the panel's sizer to the sizer we just created, shows the frame, and then starts the main event loop using the `MainLoop()` method of the `MyApp` object. When the button is clicked, the `on_button_click` method creates and shows a message dialog box saying 'You clicked the button!'. This is a simple example of how to handle events in a wxPython user interface.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,10,PyDraw wxPython Example Application,Scenario,GUI,Generic,"This chapter is about the PyDraw wxPython example application. It introduces the Model-View-Controller (MVC) architecture and explains how it is used in the PyDraw application, which is a simple drawing program made with wxPython. The chapter provides a detailed explanation of how the MVC architecture is implemented in the PyDraw application, including the different classes and their relationships, such as the View class that handles drawing and the Controller class that handles user input. The chapter also covers how to use event binding in wxPython to handle user input, and it provides examples of how to add additional functionality to the PyDraw application, such as color selection and line thickness adjustment. The chapter concludes with online resources and exercises for readers to practice using the MVC architecture and event handling in wxPython.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"import wx
 import wx.lib.colourselect as csel
 import wx.lib.filebrowsebutton as filebrowse
 
@@ -516,389 +525,389 @@ class FileDropTarget(wx.FileDropTarget):
     def OnDropFiles(self, x, y, filenames):
         if len(filenames) == 1 and filenames[0].endswith('.pdd'):
             self.target.load_drawing(filenames[0])
-        return True","This code defines a `MainWindow` frame class that contains a drop down menu, toolbar, and custom `DrawingPanel` panel class for drawing. The application allows users to create and save drawings, open existing drawing files, and change the pen colour for drawing. The `DrawingPanel` class allows for freehand drawing with the left mouse button and displays the drawing with `wx.PaintDC`. The application also features drag and drop functionality to open saved drawings. This is a fully-featured example of how to create a wxPython GUI application in Python."
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,12,Building Games with pygame,Scenario,Data and Processing,Generic,"This chapter is about building games with Pygame, a popular library for game development in Python. The chapter provides an introduction to Pygame and covers its various modules, such as the display module for creating and managing the game window and the event module for handling user input. The chapter explains how to create a basic Pygame application, including how to set up the game window and how to use the event module to detect user input. The chapter then covers more advanced game development topics, such as animation and collision detection, and provides examples of how to create interactive games using Pygame. The chapter also covers different approaches to processing input devices and provides online resources for further learning.",,"The code snippets from chapter ""Building Games with pygame"" are not provided in the information source pages given.",
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,13,StarshipMeteors pygame,Scenario,Data and Processing,Generic,"This chapter is about building the StarshipMeteors game using Pygame. The chapter provides a step-by-step guide on how to create a simple 2D game in Pygame, which involves controlling a spaceship and avoiding incoming meteoroids. The chapter explains how to create game objects and classes, such as the spaceship, meteoroids, and text labels, and how to display them on the game window using Pygame. The chapter covers game mechanics such as collision detection, movement and scoring through Python code and Pygame. The chapter provides online resources and exercises for readers to practice building games with Pygame.",,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,20,Working with CSV Files,Scenario,Data and Processing,Generic,"This chapter is about working with Comma-Separated Values (CSV) files in Python. The chapter provides an introduction to the CSV format, which is commonly used in business, finance, and data science applications, and covers how to read and write CSV files using Python's built-in csv module. The chapter explains how to parse CSV data into Python objects, such as lists and dictionaries, and how to write CSV data from Python objects. The chapter also covers advanced topics, such as reading and writing CSV files with different delimiters and handling errors and exceptions when working with CSV files. The chapter provides online resources and exercises for readers to practice working with CSV files in Python.",,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,21,Working with Excel Files,Scenario,API,Generic,"This chapter is about working with Excel files in Python. The chapter provides an introduction to the openpyxl library, which is a powerful tool for working with Excel files in Python. The chapter covers how to create and manipulate Excel files with worksheets, rows, and columns, and how to handle cell data and formatting. The chapter provides step-by-step examples of how to use the openpyxl library to read and write Excel files, including creating new Excel files from scratch and editing existing ones. The chapter also covers advanced topics such as working with charts and tables, creating macros, and using the command-line interface to run openpyxl scripts. The chapter provides online resources and exercises for readers to practice working with Excel files in Python using openpyxl.",,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,22,Regular Expressions in Python,Scenario,Data and Processing,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,24,Python DB-API,Scenario,Data and Processing,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,25,PyMySQL Module,Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,30,Threading,Scenario,Data and Processing,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,31,Multiprocessing,Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,34,Concurrency with AsyncIO,Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,36,"RxPy Observables, Observers and Subjects",Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,37,RxPy Operators,Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,39,Sockets in Python,Scenario,API,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,40,Web Services in Python,Scenario,Others/Generic,Generic,,,,
-2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,41,Bookshop Web Service,Scenario,Others/Generic,Generic,,,,
-A Whirlwind Tour of Python,A Whirlwind Tour of Python,8,Built-In Data Structures,Scenario,Data and Processing,Generic,,,,
-A Whirlwind Tour of Python,A Whirlwind Tour of Python,15,Modules and Packages,Scenario,Others/Generic,Generic,,,,
-Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,6,Navigating a Route,Scenario,Others/Generic,Generic,,,,
-Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,17,Use Your Brain,Scenario,Others/Generic,Generic,,,,
-Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,19,A Case for Code Reuse,Scenario,Others/Generic,Generic,,,,
-Beginning Django CMS,Beginning Django CMS,1,Working with a CMS,Scenario,Others/Generic,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,4,Site Templates,Scenario,Others/Generic,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,5,Your Blog Website: Templates,Scenario,Others/Generic,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,6,django CMS Plugins,Scenario,Others/Generic,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,7,Advanced Plugins,Scenario,API,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,8,Authoring in ajango CMS,Scenario,API,Web development,,,,
-Beginning Django CMS,Beginning Django CMS,10,Extending django CMS,Scenario,Others/Generic,Web development,,,,
-Beginning Game Development with Python and Pygame,Beginning Game Development with Python and Pygame: From Novice to Professional (Beginning From Novice to Professional),4,Creating Visuals,Scenario,Others/Generic,Game development,,,,
-Beginning Game Development with Python and Pygame,Beginning Game Development with Python and Pygame: From Novice to Professional (Beginning From Novice to Professional),12,Setting the Scene with OpenGL,Scenario,Others/Generic,Game development,,,,
-"Beginning Python Games Development, 2nd Edition","Beginning Python Games Development, 2nd Edition: With PyGame",12,Setting the Scene with OpenGL,Scenario,Data and Processing,Game development,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,3,Working with Genomes,Scenario,Others/Generic,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,4,Population Genetics,Scenario,Data and Processing,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,5,Population Genetics Simulation,Scenario,Data and Processing,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,6,Phylogenetics,Scenario,GUI,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,7,Using the Protein Data Bank,Scenario,Others/Generic,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,8,Other Topics in Bioinformatics,Scenario,Others/Generic,Educational purposes,,,,
-Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,9,Python for Big Genomics Datasets,Scenario,API,Educational purposes,,,,
-Data Structures and Algorithms with Python,Data Structures and Algorithms in Python,8,Membership Structures,Scenario,Data and Processing,Data analysis,,,,
-Data Structures and Algorithms with Python,Data Structures and Algorithms in Python,12,Heuristic Search,Scenario,Data and Processing,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,3,Data Meant to Be Read by Machines,Scenario,API,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,4,Working with Excel Files,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,5,PDFs and Problem Solving in Python,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,8,Data Cleanup: Standardizing and Scripting,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,9,Data Exploration and Analysis,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,10,Presenting Your Data,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,11,Web Scraping: Acquiring and Storing Data form the Web,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,12,Advance Web Scraping: Screen Scrapers and Spiders,Scenario,Others/Generic,Data analysis,,,,
-Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,13,APIs,Scenario,API,Data analysis,,,,
-Dive Into Python - Mark Pilgrim,Dive into Python,8,HTML Processing,Scenario,Others/Generic,Generic,,,,
-Dive Into Python - Mark Pilgrim,Dive into Python,9,XML Processing,Scenario,Others/Generic,Generic,,,,
-Dive Into Python - Mark Pilgrim,Dive into Python,11,HTTP Web Services,Scenario,API,Generic,,,,
-Dive Into Python - Mark Pilgrim,Dive into Python,12,SOAP Web Services,Scenario,Others/Generic,Generic,,,,
-Django 1.0 Template Development,Django 1.0 Template Development,2,"Views, URLs, and Generic Views",Scenario,Others/Generic,Web development,,,,
-Django 1.0 Template Development,Django 1.0 Template Development,8,Pagination,Scenario,Others/Generic,Web development,,,,
-Django 1.0 Template Development,Django 1.0 Template Development,10,Caching Your Pages,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,1,Building a Blog Application,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,2,Enhancing Your Blog with Advanced Features,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,3,Extending Your Blog Application,Scenario,Data and Processing,Web development,,,,
-Django by Example,Django by Example Book,4,Building a Social Website,Scenario,Data and Processing,Web development,,,,
-Django by Example,Django by Example Book,5,Sharing Content in Your Website,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,6,Tracking User Actions,Scenario,Data and Processing,Web development,,,,
-Django by Example,Django by Example Book,7,Building an Online Shop,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,8,Managing Payments and Orders,Scenario,Data and Processing,Web development,,,,
-Django by Example,Django by Example Book,9,Extending Your Shop,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,10,Building an e-Learning Platform,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,11,Caching Content,Scenario,Others/Generic,Web development,,,,
-Django by Example,Django by Example Book,12,Building an API,Scenario,Others/Generic,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,1,Django and Patterns,Scenario,API,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,4,Views and URLs,Scenario,Data and Processing,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,6,Admin Interface,Scenario,API,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,8,Dealing with Legacy Code,Scenario,GUI,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,9,Testing and Debugging,Scenario,Others/Generic,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,10,Security,Scenario,Data and Processing,Web development,,,,
-Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,11,Production-ready,Scenario,Others/Generic,Web development,,,,
-Effective Python_ 59 Specific W - Brett Slatkin,Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series) ,1,Pythonic Thinking,Scenario,Data and Processing,Generic,,,,
-Effective Python_ 59 Specific W - Brett Slatkin,Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series) ,6,Built-in Modules,Scenario,Data and Processing,Generic,,,,
-"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",9,Documenting Your Project,Scenario,Data and Processing,Generic,,,,
-"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",13,Concurrency,Scenario,Others/Generic,Generic,,,,
-"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",14,Useful Design Patterns,Scenario,API,Generic,,,,
-Fluent Python,Fluent Python,1,The Python Data Model,Scenario,API,Generic,,,,
-Fluent Python,Fluent Python,4,Text versus bytes,Scenario,Others/Generic,Generic,,,,
-Fluent Python,Fluent Python,11,Interfaces: from protocals to ABCs,Scenario,Others/Generic,Generic,,,,
-Fluent Python,Fluent Python,16,Coroutines,Scenario,Others/Generic,Generic,,,,
-Fluent Python,Fluent Python,17,Concurrency with futures,Scenario,Others/Generic,Generic,,,,
-Fluent Python,Fluent Python,18,Concurrency with asyncio,Scenario,API,Generic,,,,
-Foundations of Agile Python Development,Foundations of Agile Python Development,2,The IDE: Eclipsing the Command Line,Scenario,Others/Generic,Software development,,,,
-Foundations of Agile Python Development,Foundations of Agile Python Development,9,Databases,Scenario,Others/Generic,Software development,,,,
-From Future Import Python,From Future Import Python,5,Python Distributions,Scenario,API,Generic,,,,
-Hadoop with Python,Hadoop with Python,2,MapReduce with Python,Scenario,Data and Processing,Data analysis,,,,
-Hadoop with Python,Hadoop with Python,4,Spark with Python,Scenario,API,Data analysis,,,,
-Head First Python,Head First Python,5,Comprehending Data: Work That Data!,Scenario,Others/Generic,Generic,,,,
-Head First Python,Head First Python,6,Custom Data Objects: Bundling Code with Data,Scenario,Others/Generic,Generic,,,,
-Head First Python,Head First Python,7,Web Development: Putting It All Together,Scenario,GUI,Generic,,,,
-Head First Python,Head First Python,8,Mobile App Development: Small Devices,Scenario,Data and Processing,Generic,,,,
-Head First Python,Head First Python,9,Manage Your Data: Heading Input,Scenario,Others/Generic,Generic,,,,
-Head First Python,Head First Python,10,Scaling Your Webapp: Getting Real,Scenario,Others/Generic,Generic,,,,
-Head First Python,Head First Python,11,Dealing with Complexity: Data Wrangling,Scenario,Data and Processing,Generic,,,,
-Internet of Things with Python,Internet of Things with Python,1,Understanding and Setting up the Base IoT Hardware,Scenario,Others/Generic,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,2,Working with Python on Intel Galilgo Gen 2,Scenario,Data and Processing,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,3,Interacting with Digital Outputs with Python,Scenario,Data and Processing,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,4,Working with a RESTful API and Pulse,Scenario,Data and Processing,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,7,Retrieving Data form the Real World with Sensors,Scenario,Others/Generic,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,9,Working with the Cloud,Scenario,GUI,DevOps,,,,
-Internet of Things with Python,Internet of Things with Python,10,Analyzing Huge Amounts Data with Cloud-based IoT Analytics,Scenario,Data and Processing,DevOps,,,,
-Introducing Python,Introducing Python: Modern Computing in Simple Packages,5,"Py Boxes: Modules, Packages, and Programs",Scenario,Others/Generic,Generic,,,,
-Introducing Python,Introducing Python: Modern Computing in Simple Packages,7,Mangle Data Like a Pro,Scenario,Data and Processing,Generic,,,,
-Introducing Python,Introducing Python: Modern Computing in Simple Packages,8,Data Has to Go Somewhere,Scenario,Others/Generic,Generic,,,,
-Introducing Python,Introducing Python: Modern Computing in Simple Packages,9,"The Web, Untangled",Scenario,Data and Processing,Generic,,,,
-Introducing Python,Introducing Python: Modern Computing in Simple Packages,11,Concurrency and Networks,Scenario,Others/Generic,Generic,,,,
-Introduction to Computer Science Using Python,Introduction to Computer Science Using Python,7,Modular Design,Scenario,GUI,Educational purposes,,,,
-IPython Notebook Essentials,IPython Notebook Essentials,3,Graphics with matplotlib,Scenario,Data and Processing,Educational purposes,,,,
-IPython Notebook Essentials,IPython Notebook Essentials,4,Handling Data with pandas,Scenario,Others/Generic,Educational purposes,,,,
-IPython Notebook Essentials,IPython Notebook Essentials,5,"Advanced Computing with SciPy, Numba, and NumbaPro",Scenario,Data and Processing,Educational purposes,,,,
-Learning Pandas,Learning Pandas,1,A Tour of pandas,Scenario,Data and Processing,Data analysis,,,,
-Learning Pandas,Learning Pandas,2,Installing pandas,Scenario,Data and Processing,Data analysis,,,,
-Learning Pandas,Learning Pandas,3,NumPy for pandas,Scenario,Data and Processing,Data analysis,,,,
-Learning Pandas,Learning Pandas,4,The pandas Series Object,Scenario,Data and Processing,Data analysis,,,,
-Learning Pandas,Learning Pandas,5,The pandas DataFrame Object,Scenario,Others/Generic,Data analysis,,,,
-Learning Pandas,Learning Pandas,7,Tidying Up Your Data,Scenario,Data and Processing,Data analysis,,,,
-Learning Pandas,Learning Pandas,12,Applications to Finance,Scenario,Others/Generic,Data analysis,,,,
-"Learning Python, 5th Edition","Learning Python, 5th Edition",24,Module Packages,Scenario,Others/Generic,Generic,,,,
-"Learning Python, 5th Edition","Learning Python, 5th Edition",25,Advanced Module Topics,Scenario,Others/Generic,Generic,,,,
-Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,1,Getting Started with Selenium WebDriver and Python,Scenario,Data and Processing,Software testing,,,,
-Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,3,Finding Elements,Scenario,Others/Generic,Software testing,,,,
-Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,9,Advanced Techniques of Selenium WebDriver,Scenario,Data and Processing,Software testing,,,,
-Lightweight Django,Lightweight Django,1,The World's Smallest Django Project,Scenario,Others/Generic,Web development,,,,
-Lightweight Django,Lightweight Django,2,Stateless Web Application,Scenario,Others/Generic,Web development,,,,
-Lightweight Django,Lightweight Django,3,Building a Static Site Generator,Scenario,Others/Generic,Web development,,,,
-Lightweight Django,Lightweight Django,4,Building a REST API,Scenario,Others/Generic,Web development,,,,
-Lightweight Django,Lightweight Django,5,Client-Side Django with Backbone.js,Scenario,Others/Generic,Web development,,,,
-Lightweight Django,Lightweight Django,6,Single-Page Web Application,Scenario,API,Web development,,,,
-Lightweight Django,Lightweight Django,7,Real-Time Django,Scenario,API,Web development,,,,
-Lightweight Django,Lightweight Django,8,Communication Between Django and Tornado,Scenario,Others/Generic,Web development,,,,
-Making Sense of NoSQL,Making Sense of NoSQL: A guide for managers and the rest of us,3,NoSQL Solutions,Scenario,Others/Generic,Data analysis,,,,
-Making Use of Python,Making Use of Python,6,Modules,Scenario,Others/Generic,Generic,,,,
-Making Use of Python,Making Use of Python,10,CGI Programming,Scenario,Others/Generic,Generic,,,,
-Making Use of Python,Making Use of Python,12,Network Programming,Scenario,Data and Processing,Generic,,,,
-Making Use of Python,Making Use of Python,14,Advanced Web Programming,Scenario,Others/Generic,Generic,,,,
-Making Use of Python,Making Use of Python,15,GUI Programming with Tkinter,Scenario,Others/Generic,Generic,,,,
-Mastering Python,Mastering Python,3,Containers and Collections - Stroring Data the Right Way,Scenario,GUI,Generic,,,,
-Mastering Python,Mastering Python,4,Function Programming - Readability Versus Bravity,Scenario,Others/Generic,Generic,,,,
-Mastering Python,Mastering Python,6,"Generators and Coroutines - Infinity, One Step at a Time",Scenario,Data and Processing,Generic,,,,
-Mastering Python,Mastering Python,9,Documentation - How to Use Sphinx and reStructuredText,Scenario,API,Generic,,,,
-Mastering Python,Mastering Python,13,Multiprocessing - When a Single CPU Core Is not Enough,Scenario,Others/Generic,Generic,,,,
-Mastering Python,Mastering Python,14,"Extensions in C/C++, System Calls and C/C++ Libraries",Scenario,Others/Generic,Generic,,,,
-Mastering Python,Mastering Python,15,Packaging - Creating Your Own Libraries or Applications,Scenario,Others/Generic,Generic,,,,
-Mining the Social Web,Mining the Social Web,2,Microformats: Semantic Markup and Common Sense Collide,Scenario,Others/Generic,Web development,,,,
-Mining the Social Web,Mining the Social Web,3,Mailboxs: Oldies but Goodies,Scenario,Others/Generic,Web development,,,,
-Mining the Social Web,Mining the Social Web,4,"Twitter: Friends, Followers, and Setwise Operations",Scenario,GUI,Web development,,,,
-Mining the Social Web,Mining the Social Web,5,"Twitter: The Tweet, the Whole Tweet, and Nothing but the Tweet",Scenario,Data and Processing,Web development,,,,
-Mining the Social Web,Mining the Social Web,6,LinkedIn: Clustering Your Professional Network for Fun (and Profit?),Scenario,Others/Generic,Web development,,,,
-Mining the Social Web,Mining the Social Web,7,"Google Buzz: TF-IDF, Cosine Similarity, and Collocations",Scenario,Others/Generic,Web development,,,,
-Mining the Social Web,Mining the Social Web,8,Blogs et al.: Natural Language Processing (and Beyond),Scenario,Others/Generic,Web development,,,,
-Mining the Social Web,Mining the Social Web,9,Facebook: The All-in-One Wonder,Scenario,API,Web development,,,,
-Mining the Social Web,Mining the Social Web,10,The Semantic Web: A Cocktail Descussion,Scenario,Others/Generic,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",1,"Mining Twitter: Exploring Treading Topics, Discovering What People Are Talking About and More",Scenario,Others/Generic,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",2,"Mining Facebook: Analyzing Fan Pages, Examming Friendships, and More",Scenario,Others/Generic,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",4,"Mining Google+: Computing Document Similarity, Extracting Collocations and More",Scenario,GUI,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",5,"Mining Web Page: Using Natural Language Processing to Understand Human Language, Summarize Blog Posts, and More",Scenario,Others/Generic,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",6,"Mining Mailboxes: Analyzing Who's Talking to Whom About What, How Often, and More",Scenario,Others/Generic,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",7,"Mining the Semantically Marked-Up Web: Extracing Microformats, Inferancing over RDF, and More",Scenario,Data and Processing,Web development,,,,
-"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",8,Twitter Cookbook,Scenario,Others/Generic,Web development,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",4,Plotting and Visualization,Scenario,Data and Processing,Educational purposes,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",9,Ordinary Differential Equations,Scenario,GUI,Educational purposes,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",12,Data Processing and Analysis,Scenario,API,Educational purposes,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",14,Statistical modeling,Scenario,Others/Generic,Educational purposes,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",15,Machine Learning,Scenario,GUI,Educational purposes,,,,
-Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",17,Signal Processing,Scenario,GUI,Educational purposes,,,,
-NumPy Cookbook,NumPy Cookbook,1,Winding Along with Ipython,Scenario,Data and Processing,Educational purposes,,,,
-NumPy Cookbook,NumPy Cookbook,3,Getting to Grips with Commonly Used Functions,Scenario,Data and Processing,Educational purposes,,,,
-NumPy Cookbook,NumPy Cookbook,4,Connecting NumPy with the Rest of the World,Scenario,Data and Processing,Educational purposes,,,,
-NumPy Cookbook,NumPy Cookbook,5,Audio and Image Processing,Scenario,Others/Generic,Educational purposes,,,,
-NumPy Cookbook,NumPy Cookbook,9,Speeding Up Code with Cython,Scenario,Others/Generic,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",1,Winding Along with Ipython,Scenario,API,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",3,Getting to Grips with Commonly Used Functions,Scenario,Others/Generic,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",4,Connecting NumPy with the Rest of the World,Scenario,GUI,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",5,Audio and Image Processing,Scenario,GUI,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",9,Speeding Up Code with Cython,Scenario,Others/Generic,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",10,Fun with Scikits,Scenario,Data and Processing,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",11,Lastest and Greatest Numpy,Scenario,Others/Generic,Educational purposes,,,,
-"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",12,Exploratory and Predictive Data Analysis with NumPy,Scenario,Others/Generic,Educational purposes,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),1,Understanding Django,Scenario,Others/Generic,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),2,Django Is Python,Scenario,Others/Generic,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),4,URLs and Views,Scenario,GUI,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),5,Forms,Scenario,Data and Processing,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),6,Templates,Scenario,GUI,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),7,Handling HTTP,Scenario,GUI,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),8,Backend Protocols,Scenario,Others/Generic,Web development,,,,
-"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),11,Enhancing Applications,Scenario,Others/Generic,Web development,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),2,IronPython Syntax,Scenario,Others/Generic,Generic,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),3,Advanced IronPython,Scenario,Others/Generic,Generic,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),4,IronPython Studio,Scenario,Others/Generic,Generic,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),5,Mixing and Mingling with CLR,Scenario,Data and Processing,Generic,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),8,Caught in a Web,Scenario,Others/Generic,Generic,,,,
-Pro IronPython,Pro IronPython (Expert's Voice in .NET),9,IronPython Recipes,Scenario,API,Generic,,,,
-"Pro Python, 2nd Edition","Pro Python, 2nd Edition",11,Sheets: A CSV Framework,Scenario,Others/Generic,Generic,,,,
-Professional Python,Professional Python,12,Cli Tools,Scenario,API,Generic,,,,
-Professional Python,Professional Python,13,Asyncio,Scenario,Data and Processing,Generic,,,,
-Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,7,Working with Text,Scenario,API,Generic,,,,
-Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,8,"Executable Files, Organization, and Python on the Web",Scenario,Data and Processing,Generic,,,,
-Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,12,Simple Windowed Applications,Scenario,Data and Processing,Generic,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",2,Taching Support,Scenario,Data and Processing,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",3,Book Development Rules,Scenario,GUI,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",6,Python for Programmers,Scenario,GUI,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",12,"Generators, Iterators, and Itertools",Scenario,Others/Generic,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",14,"Coroutines, Concurrency & Distributed Systems",Scenario,GUI,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",15,Jython,Scenario,Others/Generic,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",19,Messanger/Data Transfer Object,Scenario,API,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",23,Building Application Frameworks,Scenario,API,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",24,Fronting for an Implementation,Scenario,GUI,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",26,Decorator: Dynamic Type Selection,Scenario,Others/Generic,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",28,Factory: Encapsulating Object Creation,Scenario,Data and Processing,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",30,Changing the Interface,Scenario,GUI,Educational purposes,,,,
-"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",36,Projects,Scenario,Others/Generic,Educational purposes,,,,
-Python Algorithms,Python Algorithms,3,Counting 101,Scenario,Data and Processing,Educational purposes,,,,
-Python Algorithms,Python Algorithms,5,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,Educational purposes,,,,
-Python Algorithms,Python Algorithms,6,"Divide, Combine, and Conquer",Scenario,GUI,Educational purposes,,,,
-Python Algorithms,Python Algorithms,8,Tangled Dependencies and Memoization,Scenario,Others/Generic,Educational purposes,,,,
-"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",1,Introduction,Scenario,API,Educational purposes,,,,
-"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",3,Counting 101,Scenario,Others/Generic,Educational purposes,,,,
-"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",5,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,Educational purposes,,,,
-"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",6,"Divide, Combine, and Conquer",Scenario,API,Educational purposes,,,,
-"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",8,Tangled Dependencies and Memoization,Scenario,Data and Processing,Educational purposes,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",4,Python Shortcuts,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",10,System Administration,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",11,User Interfaces,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",12,Processing XML,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",13,Network Programming,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",14,Web Programming,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",16,Programs About Programs,Scenario,API,Generic,,,,
-"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",17,Extending and Embedding,Scenario,GUI,Generic,,,,
-Python Crash Course,Python Crash Course,15,Generating Data,Scenario,GUI,Generic,,,,
-Python Crash Course,Python Crash Course,16,Downloading Data,Scenario,GUI,Generic,,,,
-Python Crash Course,Python Crash Course,17,Working with APIs,Scenario,GUI,Generic,,,,
-Python Crash Course,Python Crash Course,18,Getting Started with Django,Scenario,GUI,Generic,,,,
-Python Crash Course,Python Crash Course,19,User Accounts,Scenario,API,Generic,,,,
-Python Crash Course,Python Crash Course,20,Styling and Developing an App,Scenario,API,Generic,,,,
-Python Data Analysis,Python Data Analysis,1,Getting Started with Python Libraries,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,2,NumPy Arrays,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,4,Pandas Primer,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,6,Data Visualization,Scenario,API,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,7,Signal Processing and Time Series,Scenario,API,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,8,Working with Databases,Scenario,API,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,9,Analyzing Textual Data and Social Media,Scenario,GUI,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,10,Predictive Analytics and Machine Learning,Scenario,Others/Generic,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,11,Environments Outside the Python Ecosystem and Cloud Computing,Scenario,Others/Generic,Data analysis,,,,
-Python Data Analysis,Python Data Analysis,12,"Performance Tuning, Profilling, and Concurrency",Scenario,Others/Generic,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,1,An Introduction to Data Analysis,Scenario,Others/Generic,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,3,The NumPy Library,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,4,The pandas Library---An Introduction,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,5,pandas: Reading and Writing Data,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,6,pandas in Depth: Data Manipulation,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,7,Data Visualization with matplotlib,Scenario,Data and Processing,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,8,Machine Learning with scikit-learn,Scenario,API,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,9,An Example---Meteorological Data,Scenario,GUI,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,10,Embadding the Javascript D3 Library in IPython Notebook,Scenario,GUI,Data analysis,,,,
-Python Data Analytics,Python Data Analytics,11,Recognizing Handwritten Digits,Scenario,Data and Processing,Data analysis,,,,
-Python for Data Analysis,Python for Data Analysis,2,Introductory Examples,Scenario,Data and Processing,Data analysis,,,,
-Python for Data Analysis,Python for Data Analysis,4,NumPy Basics: Arrays and Vectorized Computation,Scenario,Data and Processing,Data analysis,,,,
-Python for Data Analysis,Python for Data Analysis,8,Plotting and Visualization,Scenario,Data and Processing,Data analysis,,,,
-Python for Data Analysis,Python for Data Analysis,11,Financial and Economic Data Applications,Scenario,Data and Processing,Data analysis,,,,
-Python for Data Analysis,Python for Data Analysis,12,Advanced NumPy,Scenario,Others/Generic,Data analysis,,,,
-Python for Google App Engine,Python for Google App Engine,2,A More Complex Application,Scenario,Others/Generic,Web development,,,,
-Python for Google App Engine,Python for Google App Engine,5,Storing Data in Google Cloud SQL,Scenario,Data and Processing,Web development,,,,
-Python for Google App Engine,Python for Google App Engine,6,Using Channels to Implement a Real-time Application,Scenario,Data and Processing,Web development,,,,
-Python for Google App Engine,Python for Google App Engine,7,Building an Application with Django,Scenario,Others/Generic,Web development,,,,
-Python for Google App Engine,Python for Google App Engine,8,Exposing a REST API with Google Cloud Endpoints,Scenario,API,Web development,,,,
-Python for Kids,Python for Kids,4,Drawing with Turtles,Scenario,GUI,Generic,,,,
-Python for Kids,Python for Kids,7,Recycling Your Code with Functions and Modules,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,10,Useful Python Modules,Scenario,GUI,Generic,,,,
-Python for Kids,Python for Kids,11,More Turtle Graphics,Scenario,GUI,Generic,,,,
-Python for Kids,Python for Kids,12,Using Tkinter for Better Graphics,Scenario,GUI,Generic,,,,
-Python for Kids,Python for Kids,13,Beginning Your First Game: Bounce!,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,14,Finishing /your First Game: Bounce!,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,15,Creating Graphics for The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,16,Developing The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,17,Creating Mr.Stick Man,Scenario,Others/Generic,Generic,,,,
-Python for Kids,Python for Kids,18,Completing The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,1,Creating the GUI Form and Adding Widgets,Scenario,GUI,Computer graphics,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,3,Look and Feel Customization,Scenario,Others/Generic,Computer graphics,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,5,Matplotlib Charts,Scenario,Others/Generic,Computer graphics,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,7,Storing Data in Out MySQL Database via Our GUI,Scenario,GUI,Computer graphics,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,9,Extending Our GUI with the wxPython Library,Scenario,GUI,Computer graphics,,,,
-Python GUI Programming Cookbook,Python GUI Programming Cookbook,10,Creating Amazing 3D GUIs with PyOpenGL and PyGLet,Scenario,GUI,Computer graphics,,,,
-Python in Education,Python in Education,2,A Pythonic Case Study: Raspberry Pi,Scenario,Others/Generic,Educational purposes,,,,
-Python Machine Learning,Python Machine Learning,1,Giving Computers the Ability to Learn from Data,Scenario,Others/Generic,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,2,Training Machine Learning Algorithms of Classification,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,3,A Tour of Machine Learning Classifiers Using Scikit-learn,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,4,Building Good Training Sets - Data Preprocessing,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,7,Combining Different Models for Ensemble Learning,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,8,Applying Machine Learning to Sentiment Analysis,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,9,Embedding a Machine Learning Model into a Web Application,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,10,Predicting Continuous Target Variables with Regression Analysis,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,11,Working with Unabeled Data - Clustering Analysis,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,12,Trainging Artificial Nerual Networks for Image Recognition,Scenario,Data and Processing,Machine learning,,,,
-Python Machine Learning,Python Machine Learning,13,Parallelizing Neural Network Training with Theano,Scenario,Data and Processing,Machine learning,,,,
-Python Parallel Programming Cookbook,Python Parallel Programming Cookbook,6,GPU Programming with Python,Scenario,Data and Processing,Educational purposes,,,,
-Python Playground,Python Playground,1,Parasing Itunes Playlists,Scenario,Others/Generic,Generic,,,,
-Python Playground,Python Playground,2,Spirographs,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,3,Conway's Game of Lift,Scenario,Others/Generic,Generic,,,,
-Python Playground,Python Playground,5,Boids: Simulating a Flock,Scenario,Others/Generic,Generic,,,,
-Python Playground,Python Playground,6,ASCII ART,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,7,Photomosaics,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,8,Autostereograms,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,9,Understanding OpenGL,Scenario,API,Generic,,,,
-Python Playground,Python Playground,10,Particle Systems,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,11,Volume Rendering,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,13,Laser Audio Display,Scenario,GUI,Generic,,,,
-Python Playground,Python Playground,14,A Raspberry Pi-Based Weather Monitor,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",15,Standard Library Modules,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",16,The sys Module,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",17,The os System Module,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",18,The re Pattern-Matching Module,Scenario,Data and Processing,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",19,Object Persistence Modules,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",20,The tkinter GUI Module and Tools,Scenario,GUI,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",21,Internet Modules and Tools,Scenario,Others/Generic,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",22,Other Standard Library Modules,Scenario,GUI,Generic,,,,
-"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",23,Python Portable SQL Database API,Scenario,API,Generic,,,,
-Python Projects for Kids,Python Projects for Kids,8,Pygame,Scenario,Data and Processing,Generic,,,,
-Python Projects for Kids,Python Projects for Kids,9,Tiny Tennis,Scenario,Others/Generic,Generic,,,,
-Python Scripting for Computational Science,Python Scripting for Computational Science,5,"Combining Python with Fortran, C, and C++",Scenario,Others/Generic,Educational purposes,,,,
-Python Scripting for Computational Science,Python Scripting for Computational Science,7,Web Interfaces and CGI Programming,Scenario,GUI,Educational purposes,,,,
-Python Scripting for Computational Science,Python Scripting for Computational Science,9,Fortran Programming with NumPy Arrays,Scenario,Data and Processing,Educational purposes,,,,
-Python Scripting for Computational Science,Python Scripting for Computational Science,10,C and C++ Programming with NumPy Arrays,Scenario,Data and Processing,Educational purposes,,,,
-Python Scripting for Computational Science,Python Scripting for Computational Science,12,Tools and Examples,Scenario,Others/Generic,Educational purposes,,,,
-Python Unlocked,Python Unlocked,5,Elegance with Design Patterns,Scenario,Others/Generic,Generic,,,,
-Python Unlocked,Python Unlocked,8,Scalling Python,Scenario,Others/Generic,Generic,,,,
-Python Web Development with Django,Python Web Development with Django,1,Practical Python for Django,Scenario,Data and Processing,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,2,Django for the Impatient: Building a Blog,Scenario,API,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,5,"URLs, HTTP Mechanisms, and Views URLs",Scenario,API,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,6,Templates and Form Processing Templates,Scenario,Data and Processing,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,7,Photo Gallery,Scenario,GUI,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,8,Content Management System,Scenario,Data and Processing,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,9,Liveblog,Scenario,Others/Generic,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,10,Pastebin,Scenario,Others/Generic,Web development,,,,
-Python Web Development with Django,Python Web Development with Django,11,Advanced Django Programming,Scenario,Others/Generic,Web development,,,,
-Python XML,Python XML,1,Python and XML,Scenario,API,Web development,,,,
-Python XML,Python XML,2,XML Fundamentals,Scenario,Others/Generic,Web development,,,,
-Python XML,Python XML,3,The Simple API for XML,Scenario,API,Web development,,,,
-Python XML,Python XML,5,Querying XML with Xpath,Scenario,Data and Processing,Web development,,,,
-Python XML,Python XML,6,Transforming XML with XSLT,Scenario,Data and Processing,Web development,,,,
-Python XML,Python XML,7,XML Validation and Dialects,Scenario,Data and Processing,Web development,,,,
-Python XML,Python XML,8,Python Internet APIs,Scenario,API,Web development,,,,
-Python XML,Python XML,9,"Python, Web Services, and SOAP",Scenario,Data and Processing,Web development,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,3,Using Python for Automation and Productivity,Scenario,Data and Processing,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,4,Creating Games and Graphics,Scenario,GUI,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,5,Creating 3D Graphics,Scenario,GUI,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,6,Using Python to Drive Hardware,Scenario,Data and Processing,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,7,Sense and Display Real-world Data,Scenario,GUI,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,8,Work on Projects with the Raspberry Pi Camera Module,Scenario,Others/Generic,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,9,Building Robots,Scenario,Data and Processing,Others,,,,
-Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,10,Interfacing with Technology,Scenario,GUI,Others,,,,
-SciPy and NumPy,SciPy and NumPy,2,NumPy,Scenario,Others/Generic,Educational purposes,,,,
-SciPy and NumPy,SciPy and NumPy,3,SciPy,Scenario,Others/Generic,Educational purposes,,,,
-SciPy and NumPy,SciPy and NumPy,4,SciKit: Taking SciPy One Step Further,Scenario,Others/Generic,Educational purposes,,,,
-Spark for Python Developers,Spark for Python Developers,1,Setting Up a Spark Virtual Environment,Scenario,Others/Generic,Data analysis,,,,
-Spark for Python Developers,Spark for Python Developers,2,Building Batch and Streaming Apps with Spark,Scenario,Others/Generic,Data analysis,,,,
-Spark for Python Developers,Spark for Python Developers,3,Juggling Data with Spark,Scenario,Data and Processing,Data analysis,,,,
-Spark for Python Developers,Spark for Python Developers,5,Steaming Live Data with Spark,Scenario,Data and Processing,Data analysis,,,,
-Spark for Python Developers,Spark for Python Developers,6,Visualizing Insights and Trends,Scenario,GUI,Data analysis,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,1,Getting Django Set Up Using a Function Test,Scenario,Others/Generic,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,6,Getting to the Minimun Viable Site,Scenario,API,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,7,"Prettification: Layout and Styling, and What to Test About It",Scenario,GUI,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,9,Automating Deployment with Fabric,Scenario,API,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,12,More Advanced Forms,Scenario,GUI,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,13,"Dipping Out Toes, Very Tentativaly, into Javascript",Scenario,Others/Generic,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,15,"User Authentication, Integrating Third-Party Plugins, and Mocking with Javascript",Scenario,API,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,16,Server-Side Authentication and Mocking in Python,Scenario,API,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,20,Continuous Integration (CI),Scenario,Data and Processing,Software testing,,,,
-Test-Driven Development with Python,Test-Driven Development with Python,21,"The Token Social Bit, the Page Pattern, and an Exercise for the Reader",Scenario,Others/Generic,Software testing,,,,
-"Think Python, 2nd Edition","Think Python, 2nd Edition",4,Case Study: Interface Design,Scenario,Others/Generic,Generic,,,,
-"Think Python, 2nd Edition","Think Python, 2nd Edition",7,Iteration,Scenario,Data and Processing,Generic,,,,
-"Think Python, 2nd Edition","Think Python, 2nd Edition",9,Case Study: Word Play,Scenario,Others/Generic,Generic,,,,
-"Think Python, 2nd Edition","Think Python, 2nd Edition",14,Files,Scenario,Others/Generic,Generic,,,,
-"Think Python, 2nd Edition","Think Python, 2nd Edition",21,Analysis of Algorithms,Scenario,Data and Processing,Generic,,,,
-"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",2,Database Structure,Scenario,Data and Processing,Web development,,,,
-"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",5,Custom Templates Filter and Tags,Scenario,Data and Processing,Web development,,,,
-"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",6,Model Administration,Scenario,Others/Generic,Web development,,,,
-"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",7,Django CMS,Scenario,Data and Processing,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,2,Scraping the Data,Scenario,API,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,3,Caching Downloads,Scenario,Others/Generic,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,4,Concurrent Downloading,Scenario,Others/Generic,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,5,Dynamic Content,Scenario,Others/Generic,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,7,Solving CAPTCHA,Scenario,Others/Generic,Web development,,,,
-Web Scraping with Python,Web Scraping with Python,8,Scrapy,Scenario,API,Web development,,,,
+        return True","This code defines a `MainWindow` frame class that contains a drop down menu, toolbar, and custom `DrawingPanel` panel class for drawing. The application allows users to create and save drawings, open existing drawing files, and change the pen colour for drawing. The `DrawingPanel` class allows for freehand drawing with the left mouse button and displays the drawing with `wx.PaintDC`. The application also features drag and drop functionality to open saved drawings. This is a fully-featured example of how to create a wxPython GUI application in Python.",
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,12,Building Games with pygame,Scenario,Data and Processing,Generic,"This chapter is about building games with Pygame, a popular library for game development in Python. The chapter provides an introduction to Pygame and covers its various modules, such as the display module for creating and managing the game window and the event module for handling user input. The chapter explains how to create a basic Pygame application, including how to set up the game window and how to use the event module to detect user input. The chapter then covers more advanced game development topics, such as animation and collision detection, and provides examples of how to create interactive games using Pygame. The chapter also covers different approaches to processing input devices and provides online resources for further learning.",https://link.springer.com/book/10.1007/978-3-030-25943-3,"The code snippets from chapter ""Building Games with pygame"" are not provided in the information source pages given.",,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,13,StarshipMeteors pygame,Scenario,Data and Processing,Generic,"This chapter is about building the StarshipMeteors game using Pygame. The chapter provides a step-by-step guide on how to create a simple 2D game in Pygame, which involves controlling a spaceship and avoiding incoming meteoroids. The chapter explains how to create game objects and classes, such as the spaceship, meteoroids, and text labels, and how to display them on the game window using Pygame. The chapter covers game mechanics such as collision detection, movement and scoring through Python code and Pygame. The chapter provides online resources and exercises for readers to practice building games with Pygame.",https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,20,Working with CSV Files,Scenario,Data and Processing,Generic,"This chapter is about working with Comma-Separated Values (CSV) files in Python. The chapter provides an introduction to the CSV format, which is commonly used in business, finance, and data science applications, and covers how to read and write CSV files using Python's built-in csv module. The chapter explains how to parse CSV data into Python objects, such as lists and dictionaries, and how to write CSV data from Python objects. The chapter also covers advanced topics, such as reading and writing CSV files with different delimiters and handling errors and exceptions when working with CSV files. The chapter provides online resources and exercises for readers to practice working with CSV files in Python.",https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,21,Working with Excel Files,Scenario,API,Generic,"This chapter is about working with Excel files in Python. The chapter provides an introduction to the openpyxl library, which is a powerful tool for working with Excel files in Python. The chapter covers how to create and manipulate Excel files with worksheets, rows, and columns, and how to handle cell data and formatting. The chapter provides step-by-step examples of how to use the openpyxl library to read and write Excel files, including creating new Excel files from scratch and editing existing ones. The chapter also covers advanced topics such as working with charts and tables, creating macros, and using the command-line interface to run openpyxl scripts. The chapter provides online resources and exercises for readers to practice working with Excel files in Python using openpyxl.",https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,22,Regular Expressions in Python,Scenario,Data and Processing,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,24,Python DB-API,Scenario,Data and Processing,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,25,PyMySQL Module,Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,30,Threading,Scenario,Data and Processing,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,31,Multiprocessing,Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,34,Concurrency with AsyncIO,Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,36,"RxPy Observables, Observers and Subjects",Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,37,RxPy Operators,Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,39,Sockets in Python,Scenario,API,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,40,Web Services in Python,Scenario,Others/Generic,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+2019 Book Advanced Guide To Python3 Programm,Advanced Guide to Python 3 Programming,41,Bookshop Web Service,Scenario,Others/Generic,Generic,,https://link.springer.com/book/10.1007/978-3-030-25943-3,,,
+A Whirlwind Tour of Python,A Whirlwind Tour of Python,8,Built-In Data Structures,Scenario,Data and Processing,Generic,,,,,
+A Whirlwind Tour of Python,A Whirlwind Tour of Python,15,Modules and Packages,Scenario,Others/Generic,Generic,,,,,
+Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,6,Navigating a Route,Scenario,Others/Generic,Generic,,,,,
+Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,17,Use Your Brain,Scenario,Others/Generic,Generic,,,,,
+Becoming a Better Programmer,Becoming a Better Programmer: A Handbook for People Who Care About Code,19,A Case for Code Reuse,Scenario,Others/Generic,Generic,,,,,
+Beginning Django CMS,Beginning Django CMS,1,Working with a CMS,Scenario,Others/Generic,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,4,Site Templates,Scenario,Others/Generic,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,5,Your Blog Website: Templates,Scenario,Others/Generic,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,6,django CMS Plugins,Scenario,Others/Generic,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,7,Advanced Plugins,Scenario,API,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,8,Authoring in ajango CMS,Scenario,API,Web development,,,,,
+Beginning Django CMS,Beginning Django CMS,10,Extending django CMS,Scenario,Others/Generic,Web development,,,,,
+Beginning Game Development with Python and Pygame,Beginning Game Development with Python and Pygame: From Novice to Professional (Beginning From Novice to Professional),4,Creating Visuals,Scenario,Others/Generic,Game development,,,,,
+Beginning Game Development with Python and Pygame,Beginning Game Development with Python and Pygame: From Novice to Professional (Beginning From Novice to Professional),12,Setting the Scene with OpenGL,Scenario,Others/Generic,Game development,,,,,
+"Beginning Python Games Development, 2nd Edition","Beginning Python Games Development, 2nd Edition: With PyGame",12,Setting the Scene with OpenGL,Scenario,Data and Processing,Game development,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,3,Working with Genomes,Scenario,Others/Generic,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,4,Population Genetics,Scenario,Data and Processing,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,5,Population Genetics Simulation,Scenario,Data and Processing,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,6,Phylogenetics,Scenario,GUI,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,7,Using the Protein Data Bank,Scenario,Others/Generic,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,8,Other Topics in Bioinformatics,Scenario,Others/Generic,Educational purposes,,,,,
+Bioinformatics with Python Cookbook,Bioinformatics with Python Cookbook,9,Python for Big Genomics Datasets,Scenario,API,Educational purposes,,,,,
+Data Structures and Algorithms with Python,Data Structures and Algorithms in Python,8,Membership Structures,Scenario,Data and Processing,Data analysis,,,,,
+Data Structures and Algorithms with Python,Data Structures and Algorithms in Python,12,Heuristic Search,Scenario,Data and Processing,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,3,Data Meant to Be Read by Machines,Scenario,API,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,4,Working with Excel Files,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,5,PDFs and Problem Solving in Python,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,8,Data Cleanup: Standardizing and Scripting,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,9,Data Exploration and Analysis,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,10,Presenting Your Data,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,11,Web Scraping: Acquiring and Storing Data form the Web,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,12,Advance Web Scraping: Screen Scrapers and Spiders,Scenario,Others/Generic,Data analysis,,,,,
+Data Wrangling with Python,Data Wrangling with Python: Tips and Tools to Make Your Life Easier,13,APIs,Scenario,API,Data analysis,,,,,
+Dive Into Python - Mark Pilgrim,Dive into Python,8,HTML Processing,Scenario,Others/Generic,Generic,,,,,
+Dive Into Python - Mark Pilgrim,Dive into Python,9,XML Processing,Scenario,Others/Generic,Generic,,,,,
+Dive Into Python - Mark Pilgrim,Dive into Python,11,HTTP Web Services,Scenario,API,Generic,,,,,
+Dive Into Python - Mark Pilgrim,Dive into Python,12,SOAP Web Services,Scenario,Others/Generic,Generic,,,,,
+Django 1.0 Template Development,Django 1.0 Template Development,2,"Views, URLs, and Generic Views",Scenario,Others/Generic,Web development,,,,,
+Django 1.0 Template Development,Django 1.0 Template Development,8,Pagination,Scenario,Others/Generic,Web development,,,,,
+Django 1.0 Template Development,Django 1.0 Template Development,10,Caching Your Pages,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,1,Building a Blog Application,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,2,Enhancing Your Blog with Advanced Features,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,3,Extending Your Blog Application,Scenario,Data and Processing,Web development,,,,,
+Django by Example,Django by Example Book,4,Building a Social Website,Scenario,Data and Processing,Web development,,,,,
+Django by Example,Django by Example Book,5,Sharing Content in Your Website,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,6,Tracking User Actions,Scenario,Data and Processing,Web development,,,,,
+Django by Example,Django by Example Book,7,Building an Online Shop,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,8,Managing Payments and Orders,Scenario,Data and Processing,Web development,,,,,
+Django by Example,Django by Example Book,9,Extending Your Shop,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,10,Building an e-Learning Platform,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,11,Caching Content,Scenario,Others/Generic,Web development,,,,,
+Django by Example,Django by Example Book,12,Building an API,Scenario,Others/Generic,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,1,Django and Patterns,Scenario,API,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,4,Views and URLs,Scenario,Data and Processing,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,6,Admin Interface,Scenario,API,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,8,Dealing with Legacy Code,Scenario,GUI,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,9,Testing and Debugging,Scenario,Others/Generic,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,10,Security,Scenario,Data and Processing,Web development,,,,,
+Django Design Patterns and Best Practices,Django Design Patterns and Best Practices,11,Production-ready,Scenario,Others/Generic,Web development,,,,,
+Effective Python_ 59 Specific W - Brett Slatkin,Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series) ,1,Pythonic Thinking,Scenario,Data and Processing,Generic,,,,,
+Effective Python_ 59 Specific W - Brett Slatkin,Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series) ,6,Built-in Modules,Scenario,Data and Processing,Generic,,,,,
+"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",9,Documenting Your Project,Scenario,Data and Processing,Generic,,,,,
+"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",13,Concurrency,Scenario,Others/Generic,Generic,,,,,
+"Expert Python Programming, 2nd Edition","Expert Python Programming, 2nd Edition",14,Useful Design Patterns,Scenario,API,Generic,,,,,
+Fluent Python,Fluent Python,1,The Python Data Model,Scenario,API,Generic,,,,,
+Fluent Python,Fluent Python,4,Text versus bytes,Scenario,Others/Generic,Generic,,,,,
+Fluent Python,Fluent Python,11,Interfaces: from protocals to ABCs,Scenario,Others/Generic,Generic,,,,,
+Fluent Python,Fluent Python,16,Coroutines,Scenario,Others/Generic,Generic,,,,,
+Fluent Python,Fluent Python,17,Concurrency with futures,Scenario,Others/Generic,Generic,,,,,
+Fluent Python,Fluent Python,18,Concurrency with asyncio,Scenario,API,Generic,,,,,
+Foundations of Agile Python Development,Foundations of Agile Python Development,2,The IDE: Eclipsing the Command Line,Scenario,Others/Generic,Software development,,,,,
+Foundations of Agile Python Development,Foundations of Agile Python Development,9,Databases,Scenario,Others/Generic,Software development,,,,,
+From Future Import Python,From Future Import Python,5,Python Distributions,Scenario,API,Generic,,,,,
+Hadoop with Python,Hadoop with Python,2,MapReduce with Python,Scenario,Data and Processing,Data analysis,,,,,
+Hadoop with Python,Hadoop with Python,4,Spark with Python,Scenario,API,Data analysis,,,,,
+Head First Python,Head First Python,5,Comprehending Data: Work That Data!,Scenario,Others/Generic,Generic,,,,,
+Head First Python,Head First Python,6,Custom Data Objects: Bundling Code with Data,Scenario,Others/Generic,Generic,,,,,
+Head First Python,Head First Python,7,Web Development: Putting It All Together,Scenario,GUI,Generic,,,,,
+Head First Python,Head First Python,8,Mobile App Development: Small Devices,Scenario,Data and Processing,Generic,,,,,
+Head First Python,Head First Python,9,Manage Your Data: Heading Input,Scenario,Others/Generic,Generic,,,,,
+Head First Python,Head First Python,10,Scaling Your Webapp: Getting Real,Scenario,Others/Generic,Generic,,,,,
+Head First Python,Head First Python,11,Dealing with Complexity: Data Wrangling,Scenario,Data and Processing,Generic,,,,,
+Internet of Things with Python,Internet of Things with Python,1,Understanding and Setting up the Base IoT Hardware,Scenario,Others/Generic,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,2,Working with Python on Intel Galilgo Gen 2,Scenario,Data and Processing,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,3,Interacting with Digital Outputs with Python,Scenario,Data and Processing,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,4,Working with a RESTful API and Pulse,Scenario,Data and Processing,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,7,Retrieving Data form the Real World with Sensors,Scenario,Others/Generic,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,9,Working with the Cloud,Scenario,GUI,DevOps,,,,,
+Internet of Things with Python,Internet of Things with Python,10,Analyzing Huge Amounts Data with Cloud-based IoT Analytics,Scenario,Data and Processing,DevOps,,,,,
+Introducing Python,Introducing Python: Modern Computing in Simple Packages,5,"Py Boxes: Modules, Packages, and Programs",Scenario,Others/Generic,Generic,,,,,
+Introducing Python,Introducing Python: Modern Computing in Simple Packages,7,Mangle Data Like a Pro,Scenario,Data and Processing,Generic,,,,,
+Introducing Python,Introducing Python: Modern Computing in Simple Packages,8,Data Has to Go Somewhere,Scenario,Others/Generic,Generic,,,,,
+Introducing Python,Introducing Python: Modern Computing in Simple Packages,9,"The Web, Untangled",Scenario,Data and Processing,Generic,,,,,
+Introducing Python,Introducing Python: Modern Computing in Simple Packages,11,Concurrency and Networks,Scenario,Others/Generic,Generic,,,,,
+Introduction to Computer Science Using Python,Introduction to Computer Science Using Python,7,Modular Design,Scenario,GUI,Educational purposes,,,,,
+IPython Notebook Essentials,IPython Notebook Essentials,3,Graphics with matplotlib,Scenario,Data and Processing,Educational purposes,,,,,
+IPython Notebook Essentials,IPython Notebook Essentials,4,Handling Data with pandas,Scenario,Others/Generic,Educational purposes,,,,,
+IPython Notebook Essentials,IPython Notebook Essentials,5,"Advanced Computing with SciPy, Numba, and NumbaPro",Scenario,Data and Processing,Educational purposes,,,,,
+Learning Pandas,Learning Pandas,1,A Tour of pandas,Scenario,Data and Processing,Data analysis,,,,,
+Learning Pandas,Learning Pandas,2,Installing pandas,Scenario,Data and Processing,Data analysis,,,,,
+Learning Pandas,Learning Pandas,3,NumPy for pandas,Scenario,Data and Processing,Data analysis,,,,,
+Learning Pandas,Learning Pandas,4,The pandas Series Object,Scenario,Data and Processing,Data analysis,,,,,
+Learning Pandas,Learning Pandas,5,The pandas DataFrame Object,Scenario,Others/Generic,Data analysis,,,,,
+Learning Pandas,Learning Pandas,7,Tidying Up Your Data,Scenario,Data and Processing,Data analysis,,,,,
+Learning Pandas,Learning Pandas,12,Applications to Finance,Scenario,Others/Generic,Data analysis,,,,,
+"Learning Python, 5th Edition","Learning Python, 5th Edition",24,Module Packages,Scenario,Others/Generic,Generic,,,,,
+"Learning Python, 5th Edition","Learning Python, 5th Edition",25,Advanced Module Topics,Scenario,Others/Generic,Generic,,,,,
+Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,1,Getting Started with Selenium WebDriver and Python,Scenario,Data and Processing,Software testing,,,,,
+Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,3,Finding Elements,Scenario,Others/Generic,Software testing,,,,,
+Learning Selenium Testing Tools with Python,Learning Selenium Testing Tools with Python,9,Advanced Techniques of Selenium WebDriver,Scenario,Data and Processing,Software testing,,,,,
+Lightweight Django,Lightweight Django,1,The World's Smallest Django Project,Scenario,Others/Generic,Web development,,,,,
+Lightweight Django,Lightweight Django,2,Stateless Web Application,Scenario,Others/Generic,Web development,,,,,
+Lightweight Django,Lightweight Django,3,Building a Static Site Generator,Scenario,Others/Generic,Web development,,,,,
+Lightweight Django,Lightweight Django,4,Building a REST API,Scenario,Others/Generic,Web development,,,,,
+Lightweight Django,Lightweight Django,5,Client-Side Django with Backbone.js,Scenario,Others/Generic,Web development,,,,,
+Lightweight Django,Lightweight Django,6,Single-Page Web Application,Scenario,API,Web development,,,,,
+Lightweight Django,Lightweight Django,7,Real-Time Django,Scenario,API,Web development,,,,,
+Lightweight Django,Lightweight Django,8,Communication Between Django and Tornado,Scenario,Others/Generic,Web development,,,,,
+Making Sense of NoSQL,Making Sense of NoSQL: A guide for managers and the rest of us,3,NoSQL Solutions,Scenario,Others/Generic,Data analysis,,,,,
+Making Use of Python,Making Use of Python,6,Modules,Scenario,Others/Generic,Generic,,,,,
+Making Use of Python,Making Use of Python,10,CGI Programming,Scenario,Others/Generic,Generic,,,,,
+Making Use of Python,Making Use of Python,12,Network Programming,Scenario,Data and Processing,Generic,,,,,
+Making Use of Python,Making Use of Python,14,Advanced Web Programming,Scenario,Others/Generic,Generic,,,,,
+Making Use of Python,Making Use of Python,15,GUI Programming with Tkinter,Scenario,Others/Generic,Generic,,,,,
+Mastering Python,Mastering Python,3,Containers and Collections - Stroring Data the Right Way,Scenario,GUI,Generic,,,,,
+Mastering Python,Mastering Python,4,Function Programming - Readability Versus Bravity,Scenario,Others/Generic,Generic,,,,,
+Mastering Python,Mastering Python,6,"Generators and Coroutines - Infinity, One Step at a Time",Scenario,Data and Processing,Generic,,,,,
+Mastering Python,Mastering Python,9,Documentation - How to Use Sphinx and reStructuredText,Scenario,API,Generic,,,,,
+Mastering Python,Mastering Python,13,Multiprocessing - When a Single CPU Core Is not Enough,Scenario,Others/Generic,Generic,,,,,
+Mastering Python,Mastering Python,14,"Extensions in C/C++, System Calls and C/C++ Libraries",Scenario,Others/Generic,Generic,,,,,
+Mastering Python,Mastering Python,15,Packaging - Creating Your Own Libraries or Applications,Scenario,Others/Generic,Generic,,,,,
+Mining the Social Web,Mining the Social Web,2,Microformats: Semantic Markup and Common Sense Collide,Scenario,Others/Generic,Web development,,,,,
+Mining the Social Web,Mining the Social Web,3,Mailboxs: Oldies but Goodies,Scenario,Others/Generic,Web development,,,,,
+Mining the Social Web,Mining the Social Web,4,"Twitter: Friends, Followers, and Setwise Operations",Scenario,GUI,Web development,,,,,
+Mining the Social Web,Mining the Social Web,5,"Twitter: The Tweet, the Whole Tweet, and Nothing but the Tweet",Scenario,Data and Processing,Web development,,,,,
+Mining the Social Web,Mining the Social Web,6,LinkedIn: Clustering Your Professional Network for Fun (and Profit?),Scenario,Others/Generic,Web development,,,,,
+Mining the Social Web,Mining the Social Web,7,"Google Buzz: TF-IDF, Cosine Similarity, and Collocations",Scenario,Others/Generic,Web development,,,,,
+Mining the Social Web,Mining the Social Web,8,Blogs et al.: Natural Language Processing (and Beyond),Scenario,Others/Generic,Web development,,,,,
+Mining the Social Web,Mining the Social Web,9,Facebook: The All-in-One Wonder,Scenario,API,Web development,,,,,
+Mining the Social Web,Mining the Social Web,10,The Semantic Web: A Cocktail Descussion,Scenario,Others/Generic,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",1,"Mining Twitter: Exploring Treading Topics, Discovering What People Are Talking About and More",Scenario,Others/Generic,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",2,"Mining Facebook: Analyzing Fan Pages, Examming Friendships, and More",Scenario,Others/Generic,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",4,"Mining Google+: Computing Document Similarity, Extracting Collocations and More",Scenario,GUI,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",5,"Mining Web Page: Using Natural Language Processing to Understand Human Language, Summarize Blog Posts, and More",Scenario,Others/Generic,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",6,"Mining Mailboxes: Analyzing Who's Talking to Whom About What, How Often, and More",Scenario,Others/Generic,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",7,"Mining the Semantically Marked-Up Web: Extracing Microformats, Inferancing over RDF, and More",Scenario,Data and Processing,Web development,,,,,
+"Mining the Social Web, 2nd Edition","Mining the Social Web, 2nd Edition",8,Twitter Cookbook,Scenario,Others/Generic,Web development,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",4,Plotting and Visualization,Scenario,Data and Processing,Educational purposes,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",9,Ordinary Differential Equations,Scenario,GUI,Educational purposes,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",12,Data Processing and Analysis,Scenario,API,Educational purposes,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",14,Statistical modeling,Scenario,Others/Generic,Educational purposes,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",15,Machine Learning,Scenario,GUI,Educational purposes,,,,,
+Numerical Python,"Numerical Python: Scientific Computing and Data Science Applications with Numpy, SciPy and Matplotlib",17,Signal Processing,Scenario,GUI,Educational purposes,,,,,
+NumPy Cookbook,NumPy Cookbook,1,Winding Along with Ipython,Scenario,Data and Processing,Educational purposes,,,,,
+NumPy Cookbook,NumPy Cookbook,3,Getting to Grips with Commonly Used Functions,Scenario,Data and Processing,Educational purposes,,,,,
+NumPy Cookbook,NumPy Cookbook,4,Connecting NumPy with the Rest of the World,Scenario,Data and Processing,Educational purposes,,,,,
+NumPy Cookbook,NumPy Cookbook,5,Audio and Image Processing,Scenario,Others/Generic,Educational purposes,,,,,
+NumPy Cookbook,NumPy Cookbook,9,Speeding Up Code with Cython,Scenario,Others/Generic,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",1,Winding Along with Ipython,Scenario,API,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",3,Getting to Grips with Commonly Used Functions,Scenario,Others/Generic,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",4,Connecting NumPy with the Rest of the World,Scenario,GUI,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",5,Audio and Image Processing,Scenario,GUI,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",9,Speeding Up Code with Cython,Scenario,Others/Generic,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",10,Fun with Scikits,Scenario,Data and Processing,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",11,Lastest and Greatest Numpy,Scenario,Others/Generic,Educational purposes,,,,,
+"NumPy Cookbook, 2nd Edition","NumPy Cookbook, 2nd Edition",12,Exploratory and Predictive Data Analysis with NumPy,Scenario,Others/Generic,Educational purposes,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),1,Understanding Django,Scenario,Others/Generic,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),2,Django Is Python,Scenario,Others/Generic,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),4,URLs and Views,Scenario,GUI,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),5,Forms,Scenario,Data and Processing,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),6,Templates,Scenario,GUI,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),7,Handling HTTP,Scenario,GUI,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),8,Backend Protocols,Scenario,Others/Generic,Web development,,,,,
+"Pro Django, 2nd Edition",Pro Django (Expert's Voice in Web Development),11,Enhancing Applications,Scenario,Others/Generic,Web development,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),2,IronPython Syntax,Scenario,Others/Generic,Generic,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),3,Advanced IronPython,Scenario,Others/Generic,Generic,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),4,IronPython Studio,Scenario,Others/Generic,Generic,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),5,Mixing and Mingling with CLR,Scenario,Data and Processing,Generic,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),8,Caught in a Web,Scenario,Others/Generic,Generic,,,,,
+Pro IronPython,Pro IronPython (Expert's Voice in .NET),9,IronPython Recipes,Scenario,API,Generic,,,,,
+"Pro Python, 2nd Edition","Pro Python, 2nd Edition",11,Sheets: A CSV Framework,Scenario,Others/Generic,Generic,,,,,
+Professional Python,Professional Python,12,Cli Tools,Scenario,API,Generic,,,,,
+Professional Python,Professional Python,13,Asyncio,Scenario,Data and Processing,Generic,,,,,
+Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,7,Working with Text,Scenario,API,Generic,,,,,
+Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,8,"Executable Files, Organization, and Python on the Web",Scenario,Data and Processing,Generic,,,,,
+Python 3 for Absolute Beginners,Python 3 for Absolute Beginners,12,Simple Windowed Applications,Scenario,Data and Processing,Generic,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",2,Taching Support,Scenario,Data and Processing,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",3,Book Development Rules,Scenario,GUI,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",6,Python for Programmers,Scenario,GUI,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",12,"Generators, Iterators, and Itertools",Scenario,Others/Generic,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",14,"Coroutines, Concurrency & Distributed Systems",Scenario,GUI,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",15,Jython,Scenario,Others/Generic,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",19,Messanger/Data Transfer Object,Scenario,API,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",23,Building Application Frameworks,Scenario,API,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",24,Fronting for an Implementation,Scenario,GUI,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",26,Decorator: Dynamic Type Selection,Scenario,Others/Generic,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",28,Factory: Encapsulating Object Creation,Scenario,Data and Processing,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",30,Changing the Interface,Scenario,GUI,Educational purposes,,,,,
+"Python 3 Patterns, Recipes and Idioms","Python 3 Patterns, Recipes and Idioms",36,Projects,Scenario,Others/Generic,Educational purposes,,,,,
+Python Algorithms,Python Algorithms,3,Counting 101,Scenario,Data and Processing,Educational purposes,,,,,
+Python Algorithms,Python Algorithms,5,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,Educational purposes,,,,,
+Python Algorithms,Python Algorithms,6,"Divide, Combine, and Conquer",Scenario,GUI,Educational purposes,,,,,
+Python Algorithms,Python Algorithms,8,Tangled Dependencies and Memoization,Scenario,Others/Generic,Educational purposes,,,,,
+"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",1,Introduction,Scenario,API,Educational purposes,,,,,
+"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",3,Counting 101,Scenario,Others/Generic,Educational purposes,,,,,
+"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",5,Traversal: The Skeleton Key og Algorithmics,Scenario,Others/Generic,Educational purposes,,,,,
+"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",6,"Divide, Combine, and Conquer",Scenario,API,Educational purposes,,,,,
+"Python Algorithms, 2nd Edition","Python Algorithms, 2nd Edition",8,Tangled Dependencies and Memoization,Scenario,Data and Processing,Educational purposes,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",4,Python Shortcuts,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",10,System Administration,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",11,User Interfaces,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",12,Processing XML,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",13,Network Programming,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",14,Web Programming,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",16,Programs About Programs,Scenario,API,Generic,,,,,
+"Python Cookbook, 2nd Edition","Python Algorithms, 2nd Edition",17,Extending and Embedding,Scenario,GUI,Generic,,,,,
+Python Crash Course,Python Crash Course,15,Generating Data,Scenario,GUI,Generic,,,,,
+Python Crash Course,Python Crash Course,16,Downloading Data,Scenario,GUI,Generic,,,,,
+Python Crash Course,Python Crash Course,17,Working with APIs,Scenario,GUI,Generic,,,,,
+Python Crash Course,Python Crash Course,18,Getting Started with Django,Scenario,GUI,Generic,,,,,
+Python Crash Course,Python Crash Course,19,User Accounts,Scenario,API,Generic,,,,,
+Python Crash Course,Python Crash Course,20,Styling and Developing an App,Scenario,API,Generic,,,,,
+Python Data Analysis,Python Data Analysis,1,Getting Started with Python Libraries,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,2,NumPy Arrays,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,4,Pandas Primer,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,6,Data Visualization,Scenario,API,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,7,Signal Processing and Time Series,Scenario,API,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,8,Working with Databases,Scenario,API,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,9,Analyzing Textual Data and Social Media,Scenario,GUI,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,10,Predictive Analytics and Machine Learning,Scenario,Others/Generic,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,11,Environments Outside the Python Ecosystem and Cloud Computing,Scenario,Others/Generic,Data analysis,,,,,
+Python Data Analysis,Python Data Analysis,12,"Performance Tuning, Profilling, and Concurrency",Scenario,Others/Generic,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,1,An Introduction to Data Analysis,Scenario,Others/Generic,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,3,The NumPy Library,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,4,The pandas Library---An Introduction,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,5,pandas: Reading and Writing Data,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,6,pandas in Depth: Data Manipulation,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,7,Data Visualization with matplotlib,Scenario,Data and Processing,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,8,Machine Learning with scikit-learn,Scenario,API,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,9,An Example---Meteorological Data,Scenario,GUI,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,10,Embadding the Javascript D3 Library in IPython Notebook,Scenario,GUI,Data analysis,,,,,
+Python Data Analytics,Python Data Analytics,11,Recognizing Handwritten Digits,Scenario,Data and Processing,Data analysis,,,,,
+Python for Data Analysis,Python for Data Analysis,2,Introductory Examples,Scenario,Data and Processing,Data analysis,,,,,
+Python for Data Analysis,Python for Data Analysis,4,NumPy Basics: Arrays and Vectorized Computation,Scenario,Data and Processing,Data analysis,,,,,
+Python for Data Analysis,Python for Data Analysis,8,Plotting and Visualization,Scenario,Data and Processing,Data analysis,,,,,
+Python for Data Analysis,Python for Data Analysis,11,Financial and Economic Data Applications,Scenario,Data and Processing,Data analysis,,,,,
+Python for Data Analysis,Python for Data Analysis,12,Advanced NumPy,Scenario,Others/Generic,Data analysis,,,,,
+Python for Google App Engine,Python for Google App Engine,2,A More Complex Application,Scenario,Others/Generic,Web development,,,,,
+Python for Google App Engine,Python for Google App Engine,5,Storing Data in Google Cloud SQL,Scenario,Data and Processing,Web development,,,,,
+Python for Google App Engine,Python for Google App Engine,6,Using Channels to Implement a Real-time Application,Scenario,Data and Processing,Web development,,,,,
+Python for Google App Engine,Python for Google App Engine,7,Building an Application with Django,Scenario,Others/Generic,Web development,,,,,
+Python for Google App Engine,Python for Google App Engine,8,Exposing a REST API with Google Cloud Endpoints,Scenario,API,Web development,,,,,
+Python for Kids,Python for Kids,4,Drawing with Turtles,Scenario,GUI,Generic,,,,,
+Python for Kids,Python for Kids,7,Recycling Your Code with Functions and Modules,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,10,Useful Python Modules,Scenario,GUI,Generic,,,,,
+Python for Kids,Python for Kids,11,More Turtle Graphics,Scenario,GUI,Generic,,,,,
+Python for Kids,Python for Kids,12,Using Tkinter for Better Graphics,Scenario,GUI,Generic,,,,,
+Python for Kids,Python for Kids,13,Beginning Your First Game: Bounce!,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,14,Finishing /your First Game: Bounce!,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,15,Creating Graphics for The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,16,Developing The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,17,Creating Mr.Stick Man,Scenario,Others/Generic,Generic,,,,,
+Python for Kids,Python for Kids,18,Completing The Mr.Stick Man Game,Scenario,Others/Generic,Generic,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,1,Creating the GUI Form and Adding Widgets,Scenario,GUI,Computer graphics,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,3,Look and Feel Customization,Scenario,Others/Generic,Computer graphics,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,5,Matplotlib Charts,Scenario,Others/Generic,Computer graphics,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,7,Storing Data in Out MySQL Database via Our GUI,Scenario,GUI,Computer graphics,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,9,Extending Our GUI with the wxPython Library,Scenario,GUI,Computer graphics,,,,,
+Python GUI Programming Cookbook,Python GUI Programming Cookbook,10,Creating Amazing 3D GUIs with PyOpenGL and PyGLet,Scenario,GUI,Computer graphics,,,,,
+Python in Education,Python in Education,2,A Pythonic Case Study: Raspberry Pi,Scenario,Others/Generic,Educational purposes,,,,,
+Python Machine Learning,Python Machine Learning,1,Giving Computers the Ability to Learn from Data,Scenario,Others/Generic,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,2,Training Machine Learning Algorithms of Classification,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,3,A Tour of Machine Learning Classifiers Using Scikit-learn,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,4,Building Good Training Sets - Data Preprocessing,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,7,Combining Different Models for Ensemble Learning,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,8,Applying Machine Learning to Sentiment Analysis,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,9,Embedding a Machine Learning Model into a Web Application,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,10,Predicting Continuous Target Variables with Regression Analysis,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,11,Working with Unabeled Data - Clustering Analysis,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,12,Trainging Artificial Nerual Networks for Image Recognition,Scenario,Data and Processing,Machine learning,,,,,
+Python Machine Learning,Python Machine Learning,13,Parallelizing Neural Network Training with Theano,Scenario,Data and Processing,Machine learning,,,,,
+Python Parallel Programming Cookbook,Python Parallel Programming Cookbook,6,GPU Programming with Python,Scenario,Data and Processing,Educational purposes,,,,,
+Python Playground,Python Playground,1,Parasing Itunes Playlists,Scenario,Others/Generic,Generic,,,,,
+Python Playground,Python Playground,2,Spirographs,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,3,Conway's Game of Lift,Scenario,Others/Generic,Generic,,,,,
+Python Playground,Python Playground,5,Boids: Simulating a Flock,Scenario,Others/Generic,Generic,,,,,
+Python Playground,Python Playground,6,ASCII ART,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,7,Photomosaics,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,8,Autostereograms,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,9,Understanding OpenGL,Scenario,API,Generic,,,,,
+Python Playground,Python Playground,10,Particle Systems,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,11,Volume Rendering,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,13,Laser Audio Display,Scenario,GUI,Generic,,,,,
+Python Playground,Python Playground,14,A Raspberry Pi-Based Weather Monitor,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",15,Standard Library Modules,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",16,The sys Module,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",17,The os System Module,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",18,The re Pattern-Matching Module,Scenario,Data and Processing,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",19,Object Persistence Modules,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",20,The tkinter GUI Module and Tools,Scenario,GUI,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",21,Internet Modules and Tools,Scenario,Others/Generic,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",22,Other Standard Library Modules,Scenario,GUI,Generic,,,,,
+"Python Pocket Reference, 4th Edition","Python Pocket Reference, 4th Edition",23,Python Portable SQL Database API,Scenario,API,Generic,,,,,
+Python Projects for Kids,Python Projects for Kids,8,Pygame,Scenario,Data and Processing,Generic,,,,,
+Python Projects for Kids,Python Projects for Kids,9,Tiny Tennis,Scenario,Others/Generic,Generic,,,,,
+Python Scripting for Computational Science,Python Scripting for Computational Science,5,"Combining Python with Fortran, C, and C++",Scenario,Others/Generic,Educational purposes,,,,,
+Python Scripting for Computational Science,Python Scripting for Computational Science,7,Web Interfaces and CGI Programming,Scenario,GUI,Educational purposes,,,,,
+Python Scripting for Computational Science,Python Scripting for Computational Science,9,Fortran Programming with NumPy Arrays,Scenario,Data and Processing,Educational purposes,,,,,
+Python Scripting for Computational Science,Python Scripting for Computational Science,10,C and C++ Programming with NumPy Arrays,Scenario,Data and Processing,Educational purposes,,,,,
+Python Scripting for Computational Science,Python Scripting for Computational Science,12,Tools and Examples,Scenario,Others/Generic,Educational purposes,,,,,
+Python Unlocked,Python Unlocked,5,Elegance with Design Patterns,Scenario,Others/Generic,Generic,,,,,
+Python Unlocked,Python Unlocked,8,Scalling Python,Scenario,Others/Generic,Generic,,,,,
+Python Web Development with Django,Python Web Development with Django,1,Practical Python for Django,Scenario,Data and Processing,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,2,Django for the Impatient: Building a Blog,Scenario,API,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,5,"URLs, HTTP Mechanisms, and Views URLs",Scenario,API,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,6,Templates and Form Processing Templates,Scenario,Data and Processing,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,7,Photo Gallery,Scenario,GUI,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,8,Content Management System,Scenario,Data and Processing,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,9,Liveblog,Scenario,Others/Generic,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,10,Pastebin,Scenario,Others/Generic,Web development,,,,,
+Python Web Development with Django,Python Web Development with Django,11,Advanced Django Programming,Scenario,Others/Generic,Web development,,,,,
+Python XML,Python XML,1,Python and XML,Scenario,API,Web development,,,,,
+Python XML,Python XML,2,XML Fundamentals,Scenario,Others/Generic,Web development,,,,,
+Python XML,Python XML,3,The Simple API for XML,Scenario,API,Web development,,,,,
+Python XML,Python XML,5,Querying XML with Xpath,Scenario,Data and Processing,Web development,,,,,
+Python XML,Python XML,6,Transforming XML with XSLT,Scenario,Data and Processing,Web development,,,,,
+Python XML,Python XML,7,XML Validation and Dialects,Scenario,Data and Processing,Web development,,,,,
+Python XML,Python XML,8,Python Internet APIs,Scenario,API,Web development,,,,,
+Python XML,Python XML,9,"Python, Web Services, and SOAP",Scenario,Data and Processing,Web development,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,3,Using Python for Automation and Productivity,Scenario,Data and Processing,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,4,Creating Games and Graphics,Scenario,GUI,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,5,Creating 3D Graphics,Scenario,GUI,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,6,Using Python to Drive Hardware,Scenario,Data and Processing,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,7,Sense and Display Real-world Data,Scenario,GUI,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,8,Work on Projects with the Raspberry Pi Camera Module,Scenario,Others/Generic,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,9,Building Robots,Scenario,Data and Processing,Others,,,,,
+Raspberry Pi Cookbook for Python Programmers,Raspberry Pi Cookbook for Python Programmers,10,Interfacing with Technology,Scenario,GUI,Others,,,,,
+SciPy and NumPy,SciPy and NumPy,2,NumPy,Scenario,Others/Generic,Educational purposes,,,,,
+SciPy and NumPy,SciPy and NumPy,3,SciPy,Scenario,Others/Generic,Educational purposes,,,,,
+SciPy and NumPy,SciPy and NumPy,4,SciKit: Taking SciPy One Step Further,Scenario,Others/Generic,Educational purposes,,,,,
+Spark for Python Developers,Spark for Python Developers,1,Setting Up a Spark Virtual Environment,Scenario,Others/Generic,Data analysis,,,,,
+Spark for Python Developers,Spark for Python Developers,2,Building Batch and Streaming Apps with Spark,Scenario,Others/Generic,Data analysis,,,,,
+Spark for Python Developers,Spark for Python Developers,3,Juggling Data with Spark,Scenario,Data and Processing,Data analysis,,,,,
+Spark for Python Developers,Spark for Python Developers,5,Steaming Live Data with Spark,Scenario,Data and Processing,Data analysis,,,,,
+Spark for Python Developers,Spark for Python Developers,6,Visualizing Insights and Trends,Scenario,GUI,Data analysis,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,1,Getting Django Set Up Using a Function Test,Scenario,Others/Generic,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,6,Getting to the Minimun Viable Site,Scenario,API,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,7,"Prettification: Layout and Styling, and What to Test About It",Scenario,GUI,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,9,Automating Deployment with Fabric,Scenario,API,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,12,More Advanced Forms,Scenario,GUI,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,13,"Dipping Out Toes, Very Tentativaly, into Javascript",Scenario,Others/Generic,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,15,"User Authentication, Integrating Third-Party Plugins, and Mocking with Javascript",Scenario,API,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,16,Server-Side Authentication and Mocking in Python,Scenario,API,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,20,Continuous Integration (CI),Scenario,Data and Processing,Software testing,,,,,
+Test-Driven Development with Python,Test-Driven Development with Python,21,"The Token Social Bit, the Page Pattern, and an Exercise for the Reader",Scenario,Others/Generic,Software testing,,,,,
+"Think Python, 2nd Edition","Think Python, 2nd Edition",4,Case Study: Interface Design,Scenario,Others/Generic,Generic,,,,,
+"Think Python, 2nd Edition","Think Python, 2nd Edition",7,Iteration,Scenario,Data and Processing,Generic,,,,,
+"Think Python, 2nd Edition","Think Python, 2nd Edition",9,Case Study: Word Play,Scenario,Others/Generic,Generic,,,,,
+"Think Python, 2nd Edition","Think Python, 2nd Edition",14,Files,Scenario,Others/Generic,Generic,,,,,
+"Think Python, 2nd Edition","Think Python, 2nd Edition",21,Analysis of Algorithms,Scenario,Data and Processing,Generic,,,,,
+"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",2,Database Structure,Scenario,Data and Processing,Web development,,,,,
+"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",5,Custom Templates Filter and Tags,Scenario,Data and Processing,Web development,,,,,
+"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",6,Model Administration,Scenario,Others/Generic,Web development,,,,,
+"Web Development with Django Cookbook, 2nd Edition","Web Development with Django Cookbook, 2nd Edition",7,Django CMS,Scenario,Data and Processing,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,2,Scraping the Data,Scenario,API,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,3,Caching Downloads,Scenario,Others/Generic,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,4,Concurrent Downloading,Scenario,Others/Generic,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,5,Dynamic Content,Scenario,Others/Generic,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,7,Solving CAPTCHA,Scenario,Others/Generic,Web development,,,,,
+Web Scraping with Python,Web Scraping with Python,8,Scrapy,Scenario,API,Web development,,,,,
