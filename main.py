@@ -46,7 +46,7 @@ if option == "By Module":
 
 elif option == "By Library":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
-    selected_library = st.sidebar.selectbox("Select a Library:", list(libraries))
+    selected_library = st.sidebar.selectbox("Select a Library:", sorted(map(str, libraries)))
     
     # Filter chapters based on the selected library
     filtered_chapter = filter_chapters_by_library(df, selected_library)
