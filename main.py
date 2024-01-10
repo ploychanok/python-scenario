@@ -55,7 +55,7 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
                 
-    # Chord diagram
+    # Sankey diagram
     display_diagram()
 
     pdf_url = selected_chapter['URL'].iloc[0]
