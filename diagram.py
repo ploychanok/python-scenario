@@ -1,32 +1,55 @@
 import streamlit as st
 import plotly.graph_objects as go
+import pandas as pd
 
-def display_diagram():
-    scenarios = ["API", "Data and Processing", "GUI", "Others/Generic"]
-    target_audiences = ["Data analysis", "Educational purposes", "Generic", "Software testing", "Web development",
-                        "DevOps", "Game development", "Machine learning", "Others", "Software development", "Computer graphics"]
-    counts = [7, 7, 28, 4, 15, 23, 4, 16, 1, 25, 10, 3, 3, 21, 4, 4, 1, 14, 27, 4, 2, 7, 2, 17, 2, 25, 2, 66, 1, 1, 2, 4, 50]
+def display_diagram(df_diagram, selected_option, selected_value):
+    # Filter the df_diagram DataFrame based on the selected option and value
+    if selected_option == "By Audience":
+        filtered_df = df_diagram[df_diagram['Target Audience'] == selected_value]
+    elif selected_option == "By Library":
+        filtered_df = df_diagram[df_diagram['Libraries'] == selected_value]
+    else:
+        st.warning("Invalid option selected.")
+        return
 
-    # Create links
-    link_sources = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
-    link_targets = [3, 2, 1, 4, 5, 5, 6, 7, 8, 9, 10, 11, 12, 13, 5, 6, 7, 8, 9, 10, 11, 12, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
-    link_values = counts
+    # Check if the filtered data frame is empty
+    if filtered_df.empty:
+        st.warning("No data available for the selected option.")
+        return
+
+    # Splitting and restructuring the data for the Sankey diagram
+    df_target_to_scenario = filtered_df[['Target Audience', 'Scenario Instances']].copy()
+    df_scenario_to_library = filtered_df[['Scenario Instances', 'Libraries']].copy()
+    df_target_to_scenario.columns = ['Source', 'Target']
+    df_scenario_to_library.columns = ['Source', 'Target']
+    sankey_data = pd.concat([df_target_to_scenario, df_scenario_to_library])
+
+    # Creating the Sankey diagram
+    source = sankey_data['Source']
+    target = sankey_data['Target']
+    labels = pd.concat([source, target]).unique()
+
+    # Create a mapping for labels to indices
+    label_to_id = {label: i for i, label in enumerate(labels)}
+
+    # Map the source and target to their respective indices
+    source_indices = source.map(label_to_id)
+    target_indices = target.map(label_to_id)
 
     # Create Sankey diagram
     fig = go.Figure(data=[go.Sankey(
         node=dict(
-            pad=15,
-            thickness=20,
-            line=dict(color="black", width=0.5),
-            label=scenarios + target_audiences
+          pad=15,
+          thickness=20,
+          line=dict(color="black", width=0.5),
+          label=labels,
+          color="blue"
         ),
         link=dict(
-            source=link_sources,
-            target=link_targets,
-            value=link_values
-        )
-    )])
+          source=source_indices,
+          target=target_indices,
+          value=[1] * len(source)  # Assuming a default value of 1 for each link
+        ))])
 
-    # Update layout
-    fig.update_layout(title_text="Sankey Diagram of Scenario Instances and Target Audiences")
+    # Display the figure using Streamlit
     st.plotly_chart(fig)

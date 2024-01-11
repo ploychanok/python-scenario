@@ -1,10 +1,12 @@
 import streamlit as st
-from filter_chapters import filter_chapters_by_module, filter_chapters_by_library, display_chapter_selection
 import pandas as pd
+from data_processing import process_data
+from filter_chapters import filter_chapters_by_module, filter_chapters_by_library, display_chapter_selection
 from diagram import display_diagram
 
 file_path = "data.csv"
 df = pd.read_csv(file_path)
+df_diagram = process_data(file_path)
 
 # Sidebar
 st.sidebar.title("Scenario Analysis")
@@ -19,6 +21,9 @@ if option == "By Audience":
     selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
+    
+    # Sankey diagram
+    display_diagram(df_diagram, option, selected_module)
 
 elif option == "By Library":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
@@ -29,6 +34,9 @@ elif option == "By Library":
     
     # Display available chapter titles for the selected library
     selected_chapter_title, selected_scenario, selected_module = display_chapter_selection(filtered_chapter)
+    
+    # Sankey diagram
+    display_diagram(df_diagram, option, selected_library)
 
 # Main content
 if not filtered_chapter.empty and selected_chapter_title is not None:
@@ -54,9 +62,6 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
             code_snippet_description = selected_chapter['Code snippet description'].iloc[0]
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
-                
-    # Sankey diagram
-    display_diagram()
 
     pdf_url = selected_chapter['URL'].iloc[0]
     if pd.notna(pdf_url):
