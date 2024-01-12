@@ -21,9 +21,6 @@ if option == "By Audience":
     selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
-    
-    # Sankey diagram
-    display_diagram(df_diagram, option, selected_module)
 
 elif option == "By Library":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
@@ -34,9 +31,6 @@ elif option == "By Library":
     
     # Display available chapter titles for the selected library
     selected_chapter_title, selected_scenario, selected_module = display_chapter_selection(filtered_chapter)
-    
-    # Sankey diagram
-    display_diagram(df_diagram, option, selected_library)
 
 # Main content
 if not filtered_chapter.empty and selected_chapter_title is not None:
@@ -62,6 +56,10 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
             code_snippet_description = selected_chapter['Code snippet description'].iloc[0]
             if pd.notna(code_snippet_description):
                 st.write(code_snippet_description)
+                
+    st.markdown("---")
+    selected_value = selected_module if option == "By Audience" else selected_library
+    display_diagram(df_diagram, option, selected_value)
 
     pdf_url = selected_chapter['URL'].iloc[0]
     if pd.notna(pdf_url):

@@ -41,14 +41,15 @@ def display_diagram(df_diagram, selected_option, selected_value):
         node=dict(
           pad=15,
           thickness=20,
-          line=dict(color="black", width=0.5),
+          line=dict(color="white", width=0.5),
           label=labels,
-          color="blue"
+          color=["#FEBF57", "#56CFE1", "#9D4EDD", "#FB5607", "#FF006E", "#8338EC", "#3A86FF"]
         ),
         link=dict(
           source=source_indices,
           target=target_indices,
-          value=[1] * len(source)  # Assuming a default value of 1 for each link
+          value=[1] * len(source),
+          color="#EAEAEA"
         ))])
 
     # Display the figure using Streamlit
