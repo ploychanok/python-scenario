@@ -10,7 +10,7 @@ df_diagram = process_data(file_path)
 
 # Sidebar
 st.sidebar.title("Scenario Analysis")
-option = st.sidebar.radio("Select Analysis Option:", ["By Audience", "By Library"])
+option = st.sidebar.radio("Select Analysis Option:", ["By Audience", "By Module"])
 
 selected_module, selected_scenario, selected_chapter_title, selected_library = None, None, None, None
 filtered_chapter = pd.DataFrame()
@@ -22,9 +22,9 @@ if option == "By Audience":
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
 
-elif option == "By Library":
+elif option == "By Module":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
-    selected_library = st.sidebar.selectbox("Select a Library:", sorted(map(str, libraries)))
+    selected_library = st.sidebar.selectbox("Select a Module:", sorted(map(str, libraries)))
     
     # Filter chapters based on the selected library
     filtered_chapter = filter_chapters_by_library(df, selected_library)
