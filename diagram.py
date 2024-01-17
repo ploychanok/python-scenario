@@ -16,7 +16,7 @@ def display_diagram(df_diagram, selected_option, selected_value):
 
     # Check if the filtered DataFrame is empty
     if filtered_df.empty:
-        st.warning("No data available for the selected option.")
+        st.warning("No data available for the selected criteria.")
         return
 
     # Preparing data for the Sankey diagram
