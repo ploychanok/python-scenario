@@ -12,7 +12,10 @@ st.set_page_config(page_title="Tatoeba", layout="wide")
 
 # Sidebar
 st.sidebar.title("Scenario Viewpoint")
-option = st.sidebar.radio("Select Viewpoint Option:", ["By Audience", "By Library"])
+option = st.sidebar.radio(
+    "Select Viewpoint Option:",
+    ["By Audience", "By Library"],
+    captions = ["Choose an audience group to filter relevant learning materials.", "Select a library to access specific chapters and resources."])
 
 selected_module, selected_scenario, selected_chapter_title, selected_library = None, None, None, None
 filtered_chapter = pd.DataFrame()
