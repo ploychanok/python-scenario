@@ -22,7 +22,7 @@ if option == "By Audience":
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
     # Main content
-    display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Audience", selected_module=selected_module)
+    display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Audience", selected_module)
 
 elif option == "By Library":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
@@ -35,4 +35,4 @@ elif option == "By Library":
     selected_chapter_title, selected_scenario, selected_module = display_chapter_selection(filtered_chapter)
 
     # Main content
-    display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Audience", selected_module=selected_module)
+    display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Library", selected_module, selected_library)
