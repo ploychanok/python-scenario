@@ -9,8 +9,8 @@ df = pd.read_csv(file_path)
 df_diagram = process_data(file_path)
 
 # Sidebar
-st.sidebar.title("Scenario Analysis")
-option = st.sidebar.radio("Select Analysis Option:", ["By Audience", "By Module"])
+st.sidebar.title("Scenario Viewpoint")
+option = st.sidebar.radio("Select Viewpoint Option:", ["By Audience", "By Library"])
 
 selected_module, selected_scenario, selected_chapter_title, selected_library = None, None, None, None
 filtered_chapter = pd.DataFrame()
@@ -24,7 +24,7 @@ if option == "By Audience":
 
 elif option == "By Module":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
-    selected_library = st.sidebar.selectbox("Select a Module:", sorted(map(str, libraries)))
+    selected_library = st.sidebar.selectbox("Select a Library:", sorted(map(str, libraries)))
     
     # Filter chapters based on the selected library
     filtered_chapter = filter_chapters_by_library(df, selected_library)
@@ -42,6 +42,12 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
     st.markdown("### Chapter Summary")
     st.write(f"**Book Name:** {selected_chapter['Display Book Name'].iloc[0]}")
     st.write(f"**Chapter Number:** {selected_chapter['Chapter Number'].iloc[0]}")
+    
+    library_text = selected_chapter['Libraries'].iloc[0]
+    if "," in library_text:
+        st.write(f"**Libraries:** {library_text}")
+    else:
+        st.write(f"**Library:** {library_text}")
 
     chapter_summary = selected_chapter['Chapter Summary'].iloc[0]
     if pd.notna(chapter_summary):
