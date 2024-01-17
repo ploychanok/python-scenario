@@ -3,54 +3,49 @@ import plotly.graph_objects as go
 import pandas as pd
 
 def display_diagram(df_diagram, selected_option, selected_value):
-    # Filter the df_diagram DataFrame based on the selected option and value
+    # Check for valid option and filter the DataFrame
     if selected_option == "By Audience":
-        filtered_df = df_diagram[df_diagram['Target Audience'] == selected_value]
+        column_filter, column_other = 'Target Audience', 'Libraries'
     elif selected_option == "By Library":
-        filtered_df = df_diagram[df_diagram['Libraries'] == selected_value]
+        column_filter, column_other = 'Libraries', 'Target Audience'
     else:
         st.warning("Invalid option selected.")
         return
 
-    # Check if the filtered data frame is empty
+    filtered_df = df_diagram[df_diagram[column_filter] == selected_value]
+
+    # Check if the filtered DataFrame is empty
     if filtered_df.empty:
         st.warning("No data available for the selected option.")
         return
 
-    # Splitting and restructuring the data for the Sankey diagram
-    df_target_to_scenario = filtered_df[['Target Audience', 'Scenario Instances']].copy()
-    df_scenario_to_library = filtered_df[['Scenario Instances', 'Libraries']].copy()
-    df_target_to_scenario.columns = ['Source', 'Target']
-    df_scenario_to_library.columns = ['Source', 'Target']
-    sankey_data = pd.concat([df_target_to_scenario, df_scenario_to_library])
+    # Preparing data for the Sankey diagram
+    df_source_target = filtered_df[[column_filter, 'Scenario Instances']].copy()
+    df_intermediate_target = filtered_df[['Scenario Instances', column_other]].copy()
+    df_source_target.columns = df_intermediate_target.columns = ['Source', 'Target']
 
-    # Creating the Sankey diagram
-    source = sankey_data['Source']
-    target = sankey_data['Target']
-    labels = pd.concat([source, target]).unique()
+    sankey_data = pd.concat([df_source_target, df_intermediate_target])
 
-    # Create a mapping for labels to indices
+    # Create labels and indices for the Sankey diagram
+    labels = pd.concat([sankey_data['Source'], sankey_data['Target']]).unique()
     label_to_id = {label: i for i, label in enumerate(labels)}
+    source_indices = sankey_data['Source'].map(label_to_id)
+    target_indices = sankey_data['Target'].map(label_to_id)
 
-    # Map the source and target to their respective indices
-    source_indices = source.map(label_to_id)
-    target_indices = target.map(label_to_id)
-
-    # Create Sankey diagram
+    # Create and display the Sankey diagram
     fig = go.Figure(data=[go.Sankey(
         node=dict(
-          pad=15,
-          thickness=20,
-          line=dict(color="white", width=0.5),
-          label=labels,
-          color=["#FEBF57", "#56CFE1", "#9D4EDD", "#FB5607", "#FF006E", "#8338EC", "#3A86FF"]
+            pad=15,
+            thickness=20,
+            line=dict(color="white", width=0.5),
+            label=labels,
+            color=["#FEBF57", "#56CFE1", "#9D4EDD", "#FB5607", "#FF006E", "#8338EC", "#3A86FF"]
         ),
         link=dict(
-          source=source_indices,
-          target=target_indices,
-          value=[1] * len(source),
-          color="#EAEAEA"
+            source=source_indices,
+            target=target_indices,
+            value=[1] * len(sankey_data),
+            color="#EAEAEA"
         ))])
 
-    # Display the figure using Streamlit
     st.plotly_chart(fig)

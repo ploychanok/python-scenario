@@ -8,6 +8,8 @@ file_path = "data.csv"
 df = pd.read_csv(file_path)
 df_diagram = process_data(file_path)
 
+st.set_page_config(page_title="Tatoeba")
+
 # Sidebar
 st.sidebar.title("Scenario Viewpoint")
 option = st.sidebar.radio("Select Viewpoint Option:", ["By Audience", "By Library"])
