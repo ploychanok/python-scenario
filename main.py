@@ -22,7 +22,7 @@ if option == "By Audience":
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
 
-elif option == "By Module":
+elif option == "By Library":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
     selected_library = st.sidebar.selectbox("Select a Library:", sorted(map(str, libraries)))
     
@@ -44,10 +44,13 @@ if not filtered_chapter.empty and selected_chapter_title is not None:
     st.write(f"**Chapter Number:** {selected_chapter['Chapter Number'].iloc[0]}")
     
     library_text = selected_chapter['Libraries'].iloc[0]
-    if "," in library_text:
-        st.write(f"**Libraries:** {library_text}")
+    if pd.notna(library_text):  # Check if library_text is not NaN
+        if "," in library_text:
+            st.write(f"**Related Libraries:** {library_text}")
+        else:
+            st.write(f"**Related Library:** {library_text}")
     else:
-        st.write(f"**Library:** {library_text}")
+        st.write("**Related Library:** Not available")
 
     chapter_summary = selected_chapter['Chapter Summary'].iloc[0]
     if pd.notna(chapter_summary):
