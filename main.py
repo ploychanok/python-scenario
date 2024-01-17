@@ -14,30 +14,32 @@ st.set_page_config(page_title="Tatoeba", layout="wide")
 st.sidebar.title("Scenario Viewpoint")
 option = st.sidebar.radio(
     "Select Viewpoint Option:",
-    ["By Audience", "By Library"],
+    ["By Audience 🎯", "By Library 📚"],
     captions = ["Choose an audience group to filter relevant learning materials.", "Select a library to access specific chapters and resources."])
 
 selected_module, selected_scenario, selected_chapter_title, selected_library = None, None, None, None
 filtered_chapter = pd.DataFrame()
 
-if option == "By Audience":
+if option == "By Audience 🎯":
     learning_scenarios = df[df['Category'] == 'Scenario']
     module_counts = learning_scenarios['Target Audience'].value_counts()
-    selected_module = st.sidebar.selectbox("Select a Target Audience:", module_counts.index)
+    selected_module = st.sidebar.selectbox("Select a Target Audience 🎯:", module_counts.index)
     filtered_chapter, selected_scenario = filter_chapters_by_module(learning_scenarios, selected_module, selected_scenario)
     selected_chapter_title, _, _ = display_chapter_selection(filtered_chapter)
+    st.sidebar.markdown("🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯🎯")
     # Main content
     display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Audience", selected_module)
 
-elif option == "By Library":
+elif option == "By Library 📚":
     libraries = set(df['Libraries'].str.split(',').explode().str.strip())
-    selected_library = st.sidebar.selectbox("Select a Library:", sorted(map(str, libraries)))
+    selected_library = st.sidebar.selectbox("Select a Library 📚:", sorted(map(str, libraries)))
     
     # Filter chapters based on the selected library
     filtered_chapter = filter_chapters_by_library(df, selected_library)
     
     # Display available chapter titles for the selected library
     selected_chapter_title, selected_scenario, selected_module = display_chapter_selection(filtered_chapter)
+    st.sidebar.markdown("📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚📚")
 
     # Main content
     display_content(df_diagram, filtered_chapter, selected_scenario, selected_chapter_title, "By Library", selected_module, selected_library)
