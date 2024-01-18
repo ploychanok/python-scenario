@@ -11,30 +11,31 @@ def display_content(df_diagram, filtered_chapter, selected_scenario, selected_ch
 
     st.markdown(f"**{selected_module}** > **{selected_scenario}** > **{selected_chapter_title}**")
     
-    # Filter the DataFrame based on the selected chapter title
-    selected_chapter = filtered_chapter[filtered_chapter['Chapter Title'] == selected_chapter_title]
-    
-    # Display chapter details
-    chapter_details = selected_chapter.iloc[0]  # Assuming there's only one row per chapter title
-    st.write(f"**Book Name:** {chapter_details['Display Book Name']}")
-    st.write(f"**Chapter Number:** {chapter_details['Chapter Number']}")
-
-    library_text = chapter_details['Libraries']
-    if pd.notna(library_text):
-        library_label = "Related Libraries" if "," in library_text else "Related Library"
-        st.write(f"**{library_label}:** {library_text}")
-    else:
-        st.write("**Related Library in Chapter:** Not available")
-
     # Display diagram
     selected_value = selected_module if option == "By Audience" else selected_library
     display_diagram(df_diagram, option, selected_value)
     st.markdown("---")
+    
+    # Filter the DataFrame based on the selected chapter title
+    selected_chapter = filtered_chapter[filtered_chapter['Chapter Title'] == selected_chapter_title]
+    
+    # Display chapter details
+    chapter_details = selected_chapter.iloc[0]
 
     # Create two columns for chapter summary and code snippet
     col1, col2 = st.columns(2)
 
     with col1:
+        st.write(f"**Book Name:** {chapter_details['Display Book Name']}")
+        st.write(f"**Chapter Number:** {chapter_details['Chapter Number']}")
+        
+        library_text = chapter_details['Libraries']
+        if pd.notna(library_text):
+            library_label = "Related Libraries" if "," in library_text else "Related Library"
+            st.write(f"**{library_label}:** {library_text}")
+        else:
+            st.write("**Related Library in Chapter:** Not available")
+        
         chapter_summary = chapter_details['Chapter Summary']
         if pd.notna(chapter_summary):
             st.markdown("### Chapter Summary")
