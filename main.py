@@ -8,7 +8,7 @@ file_path = "data.csv"
 df = pd.read_csv(file_path)
 df_diagram = process_data(file_path)
 
-st.set_page_config(page_title="Tatoeba", layout="wide")
+st.set_page_config(page_title="PyEdu", layout="wide")
 
 # Sidebar
 st.sidebar.title("Scenario Viewpoint")
